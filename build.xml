@@ -1,0 +1,29 @@
+<project name="build-site" default="publish" basedir=".">
+
+    <property name="site.src" location="site-author" />
+    <property name="site.dest" location="site-publish" />
+
+    <target name="publish" description="Render HTML Pages via XSLT">
+
+        <!-- Transform the top-level directory -->
+        <echo message="Transforming the site documents..." />
+        <xslt  basedir="${site.src}"
+                destdir="${site.dest}"
+                extension=".html"
+                style="${site.src}/stylesheets/pivot-site.xsl"
+                excludes="project.xml"
+                includes="*.xml">
+            <param name="relative-path" expression="." />
+        </xslt>
+
+        <!-- Copy static resource files -->
+        <echo message="Copying static resource files..." />
+        <copy todir="${site.dest}" filtering="no">
+            <fileset dir="${site.src}">
+                <include name="**/*.gif" />
+                <include name="**/*.png" />
+                <include name="**/*.css" />
+            </fileset>
+        </copy>
+  </target>
+</project>

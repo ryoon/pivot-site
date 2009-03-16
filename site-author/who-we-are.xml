@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<document>
+
+  <properties>
+    <title>Apache Pivot -- Who We Are</title>
+  </properties>
+
+  <body>
+
+    <section name="Who We Are">
+      <p>
+        The Apache Pivot Project operates on a meritocracy: the more you do,
+        the more responsibility you will obtain. This page lists all of the
+        people who have gone the extra mile and are Committers or members of
+        the Project Management Committee. If you would like to help, please
+        see the overview on <a href="get-involved.html">getting
+        involved</a>.
+      </p>
+
+      <p>
+        We ask that you please do not send us emails privately asking for support. We
+        are non-paid volunteers who help out with the project and we do not
+        necessarily have the time or energy to help people on an individual
+        basis. Instead, we have setup <a href="lists.html">mailing
+        lists</a> which contain many individuals who will help answer
+        detailed requests for help. The benefit of using mailing lists over private
+        communication is that it is a shared resource where others can also learn from
+        common mistakes, and as a community we all grow together.
+      </p>
+
+      <p>
+        The following is a list of the Apache Pivot PMC members and committers.
+      </p>
+
+    </section>
+
+    <section name="Podling Project Management Committee">
+
+      <h3>PMC Members &amp; Committers</h3>
+
+      <p><b>Niclas Hedhman</b> (niclas at apache.org)<br/></p>
+      <!--Your bio goes here-->
+
+      <p><b>Martijn Dashorst</b> (martijnh at apache.org)<br/></p>
+      <!--Your bio goes here-->
+
+      <p><b>Greg Brown</b> (gbrown at apache.org)<br/></p>
+      <!--Your bio goes here-->
+
+      <p><b>Todd Volkert</b> (tvolkert at apache.org)<br/></p>
+      <!--Your bio goes here-->
+
+      <p><b>Sandro Martini</b> (smartini at apache.org)<br/></p>
+      <!--Your bio goes here-->
+
+      <p><b>Christopher Brind</b> (brindy at apache.org)<br/></p>
+      <!--Your bio goes here-->
+
+    </section>
+
+  </body>
+</document>
+

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<document>
+
+  <properties>
+    <title>Apache Pivot</title>
+  </properties>
+
+  <body>
+
+    <section name="Apache Pivot">
+
+      <p>Pivot is a platform for building rich internet
+      applications in Java. It combines the enhanced productivity and
+      usability features of a modern RIA toolkit with the robustness
+      of the industry-standard Java platform.</p>
+
+      <p>
+        <img src="./img/kitchen_sink.png" alt="Sample Pivot application" border="0" />
+        <br/>
+        <font color="#000000" size="-1" face="arial,helvetica,sanserif">
+          <i>A sample Pivot application</i>
+        </font>
+      </p>
+
+      <p>Pivot applications are written using a combination of Java and
+      XML and can be run either as an applet or as a standalone
+      (optionally offline) desktop application. While Pivot was designed
+      to be familiar to web developers who have experience building AJAX
+      applications using HTML, CSS, and JavaScript, it provides a much
+      richer set of standard widgets than HTML, and allows developers to
+      create sophisticated user experiences much more quickly and easily.
+      Pivot will also seem familiar to Swing developers, as both Swing and
+      Pivot are based on Java2D and employ a model-view-controller (MVC)
+      architecture to separate component data from presentation. However,
+      Pivot includes additional features that make building modern GUI
+      applications much easier, including declarative UI, data binding,
+      effects and transitions, and web services integration.</p>
+
+      <p>Apache Pivot is developed in an open and participatory environment and
+      released under the <a href="http://www.apache.org/licenses/">Apache
+      Software License</a>.  Apache Pivot is intended to be a collaboration of the
+      best-of-breed developers from around the world.  We invite you to
+      participate in this open development project.  To learn more about getting
+      involved, <a href="./get-involved.html">click here</a>.</p>
+
+    </section>
+
+  </body>
+</document>
