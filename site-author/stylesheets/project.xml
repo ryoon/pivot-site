@@ -19,11 +19,11 @@
 
     <menu name="Documentation">
       <item name="Tutorial"             href="http://cwiki.apache.org/PIVOT/tutorial.html"/>
-      <item name="Javadocs (1.0)"       href="/1.0/docs/api/index.html"/>
+      <item name="Javadoc (1.0)"        href="/1.0/docs/api/index.html"/>
     </menu>
 
     <menu name="Releases">
-      <item name="Pivot 1.0"            href="http://pivot.googlecode.com/files/pivot_1.0.1-starter-kit.zip"/>
+      <item name="Pivot 1.0"            href="http://code.google.com/p/pivot/downloads/list"/>
     </menu>
 
     <menu name="Problems?">

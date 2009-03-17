@@ -89,7 +89,7 @@
         <!-- Search box: uses CSS positioning -->
         <div class="searchbox noPrint">
           <form action="http://www.google.com/search" method="get">
-            <input value="incubator.apache.org" name="sitesearch" type="hidden" />
+            <input value="incubator.apache.org/pivot" name="sitesearch" type="hidden" />
             <input value="Search the Site" size="25" name="q" id="query" type="text" />
             <input name="Search" value="Search Site" type="submit" />
           </form>
