@@ -8,14 +8,15 @@
   <body>
 
     <section name="The Apache License">
-
       <p>
         All software produced by The Apache Software Foundation (ASF) or any of
         its projects or subjects is licensed according to the terms of
         <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License,
         Version 2.0 (current)</a>.
       </p>
+    </section>
 
+    <section name="Incubation">
       <p>
         Apache Pivot is an effort undergoing incubation at The ASF, sponsored
         by the Apache Incubator Project Management Committee (PMC). Incubation
@@ -26,7 +27,6 @@
         of the completeness or stability of the code, it does indicate that
         the project has yet to be fully endorsed by the ASF.
       </p>
-
     </section>
 
   </body>

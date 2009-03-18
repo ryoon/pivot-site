@@ -56,6 +56,17 @@
 
         <link type="text/css" href="css/pivot.css" rel="stylesheet" />
         <link type="text/css" href="css/pivot-printer.css" rel="stylesheet" media="print" />
+
+        <script type="text/javascript">
+          var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+          try {
+            var pageTracker = _gat._getTracker("UA-7977275-1");
+            pageTracker._trackPageview();
+          } catch(err) {}
+        </script>
       </head>
 
       <body bgcolor="{$body-bg}" text="{$body-fg}" link="{$body-link}"
