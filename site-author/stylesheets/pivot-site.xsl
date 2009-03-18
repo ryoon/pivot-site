@@ -77,10 +77,10 @@
               </font>
             </td>
             <td>
-              <xsl:comment>APACHE LOGO</xsl:comment>
-              <a href="http://www.apache.org/">
-                <img src="http://www.apache.org/images/asf-logo.gif"
-                     align="right" alt="Apache Logo" border="0"/>
+              <xsl:comment>APACHE INCUBATOR LOGO</xsl:comment>
+              <a href="http://incubator.apache.org/">
+                <img src="http://incubator.apache.org/images/apache-incubator-logo.png"
+                     align="right" alt="Apache Incubator Logo" border="0"/>
               </a>
             </td>
           </tr>
