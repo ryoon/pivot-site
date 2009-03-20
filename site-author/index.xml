@@ -9,10 +9,12 @@
 
     <section name="Apache Pivot">
 
-      <p>Pivot is a platform for building rich internet
-      applications in Java. It combines the enhanced productivity and
-      usability features of a modern RIA toolkit with the robustness
-      of the industry-standard Java platform.</p>
+      <p>
+        Pivot is a platform for building rich internet
+        applications in Java. It combines the enhanced productivity and
+        usability features of a modern RIA toolkit with the robustness
+        of the industry-standard Java platform.
+      </p>
 
       <p>
         <img src="./img/kitchen_sink.png" alt="Sample Pivot application" border="0" />
@@ -22,26 +24,52 @@
         </font>
       </p>
 
-      <p>Pivot applications are written using a combination of Java and
-      XML and can be run either as an applet or as a standalone
-      (optionally offline) desktop application. While Pivot was designed
-      to be familiar to web developers who have experience building AJAX
-      applications using HTML, CSS, and JavaScript, it provides a much
-      richer set of standard widgets than HTML, and allows developers to
-      create sophisticated user experiences much more quickly and easily.
-      Pivot will also seem familiar to Swing developers, as both Swing and
-      Pivot are based on Java2D and employ a model-view-controller (MVC)
-      architecture to separate component data from presentation. However,
-      Pivot includes additional features that make building modern GUI
-      applications much easier, including declarative UI, data binding,
-      effects and transitions, and web services integration.</p>
+      <p>
+        Pivot applications are written using a combination of Java and
+        XML and can be run either as an applet or as a standalone
+        (optionally offline) desktop application. While Pivot was designed
+        to be familiar to web developers who have experience building AJAX
+        applications using HTML, CSS, and JavaScript, it provides a much
+        richer set of standard widgets than HTML, and allows developers to
+        create sophisticated user experiences much more quickly and easily.
+        Pivot will also seem familiar to Swing developers, as both Swing and
+        Pivot are based on Java2D and employ a model-view-controller (MVC)
+        architecture to separate component data from presentation. However,
+        Pivot includes additional features that make building modern GUI
+        applications much easier, including declarative UI, data binding,
+        effects and transitions, and web services integration.
+      </p>
 
-      <p>Apache Pivot is developed in an open and participatory environment and
-      released under the <a href="http://www.apache.org/licenses/">Apache
-      Software License</a>.  Apache Pivot is intended to be a collaboration of the
-      best-of-breed developers from around the world.  We invite you to
-      participate in this open development project.  To learn more about getting
-      involved, <a href="./get-involved.html">click here</a>.</p>
+      <p>
+        Apache Pivot is developed in an open and participatory environment and
+        released under the <a href="http://www.apache.org/licenses/">Apache
+        Software License</a>.  Apache Pivot is intended to be a collaboration of the
+        best-of-breed developers from around the world.  We invite you to
+        participate in this open development project.  To learn more about getting
+        involved, <a href="./get-involved.html">click here</a>.
+      </p>
+
+    </section>
+
+    <section name="Incubation At Apache">
+
+      <p>
+        Apache Pivot is an effort undergoing incubation at The ASF, sponsored
+        by the Apache Incubator Project Management Committee (PMC).
+      </p>
+
+      <p>
+        Incubation is required of all newly accepted projects until a further
+        review indicates that the infrastructure, communications, and decision
+        making process have stabilized in a manner consistent with other
+        successful ASF projects.
+      </p>
+
+      <p>
+        While incubation status is not necessarily a reflection of the
+        completeness or stability of the code, it does indicate that the project
+        has yet to be fully endorsed by the ASF.
+      </p>
 
     </section>
 
