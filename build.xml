@@ -1,5 +1,6 @@
-<project name="build-site" default="publish" basedir=".">
+<?xml version="1.0" encoding="UTF-8"?>
 
+<project name="build-site" default="publish" basedir=".">
     <property name="site.src" location="site-author" />
     <property name="site.dest" location="site-publish" />
 
@@ -7,12 +8,12 @@
 
         <!-- Transform the top-level directory -->
         <echo message="Transforming the site documents..." />
-        <xslt  basedir="${site.src}"
-                destdir="${site.dest}"
-                extension=".html"
-                style="${site.src}/stylesheets/pivot-site.xsl"
-                excludes="project.xml"
-                includes="*.xml">
+        <xslt basedir="${site.src}"
+              destdir="${site.dest}"
+              extension=".html"
+              style="${site.src}/stylesheets/pivot-site.xsl"
+              excludes="project.xml"
+              includes="*.xml">
             <param name="relative-path" expression="." />
         </xslt>
 
@@ -23,7 +24,8 @@
                 <include name="**/*.gif" />
                 <include name="**/*.png" />
                 <include name="**/*.css" />
+                <include name="**/*.cgi" />
             </fileset>
         </copy>
-  </target>
+    </target>
 </project>
