@@ -11,6 +11,7 @@
 
     <menu name="Getting Started">
       <item name="Demos"                href="http://cwiki.apache.org/PIVOT/demos.html"/>
+      <item name="Download"             href="/download.cgi"/>
       <!--
       <item name="Getting Pivot"        href="/getting-pivot.html"/>
       <item name="Starter Kit"          href="/starter-kit.html"/>
@@ -19,11 +20,11 @@
 
     <menu name="Documentation">
       <item name="Tutorial"             href="http://cwiki.apache.org/PIVOT/tutorial.html"/>
-      <item name="Javadoc (1.0)"        href="/1.0/docs/api/index.html"/>
+      <item name="Javadoc (1.1)"        href="/1.1/docs/api/index.html"/>
     </menu>
 
     <menu name="Releases">
-      <item name="Pivot 1.0"            href="http://code.google.com/p/pivot/downloads/list"/>
+      <item name="Pivot 1.1"            href="/download.cgi#1.1"/>
     </menu>
 
     <menu name="Problems?">
@@ -36,6 +37,11 @@
       <item name="SVN Repositories"     href="/svn.html"/>
       <item name="Mailing Lists"        href="/lists.html"/>
       <item name="Wiki"                 href="http://cwiki.apache.org/PIVOT/"/>
+    </menu>
+
+    <menu name="Related Projects">
+      <item name="Extra Demos"          href="http://code.google.com/p/pivot-demos/"/>
+      <item name="JFreeChart Provider"  href="http://code.google.com/p/pivot-jfree/"/>
     </menu>
 
     <menu name="Misc">
