@@ -40,7 +40,6 @@
     </menu>
 
     <menu name="Related Projects">
-      <item name="Additional Demos"     href="http://code.google.com/p/pivot-demos/"/>
       <item name="JFreeChart Provider"  href="http://code.google.com/p/pivot-jfree/"/>
     </menu>
 
