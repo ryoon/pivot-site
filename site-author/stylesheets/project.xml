@@ -19,6 +19,7 @@
     </menu>
 
     <menu name="Documentation">
+      <item name="FAQ"                  href="http://cwiki.apache.org/PIVOT/frequently-asked-questions-faq.html"/>
       <item name="Tutorial"             href="http://cwiki.apache.org/PIVOT/tutorial.html"/>
       <item name="Javadoc (1.1)"        href="/1.1/docs/api/index.html"/>
     </menu>
@@ -47,7 +48,7 @@
       <item name="Who We Are"           href="/who-we-are.html"/>
       <item name="Apache Home"          href="http://www.apache.org/"/>
       <item name="Contact"              href="/contact.html"/>
-      <item name="Legal"                href="/legal.html"/>
+      <item name="Legal / License"      href="/legal.html"/>
       <item name="Sponsorship"          href="http://www.apache.org/foundation/sponsorship.html"/>
       <item name="Thanks"               href="http://www.apache.org/foundation/thanks.html"/>
     </menu>
