@@ -7,25 +7,19 @@
   <body>
     <menu name="Apache Pivot">
       <item name="Home"                 href="/index.html"/>
+      <item name="Demos"                href="http://cwiki.apache.org/PIVOT/demos.html"/>
     </menu>
 
-    <menu name="Getting Started">
-      <item name="Demos"                href="http://cwiki.apache.org/PIVOT/demos.html"/>
-      <item name="Download"             href="/download.cgi"/>
-      <!--
-      <item name="Getting Pivot"        href="/getting-pivot.html"/>
-      <item name="Starter Kit"          href="/starter-kit.html"/>
-      -->
+    <menu name="Download">
+      <item name="Pivot 1.2"            href="/download.cgi#1.2"/>
+      <item name="Archives"             href="http://archive.apache.org/dist/incubator/pivot/"/>
     </menu>
 
     <menu name="Documentation">
       <item name="FAQ"                  href="http://cwiki.apache.org/PIVOT/frequently-asked-questions-faq.html"/>
       <item name="Tutorial"             href="http://cwiki.apache.org/PIVOT/tutorial.html"/>
+      <item name="Javadoc (1.2)"        href="/1.2/docs/api/index.html"/>
       <item name="Javadoc (1.1)"        href="/1.1/docs/api/index.html"/>
-    </menu>
-
-    <menu name="Releases">
-      <item name="Pivot 1.1"            href="/download.cgi#1.1"/>
     </menu>
 
     <menu name="Problems?">
