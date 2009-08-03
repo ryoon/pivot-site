@@ -72,21 +72,23 @@
       <body bgcolor="{$body-bg}" text="{$body-fg}" link="{$body-link}"
             alink="{$body-link}" vlink="{$body-link}">
 
-        <table border="0" width="100%" cellspacing="0">
+        <table align="center" border="0" width="95%" cellspacing="0">
 
           <xsl:comment>PAGE HEADER</xsl:comment>
           <tr>
             <td>
               <xsl:comment>PROJECT LOGO</xsl:comment>
               <a href="http://incubator.apache.org/pivot/">
-                <!--<img src="./img/pivot.gif" align="left" alt="Pivot Logo" border="0"/>-->
+                <img src="./img/pivot.png" align="left" alt="Pivot Logo" border="0"/>
               </a>
             </td>
+            <!--
             <td>
               <font face="arial,helvetica,sanserif">
                 <h1><xsl:value-of select="$project/title"/></h1>
               </font>
             </td>
+            -->
             <td>
               <xsl:comment>APACHE INCUBATOR LOGO</xsl:comment>
               <a href="http://incubator.apache.org/">
