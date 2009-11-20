@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<document group="get-involved">
+
+  <properties>
+    <title>Subversion Repository Access</title>
+  </properties>
+
+  <body>
+
+    <section name="Subversion">
+
+      <p>All of the Apache Pivot source code, documentation and this web site are
+      managed under version control using Subversion. This page explains the structure
+      of the Apache Pivot Subversion repository. The page assumes you are familiar
+      with the general
+      <a href="http://www.apache.org/dev/version-control.html#anon-svn">Apache
+      guidance for Subversion</a>.</p>
+
+      <p>All Subversion links in this page use anonymous access.</p>
+
+    </section>
+
+    <section name="Repository Structure">
+
+      <p>The root of the repository is
+      <a href="http://svn.apache.org/repos/asf/incubator/pivot">
+      http://svn.apache.org/repos/asf/incubator/pivot</a>.</p>
+
+      <p>The directories below this level are:</p>
+      <table>
+        <tr>
+          <th>Directory</th>
+          <th>Contents</th>
+        </tr>
+        <tr>
+          <td><a href="http://svn.apache.org/repos/asf/incubator/pivot/site">
+          <code>/site/</code></a></td>
+          <td>The Apache Pivot website</td>
+        </tr>
+        <tr>
+          <td><a href="http://svn.apache.org/repos/asf/incubator/pivot/tags">
+          <code>/tags/</code></a></td>
+          <td>Named snapshots.</td>
+        </tr>
+        <tr>
+          <td><a href="http://svn.apache.org/repos/asf/incubator/pivot/trunk">
+          <code>/trunk/</code></a></td>
+          <td>The primary development branch.</td>
+        </tr>
+      </table>
+
+    </section>
+
+  </body>
+</document>

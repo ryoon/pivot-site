@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<document>
+  <body>
+    <div id="stage">
+      <p>
+        Building rich internet applications (RIA) in Java by combining the enhanced
+        productivity and usability features of a modern RIA toolkit with the robustness of
+        the Java platform.
+      </p>
+      <ul class="stageBtn">
+        <li class="stageDemos">
+          <a href="#"><strong>Demos</strong><em>What you can do with Pivot</em></a>
+        </li>
+        <li class="stageDl">
+          <a href="#"><strong>Download</strong><em>Get the current release (1.4)</em></a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="featured" class="group">
+      <div class="homeCol1">
+        <h2>Why Pivot?</h2>
+        <p><img src="images/pivot_screen.jpg" alt="Pivot" /></p>
+        <p>
+          Pivot applications are written using a combination of Java and XML and can be run
+          either as an applet or as a standalone (optionally offline) desktop application.
+          Pivot includes additional features that make building modern GUI applications
+          much easier, including declarative UI, data binding, effects and transitions,
+          and web services integration.
+        </p>
+        <div class="btnMore"><a href="#"><span>More about Pivot</span></a></div>
+      </div>
+
+      <div class="homeCol2">
+        <h2>Pivot Resources</h2>
+        <ul>
+          <li><a href="#">Getting Started</a></li>
+          <li><a href="#">Platform Overview</a></li>
+          <li><a href="#">Sample Applications</a></li>
+          <li><a href="#">Component &amp; Container</a></li>
+          <li><a href="#">Calendars</a></li>
+          <li><a href="#">Drag and Drop</a></li>
+          <li><a href="#">Web Queries</a></li>
+          <li><a href="#">Data Binding</a></li>
+        </ul>
+        <div class="btnDocs"><a href="#"><span>Documentation</span></a></div>
+      </div>
+
+      <div class="homeCol3">
+        <h2>Latest Updates</h2>
+        <ul class="newsItems">
+          <li>
+            <a href="#">
+              <strong>Pivot 1.4 RC 1 Released</strong>
+              <em>November 20th, 2009</em>
+              <p>The latest version of Pivot is now available for download and testing.</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <strong>Fall 2009 Pivot Meet-up</strong>
+              <em>November 12th, 2009</em>
+              <p>The latest version of Pivot is now available for download and testing.</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <strong>New Tutorials Now Up</strong>
+              <em>November 4th, 2009</em>
+              <p>The latest version of Pivot is now available for download and testing.</p>
+            </a>
+          </li>
+        </ul>
+        <div class="btnNewsArchive"><a href="#"><span>News archive</span></a></div>
+      </div>
+    </div>
+  </body>
+</document>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<document group="about">
+
+  <properties>
+    <title>Legal Stuff They Make Us Say</title>
+  </properties>
+
+  <body>
+
+    <section name="The Apache License">
+      <p>
+        All software produced by The Apache Software Foundation (ASF) or any of
+        its projects or subjects is licensed according to the terms of
+        <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License,
+        Version 2.0 (current)</a>.
+      </p>
+    </section>
+
+  </body>
+</document>

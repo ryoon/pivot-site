@@ -1,31 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to you under the Apache License,
+Version 2.0 (the "License"); you may not use this file except in
+compliance with the License.  You may obtain a copy of the License at
 
-<project name="build-site" default="publish" basedir=".">
-    <property name="site.src" location="site-author" />
-    <property name="site.dest" location="site-publish" />
+    http://www.apache.org/licenses/LICENSE-2.0
 
-    <target name="publish" description="Render HTML Pages via XSLT">
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
 
-        <!-- Transform the top-level directory -->
-        <echo message="Transforming the site documents..." />
-        <xslt basedir="${site.src}"
-              destdir="${site.dest}"
-              extension=".html"
-              style="${site.src}/stylesheets/pivot-site.xsl"
-              excludes="project.xml"
-              includes="*.xml">
-            <param name="relative-path" expression="." />
-        </xslt>
+<project name="pivot-site" default="build" basedir=".">
+    <!-- Properties that affect the directories that are created as part of the build -->
+    <property name="folder.bin" value="ant-bin"/>
+
+    <!-- Transform macro -->
+    <macrodef name="transform">
+        <attribute name="type"/>
+
+        <sequential>
+            <xslt basedir="src"
+                destdir="${folder.bin}"
+                style="etc/@{type}.xsl"
+                includes="**/*.@{type}.xml">
+                <param name="relative-path" expression="."/>
+                <globmapper from="*.@{type}.xml" to="*.html"/>
+            </xslt>
+        </sequential>
+    </macrodef>
+
+    <target name="build" description="Builds the site">
+        <delete dir="${folder.bin}"/>
+
+        <!-- Transform the source pages using XSLT -->
+        <transform type="main"/>
+        <transform type="template"/>
 
         <!-- Copy static resource files -->
-        <echo message="Copying static resource files..." />
-        <copy todir="${site.dest}" filtering="no">
-            <fileset dir="${site.src}">
-                <include name="**/*.gif" />
-                <include name="**/*.png" />
-                <include name="**/*.css" />
-                <include name="**/*.cgi" />
-            </fileset>
+        <copy todir="${folder.bin}">
+            <fileset dir="src" excludes="**/*.xml"/>
         </copy>
     </target>
 </project>
