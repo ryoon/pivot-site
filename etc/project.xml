@@ -49,6 +49,7 @@ limitations under the License.
         </group>
 
         <group id="documentation" name="Documentation">
+            <item name="Getting Started" href="getting-started.html"/>
             <item name="Tutorial" href="~release/tutorials/"/>
             <item name="FAQ" href="~wiki/frequently-asked-questions-faq.html"/>
             <item name="Javadoc (1.4)" href="~release/docs/api/"/>
@@ -68,9 +69,10 @@ limitations under the License.
         <group id="about" name="About">
             <item name="Who We Are" href="who-we-are.html"/>
             <item name="Contact" href="contact.html"/>
+            <item name="News" href="news.html"/>
             <item name="Legal/License" href="legal.html"/>
-            <item name="Sponshorship" href="~asf/foundation/sponsorship.html"/>
-            <item name="Thanks" href="~asf/foundation/thanks.html"/>
+            <item name="Sponshorship" href="~asf/foundation/sponsorship.html" footer="no"/>
+            <item name="Thanks" href="~asf/foundation/thanks.html" footer="no"/>
         </group>
     </groups>
 </project>

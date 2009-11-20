@@ -1,5 +1,22 @@
-<?xml version="1.0"?>
-<document>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to you under the Apache License,
+Version 2.0 (the "License"); you may not use this file except in
+compliance with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<document main="true">
   <body>
     <div id="stage">
       <p>
@@ -8,12 +25,10 @@
         the Java platform.
       </p>
       <ul class="stageBtn">
-        <li class="stageDemos">
-          <a href="#"><strong>Demos</strong><em>What you can do with Pivot</em></a>
-        </li>
-        <li class="stageDl">
-          <a href="#"><strong>Download</strong><em>Get the current release (1.4)</em></a>
-        </li>
+        <item class="stageDemos" name="Demos" href="~release/demos/"
+            caption="What you can do with Pivot"/>
+        <item class="stageDl" name="Download" href="~download"
+            caption="Get the current release (1.4)"/>
       </ul>
     </div>
 
@@ -28,50 +43,39 @@
           much easier, including declarative UI, data binding, effects and transitions,
           and web services integration.
         </p>
-        <div class="btnMore"><a href="#"><span>More about Pivot</span></a></div>
+        <div class="btnMore"><a href="about.html"><span>More about Pivot</span></a></div>
       </div>
 
       <div class="homeCol2">
         <h2>Pivot Resources</h2>
         <ul>
-          <li><a href="#">Getting Started</a></li>
-          <li><a href="#">Platform Overview</a></li>
-          <li><a href="#">Sample Applications</a></li>
-          <li><a href="#">Component &amp; Container</a></li>
-          <li><a href="#">Calendars</a></li>
-          <li><a href="#">Drag and Drop</a></li>
-          <li><a href="#">Web Queries</a></li>
-          <li><a href="#">Data Binding</a></li>
+          <item name="Getting Started" href="getting-started.html"/>
+          <item name="Platform Overview" href="~release/tutorials/platform_overview.html"/>
+          <item name="WTKX Primer" href="~release/tutorials/wtkx_primer.html"/>
+          <item name="Component &amp; Container" href="~release/tutorials/component_and_container.html"/>
+          <item name="Sample Application Walkthrough" href="http://www.ibm.com/developerworks/xml/tutorials/x-pivottut/index.html"/>
+          <item name="Drag and Drop" href="#"/>
+          <item name="Web Queries" href="#"/>
+          <item name="Data Binding" href="#"/>
         </ul>
-        <div class="btnDocs"><a href="#"><span>Documentation</span></a></div>
+        <div class="btnDocs"><a href="documentation.html"><span>Documentation</span></a></div>
       </div>
 
       <div class="homeCol3">
         <h2>Latest Updates</h2>
         <ul class="newsItems">
-          <li>
-            <a href="#">
-              <strong>Pivot 1.4 RC 1 Released</strong>
-              <em>November 20th, 2009</em>
-              <p>The latest version of Pivot is now available for download and testing.</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <strong>Fall 2009 Pivot Meet-up</strong>
-              <em>November 12th, 2009</em>
-              <p>The latest version of Pivot is now available for download and testing.</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <strong>New Tutorials Now Up</strong>
-              <em>November 4th, 2009</em>
-              <p>The latest version of Pivot is now available for download and testing.</p>
-            </a>
-          </li>
+          <item href="~download" name="Pivot 1.4 Released" caption="January 12th, 2010">
+            The latest version of Pivot is now available for download and testing.
+          </item>
+          <item href="#" name="Pivot Has Graduated!" caption="December 16th, 2009">
+            Pivot has graduated from the Apache Incubator and is now an Apache project.
+          </item>
+          <item href="#" name="New Component Explorer Demo" caption="November 4th, 2009">
+            This demo allows interactive exploration of the Pivot components, including their
+            events, properties, and styles.
+          </item>
         </ul>
-        <div class="btnNewsArchive"><a href="#"><span>News archive</span></a></div>
+        <div class="btnNewsArchive"><a href="news.html"><span>News archive</span></a></div>
       </div>
     </div>
   </body>
