@@ -20,6 +20,8 @@ limitations under the License.
     <!-- Properties that affect the directories that are created as part of the build -->
     <property name="folder.bin" value="ant-bin"/>
 
+    <property file="build.properties"/>
+
     <!-- Transform macro -->
     <macrodef name="transform">
         <attribute name="type"/>
@@ -29,7 +31,7 @@ limitations under the License.
                 destdir="${folder.bin}"
                 style="etc/@{type}.xsl"
                 includes="**/*.@{type}.xml">
-                <param name="relative-path" expression="."/>
+                <param name="release" expression="${version}"/>
                 <globmapper from="*.@{type}.xml" to="*.html"/>
             </xslt>
         </sequential>

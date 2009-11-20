@@ -26,7 +26,10 @@ limitations under the License.
               indent="yes"/>
 
   <!-- Defined parameters (overrideable) -->
-  <xsl:param name="relative-path" select="'.'"/>
+  <xsl:param name="release"/>
+  <xsl:param name="wiki" select="'http://cwiki.apache.org/PIVOT'"/>
+  <xsl:param name="asf" select="'http://www.apache.org'"/>
+  <xsl:param name="jira" select="'http://issues.apache.org/jira/browse/PIVOT'"/>
 
   <!-- Process an entire document into an HTML page -->
   <xsl:template match="document">
@@ -72,7 +75,9 @@ limitations under the License.
           </div>
 
           <div id="footer" class="group">
-            <div class="footerLogo">Copyright (c) 1999-2010, The Apache Software Foundation.</div>
+            <div class="footerLogo">
+              Copyright (c) 1999-2010,<br/>The Apache Software Foundation.
+            </div>
 
             <div class="footerLinks">
               <ul class="footerMenuGr">
@@ -90,7 +95,7 @@ limitations under the License.
     <li>
       <strong><xsl:value-of select="@name"/></strong>
       <ul>
-        <xsl:apply-templates select="item"/>
+        <xsl:apply-templates select="item[not(@footer='no')]"/>
       </ul>
     </li>
   </xsl:template>
@@ -99,11 +104,20 @@ limitations under the License.
   <xsl:template match="item">
     <xsl:variable name="href">
       <xsl:choose>
-        <xsl:when test="starts-with(@href, 'http://')">
-          <xsl:value-of select="@href"/>
+        <xsl:when test="starts-with(@href, '~wiki')">
+          <xsl:value-of select="$wiki"/><xsl:value-of select="substring(@href,6)"/>
+        </xsl:when>
+        <xsl:when test="starts-with(@href, '~asf')">
+          <xsl:value-of select="$asf"/><xsl:value-of select="substring(@href,5)"/>
+        </xsl:when>
+        <xsl:when test="starts-with(@href, '~jira')">
+          <xsl:value-of select="$jira"/><xsl:value-of select="substring(@href,6)"/>
+        </xsl:when>
+        <xsl:when test="starts-with(@href, '~release')">
+          <xsl:value-of select="$release"/><xsl:value-of select="substring(@href,9)"/>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="$relative-path"/><xsl:value-of select="@href"/>
+          <xsl:value-of select="@href"/>
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>

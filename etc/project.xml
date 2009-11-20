@@ -16,44 +16,61 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<project name="The Apache Pivot Project" href="http://pivot.apache.org/">
-
+<project href="http://pivot.apache.org/">
     <title>Apache Pivot</title>
 
     <global>
-        <item name="Demos"                  href="/1.4/demos/"/>
-        <item name="Download"               href="/download.cgi#1.4"/>
-        <item name="Documentation"          href="/documentation.html"/>
-        <item name="Get Involved"           href="/get-involved.html"/>
-        <item name="About"                  href="/about.html"/>
+        <item name="Demos" href="~release/demos/"/>
+        <item name="Download" href="download.cgi#1.4"/>
+        <item name="Documentation" href="documentation.html"/>
+        <item name="Get Involved" href="get-involved.html"/>
+        <item name="About" href="about.html"/>
     </global>
 
     <groups>
         <group id="demos" name="Demos">
-            <item name="Kitchen Sink"       href="/1.4/demos/kitchen_sink.html"/>
-            <item name="Charting"           href="http://ixnay.biz/charts.html"/>
-            <item name="Component Explorer" href=""/>
-            <item name="More Demos"         href="/1.4/demos/"/>
+            <item name="Kitchen Sink" href="~release/demos/kitchen_sink.html"/>
+            <item name="Charting" href="http://ixnay.biz/charts.html"/>
+            <item name="Component Explorer" href="~release/tutorials/component_explorer.html"/>
+            <item name="Stock Tracker" href="~release/demos/stock_tracker.html" footer="no"/>
+            <item name="iTunes Search" href="~release/demos/itunes_search.html" footer="no"/>
+            <item name="JSON Viewer" href="~release/demos/json_viewer.html" footer="no"/>
+            <item name="Scripting" href="~release/demos/scripting.html" footer="no"/>
+            <item name="File Drag &amp; Drop" href="~release/demos/file_drag_drop.html" footer="no"/>
+            <item name="Table Row Editor" href="~release/demos/table_row_editor.html" footer="no"/>
+            <item name="Animated Clock" href="~release/demos/animated_clock.html" footer="no"/>
+            <item name="Large Data Sets" href="~release/demos/large_data.html" footer="no"/>
+            <item name="RSS Feed" href="~release/demos/rss_feed.html" footer="no"/>
+            <item name="DOM Interaction" href="~release/demos/dom_interaction.html" footer="no"/>
+            <item name="Decorators" href="~release/demos/decorators.html" footer="no"/>
+            <item name="Fixed Column Table" href="~release/demos/fixed_column_table.html" footer="no"/>
+            <item name="Multiple Selection" href="~release/demos/multiselect.html" footer="no"/>
+            <item name="More Demos" href="~release/demos/"/>
         </group>
 
         <group id="documentation" name="Documentation">
-            <item name="Tutorial"           href="/1.4/tutorials/"/>
-            <item name="FAQ"                href=""/>
-            <item name="Javadoc (1.4)"      href="/1.4/docs/api/"/>
+            <item name="Tutorial" href="~release/tutorials/"/>
+            <item name="FAQ" href="~wiki/frequently-asked-questions-faq.html"/>
+            <item name="Javadoc (1.4)" href="~release/docs/api/"/>
         </group>
 
         <group id="get-involved" name="Get Involved">
-            <item name="SVN Repositories"   href="/svn.html"/>
-            <item name="Mailing Lists"      href="/lists.html"/>
-            <item name="Wiki"               href="http://cwiki.apache.org/PIVOT/"/>
+            <item name="SVN Repositories" href="svn.html"/>
+            <item name="Mailing Lists" href="lists.html"/>
+            <item name="Bug Database" href="~jira/"/>
+            <item name="Wiki" href="~wiki/"/>
+        </group>
+
+        <group id="related" name="Related">
+            <item name="JFreeChart Provider" href="http://code.google.com/p/pivot-jfree/"/>
         </group>
 
         <group id="about" name="About">
-            <item name="Who We Are"         href="/who-we-are.html"/>
-            <item name="Contact"            href="/contact.html"/>
-            <item name="Legal/License"      href="/legal.html"/>
-            <item name="Sponshorship"       href="http://www.apache.org/foundation/sponsorship.html"/>
-            <item name="Thanks"             href="http://www.apache.org/foundation/thanks.html"/>
+            <item name="Who We Are" href="who-we-are.html"/>
+            <item name="Contact" href="contact.html"/>
+            <item name="Legal/License" href="legal.html"/>
+            <item name="Sponshorship" href="~asf/foundation/sponsorship.html"/>
+            <item name="Thanks" href="~asf/foundation/thanks.html"/>
         </group>
     </groups>
 </project>

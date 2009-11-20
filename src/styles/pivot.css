@@ -69,7 +69,7 @@ h2 {
 	margin-top: 20px;
 	padding-bottom: 10px;
 	background: #032036 url(bg_footer.gif) repeat-x left top;
-	color: #354d5e;
+	color: #4b6c84;
 	font-size: 85%;
 }
 
@@ -380,12 +380,12 @@ h2 {
 
 /* Footer elements */
 #footer a {
-	color: #354d5e;
+	color: #4b6c84;
 	text-decoration: none;
 }
 
 #footer a:hover {
-	color: #687986;
+	color: #8ba1b3;
 }
 
 .footerLogo {
