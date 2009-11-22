@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to you under the Apache License,
+Version 2.0 (the "License"); you may not use this file except in
+compliance with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<document group="get-involved">
+    <properties>
+        <title>Subversion Repository Access</title>
+    </properties>
+    <body>
+        <section name="Subversion">
+            <p>
+                All of the Apache Pivot source code, documentation, and this web site are managed
+                under version control using Subversion. This page explains the structure of the
+                Apache Pivot Subversion repository. The page assumes you are familiar with the
+                general <a href="http://www.apache.org/dev/version-control.html#anon-svn">Apache
+                guidance for Subversion</a>.
+            </p>
+            <p>
+                All Subversion links in this page use anonymous access.
+            </p>
+        </section>
+        <section name="Repository Structure">
+            <p>
+                The root of the repository is <a href="http://svn.apache.org/repos/asf/pivot">
+                http://svn.apache.org/repos/asf/pivot</a>.
+            </p>
+            <p>
+                The directories below this level are:
+            </p>
+            <table>
+                <tr>
+                    <th>Directory</th>
+                    <th>Contents</th>
+                </tr>
+                <tr>
+                    <td><a href="http://svn.apache.org/repos/asf/pivot/trunk">
+                    <tt>/trunk/</tt></a></td>
+                    <td>The primary development branch</td>
+                </tr>
+                <tr>
+                    <td><a href="http://svn.apache.org/repos/asf/pivot/tags">
+                    <tt>/tags/</tt></a></td>
+                    <td>Named snapshots</td>
+                </tr>
+                <tr>
+                    <td><a href="http://svn.apache.org/repos/asf/pivot/site">
+                    <tt>/site/</tt></a></td>
+                    <td>The Apache Pivot website</td>
+                </tr>
+                <tr>
+                    <td><a href="http://svn.apache.org/repos/asf/pivot/dist">
+                    <tt>/dist/</tt></a></td>
+                    <td>Files related to release distribution</td>
+                </tr>
+                <tr>
+                    <td><a href="http://svn.apache.org/repos/asf/pivot/infra">
+                    <tt>/infra/</tt></a></td>
+                    <td>Project infrastructure files, such as shell scripts</td>
+                </tr>
+                <tr>
+                    <td><a href="http://svn.apache.org/repos/asf/pivot/project">
+                    <tt>/project/</tt></a></td>
+                    <td>General project files</td>
+                </tr>
+            </table>
+        </section>
+    </body>
+</document>

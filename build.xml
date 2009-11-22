@@ -22,31 +22,33 @@ limitations under the License.
 
     <property file="build.properties"/>
 
-    <!-- Transform macro -->
-    <macrodef name="transform">
-        <attribute name="type"/>
-
-        <sequential>
-            <xslt basedir="src"
-                destdir="${folder.bin}"
-                style="etc/@{type}.xsl"
-                includes="**/*.@{type}.xml">
-                <param name="release" expression="${version}"/>
-                <globmapper from="*.@{type}.xml" to="*.html"/>
-            </xslt>
-        </sequential>
-    </macrodef>
-
     <target name="build" description="Builds the site">
-        <delete dir="${folder.bin}"/>
+        <!-- Transform the index page using index.xsl -->
+        <xslt basedir="src"
+            destdir="${folder.bin}"
+            extension=".html"
+            style="etc/index.xsl"
+            includes="index.xml">
+            <param name="release" expression="${version}"/>
+        </xslt>
 
-        <!-- Transform the source pages using XSLT -->
-        <transform type="main"/>
-        <transform type="template"/>
+        <!-- Transform all other pages using template.xsl -->
+        <xslt basedir="src"
+            destdir="${folder.bin}"
+            extension=".html"
+            style="etc/template.xsl"
+            includes="**/*.xml"
+            excludes="index.xml">
+            <param name="release" expression="${version}"/>
+        </xslt>
 
         <!-- Copy static resource files -->
         <copy todir="${folder.bin}">
             <fileset dir="src" excludes="**/*.xml"/>
         </copy>
+    </target>
+
+    <target name="clean">
+        <delete dir="${folder.bin}"/>
     </target>
 </project>
