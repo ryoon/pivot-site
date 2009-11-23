@@ -78,9 +78,12 @@ limitations under the License.
   </xsl:template>
 
   <xsl:template match="demo">
-    <script src="http://java.com/js/deployJava.js"></script>
+    <script type="text/javascript" src="http://java.com/js/deployJava.js"></script>
     <script type="text/javascript">
-      var attributes = {code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet"};
+      var attributes = {
+          code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
+          style:"border:solid 1px #999999"
+      };
 
       <xsl:for-each select="attributes/*">
         attributes.<xsl:value-of select="name(.)"/> = '<xsl:value-of select="."/>';
