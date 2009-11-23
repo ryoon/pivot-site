@@ -24,6 +24,7 @@ limitations under the License.
 
   <!-- Defined parameters (overrideable) -->
   <xsl:param name="release"/>
+  <xsl:param name="base"/>
   <xsl:param name="wiki" select="'http://cwiki.apache.org/PIVOT'"/>
   <xsl:param name="asf" select="'http://www.apache.org'"/>
   <xsl:param name="jira" select="'http://issues.apache.org/jira/browse/PIVOT'"/>
@@ -59,7 +60,9 @@ limitations under the License.
           </xsl:choose>
           <xsl:value-of select="$project/title"/>
         </title>
-        <link href="styles/pivot.css" rel="stylesheet" type="text/css"/>
+        <link href="{$base}styles/pivot.css" rel="stylesheet" type="text/css"/>
+
+        <xsl:apply-templates select="head"/>
 
         <!-- Google Analytics Code -->
         <script type="text/javascript">
@@ -79,12 +82,12 @@ limitations under the License.
           <div id="main">
             <div id="header">
               <div class="{$logoClass}">
-                <a href="index.html">
-                  <img src="images/logo.png" alt="Apache Pivot" title="Apache Pivot Homepage"/>
+                <a href="{$base}index.html">
+                  <img src="{$base}images/logo.png" alt="Apache Pivot" title="Apache Pivot Homepage"/>
                 </a>
               </div>
               <div class="tagline">
-                <img src="images/tagline.png" alt="Rich Internet Applications (RIA) in Java (tm)"/>
+                <img src="{$base}images/tagline.png" alt="Rich Internet Applications (RIA) in Java (tm)"/>
               </div>
 
               <xsl:comment>MAIN NAVIGATION</xsl:comment>
@@ -110,6 +113,10 @@ limitations under the License.
         </div>
       </body>
     </html>
+  </xsl:template>
+
+  <xsl:template match="head">
+      <xsl:apply-templates/>
   </xsl:template>
 
   <!-- Process an item group -->
@@ -140,12 +147,17 @@ limitations under the License.
           <xsl:value-of select="$jira"/><xsl:value-of select="substring(@href,6)"/>
         </xsl:when>
         <xsl:when test="starts-with(@href, '~release')">
-          <xsl:value-of select="$release"/><xsl:value-of select="substring(@href,9)"/>
+          <xsl:value-of select="$base"/>
+          <xsl:value-of select="$release"/>
+          <xsl:value-of select="substring(@href,9)"/>
         </xsl:when>
         <xsl:when test="@href='~download'">
-          <xsl:value-of select="'download.cgi#'"/><xsl:value-of select="$release"/>
+          <xsl:value-of select="$base"/>
+          <xsl:value-of select="'download.cgi#'"/>
+          <xsl:value-of select="$release"/>
         </xsl:when>
         <xsl:otherwise>
+          <xsl:value-of select="$base"/>
           <xsl:value-of select="@href"/>
         </xsl:otherwise>
       </xsl:choose>

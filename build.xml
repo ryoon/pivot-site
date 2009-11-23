@@ -32,7 +32,7 @@ limitations under the License.
             <param name="release" expression="${version}"/>
         </xslt>
 
-        <!-- Transform all other pages using template.xsl -->
+        <!-- Transform standard pages using template.xsl -->
         <xslt basedir="src"
             destdir="${folder.bin}"
             extension=".html"
@@ -40,6 +40,17 @@ limitations under the License.
             includes="**/*.xml"
             excludes="index.xml">
             <param name="release" expression="${version}"/>
+        </xslt>
+
+        <!-- Transform demos pages using demo.xsl -->
+        <xslt basedir="demos"
+            destdir="${folder.bin}/${version}/demos"
+            extension=".html"
+            style="etc/demo.xsl"
+            includes="**/*.xml"
+            excludes="index.xml">
+            <param name="release" expression="${version}"/>
+            <param name="base" expression="../../"/>
         </xslt>
 
         <!-- Copy static resource files -->

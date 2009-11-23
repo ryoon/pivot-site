@@ -21,7 +21,7 @@ limitations under the License.
 
     <global>
         <item name="Demos" href="~release/demos/"/>
-        <item name="Download" href="download.cgi#1.4"/>
+        <item name="Download" href="~download"/>
         <item name="Documentation" href="documentation.html"/>
         <item name="Get Involved" href="get-involved.html"/>
         <item name="About" href="about.html"/>
@@ -29,22 +29,9 @@ limitations under the License.
 
     <groups>
         <group id="demos" name="Demos">
-            <item name="Kitchen Sink" href="~release/demos/kitchen_sink.html"/>
+            <item name="Kitchen Sink" href="~release/demos/kitchen-sink.html"/>
             <item name="Charting" href="http://ixnay.biz/charts.html"/>
-            <item name="Component Explorer" href="~release/tutorials/component_explorer.html"/>
-            <item name="Stock Tracker" href="~release/demos/stock_tracker.html" footer="no"/>
-            <item name="iTunes Search" href="~release/demos/itunes_search.html" footer="no"/>
-            <item name="JSON Viewer" href="~release/demos/json_viewer.html" footer="no"/>
-            <item name="Scripting" href="~release/demos/scripting.html" footer="no"/>
-            <item name="File Drag &amp; Drop" href="~release/demos/file_drag_drop.html" footer="no"/>
-            <item name="Table Row Editor" href="~release/demos/table_row_editor.html" footer="no"/>
-            <item name="Animated Clock" href="~release/demos/animated_clock.html" footer="no"/>
-            <item name="Large Data Sets" href="~release/demos/large_data.html" footer="no"/>
-            <item name="RSS Feed" href="~release/demos/rss_feed.html" footer="no"/>
-            <item name="DOM Interaction" href="~release/demos/dom_interaction.html" footer="no"/>
-            <item name="Decorators" href="~release/demos/decorators.html" footer="no"/>
-            <item name="Fixed Column Table" href="~release/demos/fixed_column_table.html" footer="no"/>
-            <item name="Multiple Selection" href="~release/demos/multiselect.html" footer="no"/>
+            <item name="Component Explorer" href="~release/tutorials/component-explorer.html"/>
             <item name="More Demos" href="~release/demos/"/>
         </group>
 
