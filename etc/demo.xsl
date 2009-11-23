@@ -82,6 +82,8 @@ limitations under the License.
     <script type="text/javascript">
       var attributes = {
           code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
+          width:"<xsl:value-of select="@width"/>",
+          height:"<xsl:value-of select="@height"/>",
           style:"border:solid 1px #999999"
       };
 
