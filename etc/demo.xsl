@@ -19,48 +19,6 @@ limitations under the License.
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <xsl:include href="project.xsl"/>
 
-  <xsl:variable name="jar-core">
-    <xsl:value-of select="'../lib/pivot-core-'"/>
-    <xsl:value-of select="$release"/>
-    <xsl:value-of select="'.jar'"/>
-  </xsl:variable>
-
-  <xsl:variable name="jar-wtk">
-    <xsl:value-of select="'../lib/pivot-wtk-'"/>
-    <xsl:value-of select="$release"/>
-    <xsl:value-of select="'.jar'"/>
-  </xsl:variable>
-
-  <xsl:variable name="jar-wtk-terra">
-    <xsl:value-of select="'../lib/pivot-wtk-'"/>
-    <xsl:value-of select="$release"/>
-    <xsl:value-of select="'.terra.jar'"/>
-  </xsl:variable>
-
-  <xsl:variable name="jar-web">
-    <xsl:value-of select="'../lib/pivot-web-'"/>
-    <xsl:value-of select="$release"/>
-    <xsl:value-of select="'.jar'"/>
-  </xsl:variable>
-
-  <xsl:variable name="jar-demos">
-    <xsl:value-of select="'../lib/pivot-demos-'"/>
-    <xsl:value-of select="$release"/>
-    <xsl:value-of select="'.jar'"/>
-  </xsl:variable>
-
-  <xsl:variable name="jar-tutorials">
-    <xsl:value-of select="'../lib/pivot-tutorials-'"/>
-    <xsl:value-of select="$release"/>
-    <xsl:value-of select="'.jar'"/>
-  </xsl:variable>
-
-  <xsl:variable name="jar-tools">
-    <xsl:value-of select="'../lib/pivot-tools-'"/>
-    <xsl:value-of select="$release"/>
-    <xsl:value-of select="'.jar'"/>
-  </xsl:variable>
-
   <xsl:template match="body">
     <div id="contentBase" class="group">
       <h1><xsl:value-of select="//document/properties/title"/></h1>
@@ -88,52 +46,71 @@ limitations under the License.
       };
 
       <xsl:for-each select="attributes/*">
-        attributes.<xsl:value-of select="name(.)"/> = '<xsl:value-of select="."/>';
+          attributes.<xsl:value-of select="name(.)"/> = '<xsl:value-of select="."/>';
       </xsl:for-each>
 
       var libraries = [];
-      <xsl:for-each select="libraries/library">
-        <xsl:choose>
-          <xsl:when test=".='core'">
-            libraries.push('<xsl:value-of select="$jar-core"/>');
-          </xsl:when>
-          <xsl:when test=".='wtk'">
-            libraries.push('<xsl:value-of select="$jar-wtk"/>');
-            libraries.push('<xsl:value-of select="$jar-wtk-terra"/>');
-          </xsl:when>
-          <xsl:when test=".='web'">
-            libraries.push('<xsl:value-of select="$jar-web"/>');
-          </xsl:when>
-          <xsl:when test=".='demos'">
-            libraries.push('<xsl:value-of select="$jar-demos"/>');
-          </xsl:when>
-          <xsl:when test=".='tutorials'">
-            libraries.push('<xsl:value-of select="$jar-tutorials"/>');
-          </xsl:when>
-          <xsl:when test=".='tools'">
-            libraries.push('<xsl:value-of select="$jar-tools"/>');
-          </xsl:when>
-        </xsl:choose>
-      </xsl:for-each>
+      <xsl:apply-templates select="libraries/library">
+          <xsl:with-param name="signed" select="@signed"/>
+      </xsl:apply-templates>
       attributes.archive = libraries.join(",");
 
       var parameters = {
-        codebase_lookup:false,
-        java_arguments:"-Dsun.awt.noerasebackground=true -Dsun.awt.erasebackgroundonresize=true",
-        application_class_name:"<xsl:value-of select="@class"/>"
+          codebase_lookup:false,
+          java_arguments:"-Dsun.awt.noerasebackground=true -Dsun.awt.erasebackgroundonresize=true",
+          application_class_name:"<xsl:value-of select="@class"/>"
       };
 
       <xsl:if test="startup-properties">
           var startupProperties = [];
-
           <xsl:for-each select="startup-properties/*">
               startupProperties.push("<xsl:value-of select="name(.)"/>=<xsl:value-of select="."/>");
           </xsl:for-each>
-
           parameters.startup_properties = startupProperties.join("&amp;");
       </xsl:if>
 
       deployJava.runApplet(attributes, parameters, "1.6");
     </script>
   </xsl:template>
+
+    <xsl:template match="library">
+        <xsl:param name="signed"/>
+
+        <xsl:choose>
+            <xsl:when test=".='wtk'">
+                <xsl:variable name="jar">
+                    <xsl:value-of select="'../lib/pivot-wtk-'"/>
+                    <xsl:value-of select="$release"/>
+                    <xsl:if test="$signed='true'">
+                        <xsl:value-of select="'.signed'"/>
+                    </xsl:if>
+                    <xsl:value-of select="'.jar'"/>
+                </xsl:variable>
+                libraries.push('<xsl:value-of select="$jar"/>');
+                <xsl:variable name="jar-terra">
+                    <xsl:value-of select="'../lib/pivot-wtk-'"/>
+                    <xsl:value-of select="$release"/>
+                    <xsl:value-of select="'.terra'"/>
+                    <xsl:if test="$signed='true'">
+                        <xsl:value-of select="'.signed'"/>
+                    </xsl:if>
+                    <xsl:value-of select="'.jar'"/>
+                </xsl:variable>
+                libraries.push('<xsl:value-of select="$jar-terra"/>');
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:variable name="jar">
+                    <xsl:value-of select="'../lib/pivot-'"/>
+                    <xsl:value-of select="."/>
+                    <xsl:value-of select="'-'"/>
+                    <xsl:value-of select="$release"/>
+                    <xsl:if test="$signed='true'">
+                        <xsl:value-of select="'.signed'"/>
+                    </xsl:if>
+                    <xsl:value-of select="'.jar'"/>
+                </xsl:variable>
+                libraries.push('<xsl:value-of select="$jar"/>');
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
 </xsl:stylesheet>
