@@ -27,7 +27,7 @@ limitations under the License.
         <xslt basedir="src"
             destdir="${folder.bin}"
             extension=".html"
-            style="etc/index.xsl"
+            style="xsl/index.xsl"
             includes="index.xml">
             <param name="release" expression="${version}"/>
         </xslt>
@@ -36,7 +36,7 @@ limitations under the License.
         <xslt basedir="src"
             destdir="${folder.bin}"
             extension=".html"
-            style="etc/template.xsl"
+            style="xsl/template.xsl"
             includes="**/*.xml"
             excludes="index.xml">
             <param name="release" expression="${version}"/>
@@ -46,7 +46,7 @@ limitations under the License.
         <xslt basedir="demos"
             destdir="${folder.bin}/${version}/demos"
             extension=".html"
-            style="etc/demo.xsl"
+            style="xsl/demo.xsl"
             includes="**/*.xml"
             excludes="index.xml">
             <param name="release" expression="${version}"/>
