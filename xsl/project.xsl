@@ -31,8 +31,8 @@ limitations under the License.
 
   <!-- Defined variables (not overrideable) -->
   <xsl:variable name="project" select="document('project.xml')/project"/>
-  <xsl:variable name="group">
-    <xsl:value-of select="//document/@group"/>
+  <xsl:variable name="item-group">
+    <xsl:value-of select="//document/@item-group"/>
   </xsl:variable>
 
   <!-- Process an entire document into an HTML page -->
@@ -92,7 +92,7 @@ limitations under the License.
 
               <xsl:comment>MAIN NAVIGATION</xsl:comment>
               <ul class="navi">
-                <xsl:apply-templates select="$project/global/item"/>
+                <xsl:apply-templates select="$project/global-items/item"/>
               </ul>
             </div>
 
@@ -106,7 +106,7 @@ limitations under the License.
 
             <div class="footerLinks">
               <ul class="footerMenuGr">
-                <xsl:apply-templates select="$project/groups/group"/>
+                <xsl:apply-templates select="$project/item-groups/item-group"/>
               </ul>
             </div>
           </div>
@@ -120,11 +120,11 @@ limitations under the License.
   </xsl:template>
 
   <!-- Process an item group -->
-  <xsl:template match="group">
+  <xsl:template match="item-group">
     <li>
       <strong><xsl:value-of select="@name"/></strong>
       <ul>
-        <xsl:apply-templates select="item[not(@footer='no')]"/>
+        <xsl:apply-templates select="item[not(@footer='false')]"/>
       </ul>
     </li>
   </xsl:template>

@@ -1,38 +1,29 @@
 The Apache Pivot Website Instructions
 ---------------------------------------
 
-***NOTE***
-DO NOT EDIT THE .html files in the site-publish directory.
-Please follow the directions below for updating the website.
-***NOTE***
-
 The Pivot web site is based on .xml files which are transformed
 into .html files using XSLT and Ant.
 
-In order to make modifications to the Pivot web site, you need to first check out
-the Pivot site from SVN. To check out the Pivot site into a sub-directory
-called pivot-site in the current directory:
+NOTE: In order to build, the site requires symbolic links to be set up that point to the demos and
+tutorials 'www' folders. If you are on a platform that supports symbollic links, these links will be
+created for you when you check out the Pivot site from SVN; by default, they will be:
 
-svn checkout https://svn.apache.org/repos/asf/incubator/pivot/site/trunk pivot-site
+  demos -> ../../trunk/demos/www
+  tutorials -> ../../trunk/tutorials/www
 
-Once you have the site checked out locally, cd into your
-pivot-site directory and execute:
+If these default links do not match your local folder structure, then you should update the links
+to point to the correct folders:
 
-> ant
+  // Current folder is [site-trunk]
+  $ ln -s [pivot-trunk]/demos/www demos
+  $ ln -s [pivot-trunk]/tutorials/www tutorials
 
-This will build the documentation into the site-publish/ directory. The output
-will show you which files got re-generated.
+Once you have the site checked out locally and the symbolic links set up, cd into your site trunk
+directory and execute:
 
-If you would like to make modifications to the web site documents,
-you simply need to edit the files in the site-author/ directory.
+> ant clean build
 
-The files in site-author/stylesheets are the global files for the site. If you make a
-modification to project.xml, it will affect the left side navigation for the
-web site, and all of your .html files will be re-generated.
+This will build the site into the ant-bin/ directory.
 
-Once you have built your documentation and confirmed that your changes are
-ok, you can check your .xml and your .html files back into SVN.
-
-Then, copy the contents of the site-publish directory to
-people.apache.org:/www/incubator.apache.org/pivot/ to have the changes reflected
-on the Pivot web site.
+Note that the generated pages do not get checked into SVN. To deploy updated pages to the Pivot web
+site, you should scp the pages to people.apache.org:/www/pivot.apache.org/.

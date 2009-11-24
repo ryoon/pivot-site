@@ -25,7 +25,7 @@ limitations under the License.
 
       <xsl:comment>GROUP NAVIGATION</xsl:comment>
       <ul class="naviLeft">
-        <xsl:apply-templates select="$project/groups/group[@id=$group]/item"/>
+        <xsl:apply-templates select="$project/item-groups/item-group[@id=$item-group]/item"/>
       </ul>
 
       <xsl:comment>CONTENT</xsl:comment>

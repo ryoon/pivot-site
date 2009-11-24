@@ -19,47 +19,53 @@ limitations under the License.
 <project href="http://pivot.apache.org/">
     <title>Apache Pivot</title>
 
-    <global>
+    <!-- The global items appear in the main navigation. -->
+    <global-items>
         <item name="Demos" href="~release/demos/"/>
         <item name="Download" href="~download"/>
         <item name="Documentation" href="documentation.html"/>
         <item name="Get Involved" href="get-involved.html"/>
         <item name="About" href="about.html"/>
-    </global>
+    </global-items>
 
-    <groups>
-        <group id="demos" name="Demos">
+    <!--
+    The item groups show up in the footer navigation. The items belonging to the same group as the
+    current page will also show up in the left navigation (with the exception of demos, which
+    reference demos/index.xml.
+    -->
+    <item-groups>
+        <item-group id="demos" name="Demos">
             <item name="Kitchen Sink" href="~release/demos/kitchen-sink.html"/>
             <item name="Charting" href="http://ixnay.biz/charts.html"/>
             <item name="Component Explorer" href="~release/tutorials/component-explorer.html"/>
             <item name="More Demos" href="~release/demos/"/>
-        </group>
+        </item-group>
 
-        <group id="documentation" name="Documentation">
+        <item-group id="documentation" name="Documentation">
             <item name="Getting Started" href="getting-started.html"/>
             <item name="Tutorial" href="~release/tutorials/"/>
             <item name="FAQ" href="~wiki/frequently-asked-questions-faq.html"/>
             <item name="Javadoc (1.4)" href="~release/docs/api/"/>
-        </group>
+        </item-group>
 
-        <group id="get-involved" name="Get Involved">
+        <item-group id="get-involved" name="Get Involved">
             <item name="SVN Repositories" href="svn.html"/>
             <item name="Mailing Lists" href="lists.html"/>
             <item name="Bug Database" href="~jira/"/>
             <item name="Wiki" href="~wiki/"/>
-        </group>
+        </item-group>
 
-        <group id="related" name="Related">
+        <item-group id="related" name="Related">
             <item name="JFreeChart Provider" href="http://code.google.com/p/pivot-jfree/"/>
-        </group>
+        </item-group>
 
-        <group id="about" name="About">
+        <item-group id="about" name="About">
             <item name="Who We Are" href="who-we-are.html"/>
             <item name="Contact" href="contact.html"/>
             <item name="News" href="news.html"/>
             <item name="Legal/License" href="legal.html"/>
-            <item name="Sponshorship" href="~asf/foundation/sponsorship.html" footer="no"/>
-            <item name="Thanks" href="~asf/foundation/thanks.html" footer="no"/>
-        </group>
-    </groups>
+            <item name="Sponshorship" href="~asf/foundation/sponsorship.html" footer="false"/>
+            <item name="Thanks" href="~asf/foundation/thanks.html" footer="false"/>
+        </item-group>
+    </item-groups>
 </project>
