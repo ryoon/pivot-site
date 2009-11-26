@@ -17,49 +17,60 @@ limitations under the License.
 -->
 
 <project name="pivot-site" default="build" basedir=".">
-    <!-- Properties that affect the directories that are created as part of the build -->
+    <fail unless="folder.trunk">
+        <![CDATA[Usage: ant -Dfolder.trunk=<path-to-pivot-trunk> [target]]]>
+    </fail>
+
     <property name="folder.bin" value="ant-bin"/>
 
-    <property file="build.properties"/>
+    <!--
+    Import the main build file. This lets us know the current Pivot version and build the JAR files
+    needed to run the demos and tutorials.
+    -->
+    <import file="${folder.trunk}/build.xml"/>
 
     <target name="build" description="Builds the site">
-        <!-- Transform the index page using index.xsl -->
-        <xslt basedir="src"
+        <!-- Transform the index page -->
+        <xslt basedir="www"
+            includes="index.xml"
             destdir="${folder.bin}"
             extension=".html"
-            style="xsl/index.xsl"
-            includes="index.xml">
+            style="xsl/index.xsl">
             <param name="release" expression="${version}"/>
+            <param name="demos" expression="${folder.trunk}/demos/www"/>
         </xslt>
 
-        <!-- Transform standard pages using template.xsl -->
-        <xslt basedir="src"
+        <!-- Transform the auxilliary pages -->
+        <xslt basedir="www"
+            includes="**/*.xml"
+            excludes="index.xml"
             destdir="${folder.bin}"
             extension=".html"
-            style="xsl/template.xsl"
-            includes="**/*.xml"
-            excludes="index.xml">
+            style="xsl/auxilliary.xsl">
             <param name="release" expression="${version}"/>
+            <param name="demos" expression="${folder.trunk}/demos/www"/>
         </xslt>
 
-        <!-- Transform demos pages using demo.xsl -->
-        <xslt basedir="demos"
-            destdir="${folder.bin}/${version}/demos"
-            extension=".html"
-            style="xsl/demo.xsl"
+        <!-- Transform the demos pages -->
+        <xslt basedir="${folder.trunk}/demos/www"
             includes="**/*.xml"
-            excludes="index.xml">
+            excludes="index.xml"
+            destdir="${folder.bin}/demos"
+            extension=".html"
+            style="xsl/demo.xsl">
             <param name="release" expression="${version}"/>
-            <param name="base" expression="../../"/>
+            <param name="demos" expression="${folder.trunk}/demos/www"/>
+            <param name="base" expression="../"/>
         </xslt>
 
         <!-- Copy static resource files -->
         <copy todir="${folder.bin}">
-            <fileset dir="src" excludes="**/*.xml"/>
+            <fileset dir="www" excludes="**/*.xml"/>
         </copy>
     </target>
 
     <target name="clean">
         <delete dir="${folder.bin}"/>
+        <delete dir="${folder.lib}"/>
     </target>
 </project>

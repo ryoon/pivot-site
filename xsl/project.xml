@@ -35,9 +35,7 @@ limitations under the License.
     -->
     <item-groups>
         <item-group id="demos" name="Demos">
-            <item name="Kitchen Sink" href="~release/demos/kitchen-sink.html"/>
-            <item name="Charting" href="http://ixnay.biz/charts.html"/>
-            <item name="Component Explorer" href="~release/tutorials/component-explorer.html"/>
+            <!-- <demo-item> elements from demos/index.xml will automatically be processed here-->
             <item name="More Demos" href="~release/demos/"/>
         </item-group>
 

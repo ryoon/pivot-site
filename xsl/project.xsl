@@ -25,6 +25,7 @@ limitations under the License.
   <!-- Defined parameters (overrideable) -->
   <xsl:param name="release"/>
   <xsl:param name="base"/>
+  <xsl:param name="demos"/>
   <xsl:param name="wiki" select="'http://cwiki.apache.org/PIVOT'"/>
   <xsl:param name="asf" select="'http://www.apache.org'"/>
   <xsl:param name="jira" select="'http://issues.apache.org/jira/browse/PIVOT'"/>
@@ -121,72 +122,116 @@ limitations under the License.
 
   <!-- Process an item group -->
   <xsl:template match="item-group">
-    <li>
-      <strong><xsl:value-of select="@name"/></strong>
-      <ul>
-        <xsl:apply-templates select="item[not(@footer='false')]"/>
-      </ul>
-    </li>
+      <li>
+          <strong><xsl:value-of select="@name"/></strong>
+          <ul>
+              <xsl:if test="@id='demos'">
+                  <xsl:call-template name="demos-item-group"/>
+              </xsl:if>
+              <xsl:apply-templates select="item[not(@footer='false')]"/>
+          </ul>
+      </li>
+  </xsl:template>
+
+  <xsl:template name="demos-item-group">
+      <xsl:variable name="index" select="document(concat($demos, '/index.xml'))/document"/>
+      <xsl:apply-templates select="$index/body//demo-item"/>
+  </xsl:template>
+
+  <xsl:template match="demo-item[remote]">
+      <xsl:if test="properties/footer">
+          <xsl:variable name="target">
+              <xsl:choose>
+                  <xsl:when test="properties/new-window">
+                      <xsl:value-of select="'demo'"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                      <xsl:value-of select="'_self'"/>
+                  </xsl:otherwise>
+              </xsl:choose>
+          </xsl:variable>
+          <xsl:variable name="href" select="remote/@href"/>
+          <li><a href="{$href}" target="{$target}"><xsl:value-of select="properties/title"/></a></li>
+      </xsl:if>
+  </xsl:template>
+
+  <xsl:template match="demo-item[not(remote)]">
+      <xsl:variable name="id" select="@id"/>
+      <xsl:variable name="demo" select="document(concat($demos, '/', $id, '.xml'))/document"/>
+      <xsl:if test="$demo/properties/footer">
+          <xsl:variable name="href">
+              <xsl:value-of select="concat($base, 'demos/', $id, '.html')"/>
+          </xsl:variable>
+          <xsl:variable name="target">
+              <xsl:choose>
+                  <xsl:when test="$demo/properties/new-window">
+                      <xsl:value-of select="'demo'"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                      <xsl:value-of select="'_self'"/>
+                  </xsl:otherwise>
+              </xsl:choose>
+          </xsl:variable>
+          <li><a href="{$href}" target="{$target}"><xsl:value-of select="$demo/properties/title"/></a></li>
+      </xsl:if>
   </xsl:template>
 
   <!-- Process a navigation item -->
   <xsl:template match="item">
-    <xsl:variable name="class">
-      <xsl:value-of select="@class"/>
-    </xsl:variable>
+      <xsl:variable name="class" select="@class"/>
 
-    <xsl:variable name="href">
+      <xsl:variable name="href">
+          <xsl:choose>
+              <xsl:when test="starts-with(@href, '~wiki')">
+                  <xsl:value-of select="$wiki"/><xsl:value-of select="substring(@href,6)"/>
+              </xsl:when>
+              <xsl:when test="starts-with(@href, '~asf')">
+                  <xsl:value-of select="$asf"/><xsl:value-of select="substring(@href,5)"/>
+              </xsl:when>
+              <xsl:when test="starts-with(@href, '~jira')">
+                  <xsl:value-of select="$jira"/><xsl:value-of select="substring(@href,6)"/>
+              </xsl:when>
+              <xsl:when test="starts-with(@href, '~release')">
+                  <xsl:value-of select="$base"/>
+                  <xsl:value-of select="$release"/>
+                  <xsl:value-of select="substring(@href,9)"/>
+              </xsl:when>
+              <xsl:when test="@href='~download'">
+                  <xsl:value-of select="$base"/>
+                  <xsl:value-of select="'download.cgi#'"/>
+                  <xsl:value-of select="$release"/>
+              </xsl:when>
+              <xsl:otherwise>
+                  <xsl:value-of select="$base"/>
+                  <xsl:value-of select="@href"/>
+              </xsl:otherwise>
+          </xsl:choose>
+      </xsl:variable>
+
       <xsl:choose>
-        <xsl:when test="starts-with(@href, '~wiki')">
-          <xsl:value-of select="$wiki"/><xsl:value-of select="substring(@href,6)"/>
-        </xsl:when>
-        <xsl:when test="starts-with(@href, '~asf')">
-          <xsl:value-of select="$asf"/><xsl:value-of select="substring(@href,5)"/>
-        </xsl:when>
-        <xsl:when test="starts-with(@href, '~jira')">
-          <xsl:value-of select="$jira"/><xsl:value-of select="substring(@href,6)"/>
-        </xsl:when>
-        <xsl:when test="starts-with(@href, '~release')">
-          <xsl:value-of select="$base"/>
-          <xsl:value-of select="$release"/>
-          <xsl:value-of select="substring(@href,9)"/>
-        </xsl:when>
-        <xsl:when test="@href='~download'">
-          <xsl:value-of select="$base"/>
-          <xsl:value-of select="'download.cgi#'"/>
-          <xsl:value-of select="$release"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="$base"/>
-          <xsl:value-of select="@href"/>
-        </xsl:otherwise>
+          <xsl:when test="@caption">
+              <li class="{$class}">
+                  <a href="{$href}">
+                      <strong><xsl:value-of select="@name"/></strong>
+                      <em><xsl:value-of select="@caption"/></em>
+                      <xsl:choose>
+                          <xsl:when test=".">
+                              <p><xsl:apply-templates/></p>
+                          </xsl:when>
+                      </xsl:choose>
+                  </a>
+              </li>
+          </xsl:when>
+          <xsl:otherwise>
+              <li><a href="{$href}"><xsl:value-of select="@name"/></a></li>
+          </xsl:otherwise>
       </xsl:choose>
-    </xsl:variable>
-
-    <xsl:choose>
-        <xsl:when test="@caption">
-          <li class="{$class}">
-            <a href="{$href}">
-              <strong><xsl:value-of select="@name"/></strong>
-              <em><xsl:value-of select="@caption"/></em>
-              <xsl:choose>
-                <xsl:when test=".">
-                  <p><xsl:apply-templates/></p>
-                </xsl:when>
-              </xsl:choose>
-            </a>
-          </li>
-        </xsl:when>
-        <xsl:otherwise>
-          <li><a href="{$href}"><xsl:value-of select="@name"/></a></li>
-        </xsl:otherwise>
-    </xsl:choose>
   </xsl:template>
 
   <!-- Process everything else by just passing it through -->
   <xsl:template match="*|@*">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|*|text()"/>
-    </xsl:copy>
+      <xsl:copy>
+          <xsl:apply-templates select="@*|*|text()"/>
+      </xsl:copy>
   </xsl:template>
 </xsl:stylesheet>
