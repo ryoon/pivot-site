@@ -16,7 +16,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<document main="true">
+<document>
+    <properties>
+        <home>true</home>
+    </properties>
+
   <body>
     <div id="stage">
       <p>

@@ -1,12 +1,11 @@
 The Apache Pivot Website Instructions
 ---------------------------------------
 
-The Pivot web site is based on .xml files which are transformed
-into .html files using XSLT and Ant.
+The Pivot web site is based on XML files which are transformed into HTML files using XSLT and Ant.
 
-NOTE: In order to build the site, Ant needs to know the location of the folder on your local file
-system that represents http://svn.apache.org/repos/asf/pivot/trunk/. This location is passed to the
-Ant build using the 'folder.trunk' parameter. The build will not run without this parameter being
+In order to build the site, Ant needs to know the location of the folder on your local file system
+that represents http://svn.apache.org/repos/asf/pivot/trunk/. This location is passed to the Ant
+build using the 'folder.trunk' parameter. The build will not run without this parameter being
 specified.
 
 An example command to build the site, which will build the site into the ant-bin/ folder, is as

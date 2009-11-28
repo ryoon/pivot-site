@@ -17,31 +17,30 @@ limitations under the License.
 -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-  <xsl:include href="project.xsl"/>
+    <xsl:import href="project.xsl"/>
 
-  <xsl:template match="body">
-    <div id="contentBase" class="group">
-      <h1><xsl:value-of select="//document/properties/title"/></h1>
+    <!-- Override <body> to translate to the auxilliary body HTML -->
+    <xsl:template match="body">
+        <div id="contentBase" class="group">
+            <h1><xsl:value-of select="//document/properties/title"/></h1>
+            <ul class="naviLeft">
+                <xsl:call-template name="group-navigation"/>
+            </ul>
+            <div class="content">
+                <xsl:apply-templates/>
+            </div>
+        </div>
+    </xsl:template>
 
-      <xsl:comment>GROUP NAVIGATION</xsl:comment>
-      <ul class="naviLeft">
+    <!-- Left side-bar group navigation -->
+    <xsl:template name="group-navigation">
         <xsl:apply-templates select="$project/item-groups/item-group[@id=$item-group]/item"/>
-      </ul>
+    </xsl:template>
 
-      <xsl:comment>CONTENT</xsl:comment>
-      <div class="content">
-        <!-- TODO Revisit once Thien updates content styles -->
-        <xsl:apply-templates select="section"/>
-      </div>
-    </div>
-  </xsl:template>
-
-  <xsl:template match="section">
-    <xsl:variable name="name">
-      <xsl:value-of select="@name"/>
-    </xsl:variable>
-    <a name="{$name}"><h2><xsl:value-of select="@name"/></h2></a>
-
-    <xsl:apply-templates/>
-  </xsl:template>
+    <!-- <section> translates to an anchor, a title, and nested content -->
+    <xsl:template match="section">
+        <xsl:variable name="name" select="@name"/>
+        <a name="{$name}"><h2><xsl:value-of select="@name"/></h2></a>
+        <xsl:apply-templates/>
+    </xsl:template>
 </xsl:stylesheet>

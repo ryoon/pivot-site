@@ -17,62 +17,53 @@ limitations under the License.
 -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-  <xsl:include href="project.xsl"/>
+    <xsl:import href="auxilliary.xsl"/>
 
-  <xsl:template match="body">
-    <div id="contentBase" class="group">
-      <h1><xsl:value-of select="//document/properties/title"/></h1>
+    <!-- Override group navigation to pull from the demos index -->
+    <xsl:template name="group-navigation">
+        <xsl:apply-templates select="$demos-index/body//application-item"/>
+    </xsl:template>
 
-      <xsl:comment>GROUP NAVIGATION</xsl:comment>
-      <ul class="naviLeft">
-        <li><a href="getting-started.html">Getting Started</a></li>
-      </ul>
+    <!-- <application> translates to Javascript that creates an applet -->
+    <xsl:template match="application">
+        <script type="text/javascript" src="http://java.com/js/deployJava.js"></script>
+        <script type="text/javascript">
+            var attributes = {
+                code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
+                width:"<xsl:value-of select="@width"/>",
+                height:"<xsl:value-of select="@height"/>",
+                style:"border:solid 1px #999999"
+            };
 
-      <xsl:comment>CONTENT</xsl:comment>
-      <div class="content">
-        <xsl:apply-templates/>
-      </div>
-    </div>
-  </xsl:template>
+            <xsl:for-each select="attributes/*">
+                attributes.<xsl:value-of select="name(.)"/> = '<xsl:value-of select="."/>';
+            </xsl:for-each>
 
-  <xsl:template match="demo">
-    <script type="text/javascript" src="http://java.com/js/deployJava.js"></script>
-    <script type="text/javascript">
-      var attributes = {
-          code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
-          width:"<xsl:value-of select="@width"/>",
-          height:"<xsl:value-of select="@height"/>",
-          style:"border:solid 1px #999999"
-      };
+            var libraries = [];
+            <xsl:apply-templates select="libraries/library">
+                <xsl:with-param name="signed" select="@signed"/>
+            </xsl:apply-templates>
+            attributes.archive = libraries.join(",");
 
-      <xsl:for-each select="attributes/*">
-          attributes.<xsl:value-of select="name(.)"/> = '<xsl:value-of select="."/>';
-      </xsl:for-each>
+            var parameters = {
+                codebase_lookup:false,
+                java_arguments:"-Dsun.awt.noerasebackground=true -Dsun.awt.erasebackgroundonresize=true",
+                application_class_name:"<xsl:value-of select="@class"/>"
+            };
 
-      var libraries = [];
-      <xsl:apply-templates select="libraries/library">
-          <xsl:with-param name="signed" select="@signed"/>
-      </xsl:apply-templates>
-      attributes.archive = libraries.join(",");
+            <xsl:if test="startup-properties">
+                var startupProperties = [];
+                <xsl:for-each select="startup-properties/*">
+                    startupProperties.push("<xsl:value-of select="name(.)"/>=<xsl:value-of select="."/>");
+                </xsl:for-each>
+                parameters.startup_properties = startupProperties.join("&amp;");
+            </xsl:if>
 
-      var parameters = {
-          codebase_lookup:false,
-          java_arguments:"-Dsun.awt.noerasebackground=true -Dsun.awt.erasebackgroundonresize=true",
-          application_class_name:"<xsl:value-of select="@class"/>"
-      };
+            deployJava.runApplet(attributes, parameters, "1.6");
+        </script>
+    </xsl:template>
 
-      <xsl:if test="startup-properties">
-          var startupProperties = [];
-          <xsl:for-each select="startup-properties/*">
-              startupProperties.push("<xsl:value-of select="name(.)"/>=<xsl:value-of select="."/>");
-          </xsl:for-each>
-          parameters.startup_properties = startupProperties.join("&amp;");
-      </xsl:if>
-
-      deployJava.runApplet(attributes, parameters, "1.6");
-    </script>
-  </xsl:template>
-
+    <!-- <library> translates to Javascript that adds necessary jars to a Javascript array -->
     <xsl:template match="library">
         <xsl:param name="signed"/>
 

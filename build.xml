@@ -22,12 +22,7 @@ limitations under the License.
     </fail>
 
     <property name="folder.bin" value="ant-bin"/>
-
-    <!--
-    Import the main build file. This lets us know the current Pivot version and build the JAR files
-    needed to run the demos and tutorials.
-    -->
-    <import file="${folder.trunk}/build.xml"/>
+    <property file="${folder.trunk}/build.properties"/>
 
     <target name="build" description="Builds the site">
         <!-- Transform the index page -->
@@ -69,8 +64,7 @@ limitations under the License.
         </copy>
     </target>
 
-    <target name="clean">
+    <target name="clean" description="Removes build artifacts">
         <delete dir="${folder.bin}"/>
-        <delete dir="${folder.lib}"/>
     </target>
 </project>

@@ -18,30 +18,29 @@ limitations under the License.
 
 <project href="http://pivot.apache.org/">
     <title>Apache Pivot</title>
+    <tagline>Rich Internet Applications (RIA) in Java (tm)</tagline>
+    <copyright>
+        <message>Copyright (c) 1999-2010</message>
+        <message>The Apache Software Foundation.</message>
+    </copyright>
 
-    <!-- The global items appear in the main navigation. -->
     <global-items>
-        <item name="Demos" href="~release/demos/"/>
+        <item name="Demos" href="demos/"/>
         <item name="Download" href="~download"/>
         <item name="Documentation" href="documentation.html"/>
         <item name="Get Involved" href="get-involved.html"/>
         <item name="About" href="about.html"/>
     </global-items>
 
-    <!--
-    The item groups show up in the footer navigation. The items belonging to the same group as the
-    current page will also show up in the left navigation (with the exception of demos, which
-    reference demos/index.xml.
-    -->
     <item-groups>
         <item-group id="demos" name="Demos">
-            <!-- <demo-item> elements from demos/index.xml will automatically be processed here-->
-            <item name="More Demos" href="~release/demos/"/>
+            <!-- <application-item> elements from demos/index.xml will be processed here-->
+            <item name="More Demos" href="demos/"/>
         </item-group>
 
         <item-group id="documentation" name="Documentation">
             <item name="Getting Started" href="getting-started.html"/>
-            <item name="Tutorial" href="~release/tutorials/"/>
+            <item name="Tutorial" href="tutorials/"/>
             <item name="FAQ" href="~wiki/frequently-asked-questions-faq.html"/>
             <item name="Javadoc (1.4)" href="~release/docs/api/"/>
         </item-group>
