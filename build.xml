@@ -46,6 +46,17 @@ limitations under the License.
             <param name="demos" expression="${folder.trunk}/demos/www"/>
         </xslt>
 
+        <!-- Transform the demos index -->
+        <xslt basedir="${folder.trunk}/demos/www"
+            includes="index.xml"
+            destdir="${folder.bin}/demos"
+            extension=".html"
+            style="xsl/demo-index.xsl">
+            <param name="release" expression="${version}"/>
+            <param name="demos" expression="${folder.trunk}/demos/www"/>
+            <param name="base" expression="../"/>
+        </xslt>
+
         <!-- Transform the demos pages -->
         <xslt basedir="${folder.trunk}/demos/www"
             includes="**/*.xml"

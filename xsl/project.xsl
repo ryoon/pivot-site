@@ -210,12 +210,8 @@ limitations under the License.
         </xsl:variable>
         <xsl:variable name="target">
             <xsl:choose>
-                <xsl:when test="boolean(@new-window)">
-                    <xsl:value-of select="'_new'"/>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:value-of select="'_self'"/>
-                </xsl:otherwise>
+                <xsl:when test="boolean(@new-window)">_new</xsl:when>
+                <xsl:otherwise>_self</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
         <li><a href="{$href}" target="{$target}"><xsl:value-of select="$demo/properties/title"/></a></li>
@@ -229,12 +225,8 @@ limitations under the License.
     <xsl:template match="application-item[remote]">
         <xsl:variable name="target">
             <xsl:choose>
-                <xsl:when test="boolean(@new-window)">
-                    <xsl:value-of select="'_new'"/>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:value-of select="'_self'"/>
-                </xsl:otherwise>
+                <xsl:when test="boolean(@new-window)">_new</xsl:when>
+                <xsl:otherwise>_self</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
         <xsl:variable name="href" select="remote/@href"/>

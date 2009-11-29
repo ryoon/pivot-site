@@ -65,4 +65,12 @@ limitations under the License.
             <item name="Thanks" href="~asf/foundation/thanks.html" footer="false"/>
         </item-group>
     </item-groups>
+
+    <demo-screenshots>
+        <screenshot id="kitchen-sink">images/demos_feat_kitchen.jpg</screenshot>
+        <screenshot id="stock-tracker">images/demos_feat_stock.jpg</screenshot>
+        <screenshot id="itunes-search">images/demos_feat_itunes.jpg</screenshot>
+        <screenshot id="charting">images/demos_feat_chart.jpg</screenshot>
+        <screenshot id="decorators">images/demos_feat_deco.jpg</screenshot>
+    </demo-screenshots>
 </project>

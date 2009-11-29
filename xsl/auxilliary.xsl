@@ -27,7 +27,7 @@ limitations under the License.
                 <xsl:call-template name="group-navigation"/>
             </ul>
             <div class="content">
-                <xsl:apply-templates/>
+                <xsl:call-template name="content"/>
             </div>
         </div>
     </xsl:template>
@@ -35,6 +35,11 @@ limitations under the License.
     <!-- Left side-bar group navigation -->
     <xsl:template name="group-navigation">
         <xsl:apply-templates select="$project/item-groups/item-group[@id=$item-group]/item"/>
+    </xsl:template>
+
+    <!-- Auxilliary content area -->
+    <xsl:template name="content">
+        <xsl:apply-templates/>
     </xsl:template>
 
     <!-- <section> translates to an anchor, a title, and nested content -->
