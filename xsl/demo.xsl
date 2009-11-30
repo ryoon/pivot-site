@@ -19,6 +19,8 @@ limitations under the License.
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:import href="auxilliary.xsl"/>
 
+    <xsl:param name="root"/>
+
     <!-- Override document template to check for full-screen demos -->
     <xsl:template match="document">
         <xsl:choose>
@@ -58,6 +60,11 @@ limitations under the License.
         <xsl:apply-templates select="$demos-index/body//application-item"/>
     </xsl:template>
 
+    <!-- <root> gets resolved to the 'root' XSL parameter -->
+    <xsl:template match="root">
+        <xsl:value-of select="$root"/>
+    </xsl:template>
+
     <!-- <application> translates to Javascript that creates an applet -->
     <xsl:template match="application">
         <script type="text/javascript" src="http://java.com/js/deployJava.js"></script>
@@ -87,7 +94,7 @@ limitations under the License.
             <xsl:if test="startup-properties">
                 var startupProperties = [];
                 <xsl:for-each select="startup-properties/*">
-                    startupProperties.push("<xsl:value-of select="name(.)"/>=<xsl:value-of select="."/>");
+                    startupProperties.push("<xsl:value-of select="name(.)"/>=<xsl:apply-templates/>");
                 </xsl:for-each>
                 parameters.startup_properties = startupProperties.join("&amp;");
             </xsl:if>

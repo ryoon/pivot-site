@@ -67,6 +67,7 @@ limitations under the License.
             <param name="release" expression="${version}"/>
             <param name="demos" expression="${folder.trunk}/demos/www"/>
             <param name="base" expression="../"/>
+            <param name="root" expression=""/>
         </xslt>
 
         <!-- Copy static resource files -->
