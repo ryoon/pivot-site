@@ -31,8 +31,8 @@ limitations under the License.
       <ul class="stageBtn">
         <item class="stageDemos" name="Demos" href="demos/"
             caption="What you can do with Pivot"/>
-        <item class="stageDl" name="Download" href="~download"
-            caption="Get the current release (1.4)"/>
+        <item class="stageDl" name="Download" href="download.cgi#{$release}"
+            caption="Get the current release ({$release})"/>
       </ul>
     </div>
 
@@ -54,9 +54,9 @@ limitations under the License.
         <h2>Pivot Resources</h2>
         <ul>
           <item name="Getting Started" href="getting-started.html"/>
-          <item name="Platform Overview" href="~release/tutorials/platform_overview.html"/>
-          <item name="WTKX Primer" href="~release/tutorials/wtkx_primer.html"/>
-          <item name="Component &amp; Container" href="~release/tutorials/component_and_container.html"/>
+          <item name="Platform Overview" href="tutorials/platform_overview.html"/>
+          <item name="WTKX Primer" href="tutorials/wtkx_primer.html"/>
+          <item name="Component &amp; Container" href="tutorials/component_and_container.html"/>
           <item name="Sample Application Walkthrough" href="http://www.ibm.com/developerworks/xml/tutorials/x-pivottut/index.html"/>
           <item name="Drag and Drop" href="#"/>
           <item name="Web Queries" href="#"/>
@@ -68,7 +68,7 @@ limitations under the License.
       <div class="homeCol3">
         <h2>Latest Updates</h2>
         <ul class="newsItems">
-          <item href="~download" name="Pivot 1.4 Released" caption="January 12th, 2010">
+          <item href="download.cgi#{$release}" name="Pivot 1.4 Released" caption="January 12th, 2010">
             The latest version of Pivot is now available for download and testing.
           </item>
           <item href="#" name="Pivot Has Graduated!" caption="December 16th, 2009">

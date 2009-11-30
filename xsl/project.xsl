@@ -28,6 +28,10 @@ limitations under the License.
     <xsl:param name="demos"/>
 
     <!-- Variables (not overrideable) -->
+    <xsl:variable name="release-token">{$release}</xsl:variable>
+    <xsl:variable name="wiki-token">{$wiki}</xsl:variable>
+    <xsl:variable name="asf-token">{$asf}</xsl:variable>
+    <xsl:variable name="jira-token">{$jira}</xsl:variable>
     <xsl:variable name="wiki">http://cwiki.apache.org/PIVOT</xsl:variable>
     <xsl:variable name="asf">http://www.apache.org</xsl:variable>
     <xsl:variable name="jira">http://issues.apache.org/jira/browse/PIVOT</xsl:variable>
@@ -131,7 +135,11 @@ limitations under the License.
     <xsl:template name="footer-navigation">
         <xsl:for-each select="$project/item-groups/item-group">
             <li>
-                <strong><xsl:value-of select="@name"/></strong>
+                <strong>
+                    <xsl:apply-templates select="@name">
+                        <xsl:with-param name="value-only">true</xsl:with-param>
+                    </xsl:apply-templates>
+                </strong>
                 <ul>
                     <xsl:choose>
                         <xsl:when test="@id='demos'">
@@ -154,35 +162,23 @@ limitations under the License.
         <xsl:apply-templates/>
     </xsl:template>
 
+    <!-- <release> gets translated to the current release (text) -->
+    <xsl:template match="release">
+        <xsl:value-of select="$release"/>
+    </xsl:template>
+
     <!-- <item> gets translated to a decorated hyperlink -->
     <xsl:template match="item">
         <xsl:variable name="href">
             <xsl:choose>
-                <xsl:when test="starts-with(@href, '~wiki')">
-                    <xsl:value-of select="$wiki"/><xsl:value-of select="substring(@href,6)"/>
-                </xsl:when>
-                <xsl:when test="starts-with(@href, '~asf')">
-                    <xsl:value-of select="$asf"/><xsl:value-of select="substring(@href,5)"/>
-                </xsl:when>
-                <xsl:when test="starts-with(@href, '~jira')">
-                    <xsl:value-of select="$jira"/><xsl:value-of select="substring(@href,6)"/>
-                </xsl:when>
-                <xsl:when test="starts-with(@href, '~release')">
-                    <xsl:value-of select="$base"/>
-                    <xsl:value-of select="$release"/>
-                    <xsl:value-of select="substring(@href,9)"/>
-                </xsl:when>
-                <xsl:when test="@href='~download'">
-                    <xsl:value-of select="$base"/>
-                    <xsl:value-of select="'download.cgi#'"/>
-                    <xsl:value-of select="$release"/>
-                </xsl:when>
                 <xsl:when test="starts-with(@href, 'http://')">
                     <xsl:value-of select="@href"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of select="$base"/>
-                    <xsl:value-of select="@href"/>
+                    <xsl:apply-templates select="@href">
+                        <xsl:with-param name="value-only">true</xsl:with-param>
+                    </xsl:apply-templates>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
@@ -191,8 +187,16 @@ limitations under the License.
             <xsl:when test="@caption">
                 <li class="{@class}">
                     <a href="{$href}">
-                        <strong><xsl:value-of select="@name"/></strong>
-                        <em><xsl:value-of select="@caption"/></em>
+                        <strong>
+                            <xsl:apply-templates select="@name">
+                                <xsl:with-param name="value-only">true</xsl:with-param>
+                            </xsl:apply-templates>
+                        </strong>
+                        <em>
+                            <xsl:apply-templates select="@caption">
+                                <xsl:with-param name="value-only">true</xsl:with-param>
+                            </xsl:apply-templates>
+                        </em>
                         <xsl:choose>
                             <xsl:when test=".">
                                 <p><xsl:apply-templates/></p>
@@ -202,7 +206,11 @@ limitations under the License.
                 </li>
             </xsl:when>
             <xsl:otherwise>
-                <li><a href="{$href}"><xsl:value-of select="@name"/></a></li>
+                <li><a href="{$href}">
+                    <xsl:apply-templates select="@name">
+                        <xsl:with-param name="value-only">true</xsl:with-param>
+                    </xsl:apply-templates>
+                </a></li>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -247,10 +255,46 @@ limitations under the License.
 
     <!-- Perform variable resolution on all attributes -->
     <xsl:template match="@*">
-        <xsl:attribute name="{name(.)}">
-            <!-- TODO Resolve variables -->
-            <xsl:value-of select="."/>
-        </xsl:attribute>
+        <xsl:param name="value-only" select="false()"/>
+
+        <xsl:variable name="value">
+            <xsl:choose>
+                <xsl:when test="contains(., $release-token)">
+                    <xsl:value-of select="substring-before(., $release-token)"/>
+                    <xsl:value-of select="$release"/>
+                    <xsl:value-of select="substring-after(., $release-token)"/>
+                </xsl:when>
+                <xsl:when test="contains(., $wiki-token)">
+                    <xsl:value-of select="substring-before(., $wiki-token)"/>
+                    <xsl:value-of select="$wiki"/>
+                    <xsl:value-of select="substring-after(., $wiki-token)"/>
+                </xsl:when>
+                <xsl:when test="contains(., $asf-token)">
+                    <xsl:value-of select="substring-before(., $asf-token)"/>
+                    <xsl:value-of select="$asf"/>
+                    <xsl:value-of select="substring-after(., $asf-token)"/>
+                </xsl:when>
+                <xsl:when test="contains(., $jira-token)">
+                    <xsl:value-of select="substring-before(., $jira-token)"/>
+                    <xsl:value-of select="$jira"/>
+                    <xsl:value-of select="substring-after(., $jira-token)"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="."/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+
+        <xsl:choose>
+            <xsl:when test="boolean($value-only)">
+                <xsl:value-of select="$value"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:attribute name="{name(.)}">
+                    <xsl:value-of select="$value"/>
+                </xsl:attribute>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
     <!-- Process everything else by just passing it through (including comments) -->
