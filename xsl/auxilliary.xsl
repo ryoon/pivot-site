@@ -45,8 +45,18 @@ limitations under the License.
     <!-- <section> translates to an anchor, a title, and nested content -->
     <xsl:template match="section">
         <div class="section">
-            <a name="{@name}"><h2><xsl:value-of select="@name"/></h2></a>
+            <xsl:variable name="name">
+                <xsl:apply-templates select="@name">
+                    <xsl:with-param name="value-only">true</xsl:with-param>
+                </xsl:apply-templates>
+            </xsl:variable>
+            <a name="{$name}"><h2><xsl:value-of select="$name"/></h2></a>
             <xsl:apply-templates/>
         </div>
+    </xsl:template>
+
+    <xsl:template match="subsection">
+        <!-- TODO -->
+        <xsl:apply-templates/>
     </xsl:template>
 </xsl:stylesheet>

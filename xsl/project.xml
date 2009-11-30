@@ -38,6 +38,12 @@ limitations under the License.
             <item name="More Demos" href="demos/"/>
         </item-group>
 
+        <item-group id="download" name="Download" footer="false">
+            <item name="Downloads" href="download.cgi#{$release}"/>
+            <item name="KEYS" href="{$asf}/dist/pivot/KEYS"/>
+            <item name="Archived Releases" href="http://archive.apache.org/dist/pivot/"/>
+        </item-group>
+
         <item-group id="documentation" name="Documentation">
             <item name="Getting Started" href="getting-started.html"/>
             <item name="Tutorial" href="tutorials/"/>

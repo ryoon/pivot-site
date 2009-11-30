@@ -133,7 +133,7 @@ limitations under the License.
 
     <!-- The footer site navigation -->
     <xsl:template name="footer-navigation">
-        <xsl:for-each select="$project/item-groups/item-group">
+        <xsl:for-each select="$project/item-groups/item-group[not(@footer='false')]">
             <li>
                 <strong>
                     <xsl:apply-templates select="@name">
