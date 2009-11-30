@@ -17,14 +17,41 @@ limitations under the License.
 -->
 
 <document item-group="documentation">
+    <properties>
+        <title>Getting Started</title>
+    </properties>
 
-  <properties>
-    <title>Getting Started</title>
-  </properties>
-
-  <body>
-
-    TODO
-
-  </body>
+    <body>
+        <section name="Take the Tutorial">
+            <p>
+                The <a href="tutorials/">Pivot tutorial</a> is a great place to get started. It
+                covers the overall architecture of the platform, walks through a few requisite
+                "Hello World" examples, and then proceeds to cover every Pivot component using real
+                examples.
+            </p>
+        </section>
+        <section name="Download Pivot">
+            <p>
+                To follow along with the examples in the Pivot tutorial, you'll need a local copy
+                of the Pivot <release/> release. The binary and source distributions are available
+                for <a href="download.cgi#{$release}">download</a> through one of Apache's mirrors.
+            </p>
+        </section>
+        <section name="Join the User Mailing List">
+            <p>
+                The best place to get your questions answered is the <a href="lists.html#user">
+                user mailing list</a>. Many people on the mailing lists have gone through the same
+                learning curve and are ready and willing to help.
+            </p>
+        </section>
+        <section name="Learn About WTKX">
+            <p>
+                One of the benefits of using Pivot is the optional use of the GUI markup language,
+                WTKX. Its use can dramatically speed up development of visual user interfaces. To
+                develop a firm understanding of the relationship between WTKX and the Java code
+                that it represents, we recommend reading the <a href="tutorials/wtkx-primer.html">
+                WTKX primer</a>.
+            </p>
+        </section>
+    </body>
 </document>

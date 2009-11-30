@@ -43,7 +43,7 @@ limitations under the License.
             </p>
             <table>
                 <tr>
-                    <th>Directory</th>
+                    <th style="padding-right:15px;">Directory</th>
                     <th>Contents</th>
                 </tr>
                 <tr>

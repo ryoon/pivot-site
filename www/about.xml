@@ -17,14 +17,46 @@ limitations under the License.
 -->
 
 <document item-group="about">
+    <properties>
+        <title>About</title>
+    </properties>
 
-  <properties>
-    <title>About</title>
-  </properties>
-
-  <body>
-
-    TODO
-
-  </body>
+    <body>
+        <section name="What is Apache Pivot?">
+            <p>
+                Apache Pivot is an open-source platform for building rich internet applications in
+                Java. It combines the enhanced productivity and usability features of a modern RIA
+                toolkit with the robustness of the Java platform. Pivot applications are written
+                using a combination of Java and XML and can be run either as an applet or as a
+                standalone, optionally offline, desktop application.
+            </p>
+            <p>
+                Like other modern development platforms, Pivot provides a comprehensive set of
+                foundation classes that together comprise a "framework". These classes form the
+                building blocks upon which more complex and sophisticated applications can be built.
+            </p>
+        </section>
+        <section name="Who is Pivot's target audience?">
+            <p>
+                Pivot was designed to be familiar to web developers who have experience building
+                AJAX applications using HTML, CSS, and JavaScript. However, it provides a much
+                richer set of standard widgets than HTML, and allows developers to create
+                sophisticated user experiences much more quickly and easily. Pivot will also seem
+                familiar to Swing developers, as both Swing and Pivot are based on Java2D and
+                employ a model-view-controller (MVC) architecture to separate component data from
+                presentation. However, Pivot includes additional features that make building modern
+                GUI applications much easier, including declarative UI, data binding, effects and
+                transitions, and web services integration.
+            </p>
+        </section>
+        <section name="Pivot's History">
+            <p>
+                Pivot began as an R&amp;D effort at VMware in 2007 and was released as an
+                open-source project in June 2008 under the Apache 2.0 license. Pivot joined the
+                Apache Incubator in January 2009 and graduated as a top-level Apache project in
+                December 2009. It is currently driven entirely by the software development
+                community.
+            </p>
+        </section>
+    </body>
 </document>

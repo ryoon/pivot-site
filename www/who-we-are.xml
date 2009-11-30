@@ -21,62 +21,77 @@ limitations under the License.
         <title>Who We Are</title>
     </properties>
 
-  <body>
+    <body>
+        <section name="Who We Are">
+            <p>
+                The Apache Pivot Project operates on a meritocracy: the more you do,
+                the more responsibility you will obtain. This page lists all of the
+                people who have gone the extra mile and are Committers or members of
+                the Project Management Committee. If you would like to help, please
+                see the overview on <a href="get-involved.html">getting involved</a>.
+            </p>
 
-    <section name="Who We Are">
-      <p>
-        The Apache Pivot Project operates on a meritocracy: the more you do,
-        the more responsibility you will obtain. This page lists all of the
-        people who have gone the extra mile and are Committers or members of
-        the Project Management Committee. If you would like to help, please
-        see the overview on <a href="get-involved.html">getting
-        involved</a>.
-      </p>
+            <p>
+                We ask that you please do not send us emails privately asking for support. We
+                are non-paid volunteers who help out with the project, and we do not
+                necessarily have the time or energy to help people on an individual
+                basis. Instead, we have setup <a href="lists.html">mailing
+                lists</a> which contain many individuals who will help answer
+                detailed requests for help. The benefit of using mailing lists over private
+                communication is that it is a shared resource where others can also learn from
+                common questions, and as a community, we all grow together.
+            </p>
 
-      <p>
-        We ask that you please do not send us emails privately asking for support. We
-        are non-paid volunteers who help out with the project and we do not
-        necessarily have the time or energy to help people on an individual
-        basis. Instead, we have setup <a href="lists.html">mailing
-        lists</a> which contain many individuals who will help answer
-        detailed requests for help. The benefit of using mailing lists over private
-        communication is that it is a shared resource where others can also learn from
-        common mistakes, and as a community we all grow together.
-      </p>
+            <p>
+                The following is a list of the Apache Pivot PMC members and committers.
+            </p>
+        </section>
 
-      <p>
-        The following is a list of the Apache Pivot PMC members and committers.
-      </p>
+        <section name="Project Management Committee">
+            <ul class="committers">
+                <li>
+                    <strong>Greg Brown</strong>
+                    <em>(gbrown at apache.org)</em>
+                    <!--Your bio goes here-->
+                </li>
 
-    </section>
+                <li>
+                    <strong>Christopher Brind</strong>
+                    <em>(brindy at apache.org)</em>
+                </li>
+                <!--Your bio goes here-->
 
-    <section name="Podling Project Management Committee">
+                <li>
+                    <strong>Martijn Dashorst</strong>
+                    <em>(martijnh at apache.org)</em>
+                </li>
+                <!--Your bio goes here-->
 
-      <h3>PMC Members &amp; Committers</h3>
+                <li>
+                    <strong>Noel Grandin</strong>
+                    <em>(noelgrandin at apache.org)</em>
+                </li>
+                <!--Your bio goes here-->
 
-      <p><b>Niclas Hedhman</b> (niclas at apache.org)<br/></p>
-      <!--Your bio goes here-->
+                <li>
+                    <strong>Niclas Hedhman</strong>
+                    <em>(niclas at apache.org)</em>
+                </li>
+                <!--Your bio goes here-->
 
-      <p><b>Martijn Dashorst</b> (martijnh at apache.org)<br/></p>
-      <!--Your bio goes here-->
+                <li>
+                    <strong>Sandro Martini</strong>
+                    <em>(smartini at apache.org)</em>
+                </li>
+                <!--Your bio goes here-->
 
-      <p><b>Greg Brown</b> (gbrown at apache.org)<br/></p>
-      <!--Your bio goes here-->
-
-      <p><b>Todd Volkert</b> (tvolkert at apache.org)<br/></p>
-      <!--Your bio goes here-->
-
-      <p><b>Sandro Martini</b> (smartini at apache.org)<br/></p>
-      <!--Your bio goes here-->
-
-      <p><b>Christopher Brind</b> (brindy at apache.org)<br/></p>
-      <!--Your bio goes here-->
-
-      <p><b>Noel Grandin</b> (noelgrandin at apache.org)<br/></p>
-      <!--Your bio goes here-->
-
-    </section>
-
-  </body>
+                <li>
+                    <strong>Todd Volkert</strong>
+                    <em>(tvolkert at apache.org)</em>
+                </li>
+                <!--Your bio goes here-->
+            </ul>
+        </section>
+    </body>
 </document>
 

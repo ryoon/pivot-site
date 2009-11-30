@@ -43,7 +43,7 @@ limitations under the License.
         <p>
           Pivot applications are written using a combination of Java and XML and can be run
           either as an applet or as a standalone (optionally offline) desktop application.
-          Pivot includes additional features that make building modern GUI applications
+          Pivot includes features that make building modern GUI applications
           much easier, including declarative UI, data binding, effects and transitions,
           and web services integration.
         </p>
@@ -54,13 +54,13 @@ limitations under the License.
         <h2>Pivot Resources</h2>
         <ul>
           <item name="Getting Started" href="getting-started.html"/>
-          <item name="Platform Overview" href="tutorials/platform_overview.html"/>
-          <item name="WTKX Primer" href="tutorials/wtkx_primer.html"/>
-          <item name="Component &amp; Container" href="tutorials/component_and_container.html"/>
-          <item name="Sample Application Walkthrough" href="http://www.ibm.com/developerworks/xml/tutorials/x-pivottut/index.html"/>
-          <item name="Drag and Drop" href="#"/>
-          <item name="Web Queries" href="#"/>
-          <item name="Data Binding" href="#"/>
+          <item name="Platform Overview" href="tutorials/platform-overview.html"/>
+          <item name="WTKX Primer" href="tutorials/wtkx-primer.html"/>
+          <item name="Component &amp; Container" href="tutorials/component-and-container.html"/>
+          <item name="Sample Application Walkthrough" href="http://www.ibm.com/developerworks/xml/tutorials/x-pivottut/index.html" new-window="true"/>
+          <item name="Drag and Drop" href="tutorials/drag-and-drop.html"/>
+          <item name="Web Queries" href="tutorials/web-queries.html"/>
+          <item name="Data Binding" href="tutorials/data-binding.html"/>
         </ul>
         <div class="btnDocs"><a href="documentation.html"><span>Documentation</span></a></div>
       </div>
@@ -69,14 +69,10 @@ limitations under the License.
         <h2>Latest Updates</h2>
         <ul class="newsItems">
           <item href="download.cgi#{$release}" name="Pivot 1.4 Released" caption="January 12th, 2010">
-            The latest version of Pivot is now available for download and testing.
+            The latest version of Pivot is now available for download.
           </item>
-          <item href="#" name="Pivot Has Graduated!" caption="December 16th, 2009">
-            Pivot has graduated from the Apache Incubator and is now an Apache project.
-          </item>
-          <item href="#" name="New Component Explorer Demo" caption="November 4th, 2009">
-            This demo allows interactive exploration of the Pivot components, including their
-            events, properties, and styles.
+          <item href="#" name="Pivot Has Graduated!" caption="December 16th, 2009" new-window="true">
+            Pivot has graduated from the Apache Incubator and is now a top-level Apache project.
           </item>
         </ul>
         <div class="btnNewsArchive"><a href="news.html"><span>News archive</span></a></div>

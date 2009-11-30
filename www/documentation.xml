@@ -17,14 +17,18 @@ limitations under the License.
 -->
 
 <document item-group="documentation">
+    <properties>
+        <title>Documentation</title>
+    </properties>
 
-  <properties>
-    <title>Documentation</title>
-  </properties>
-
-  <body>
-
-    TODO
-
-  </body>
+    <body>
+        <section name="Online">
+            <p>
+                Pivot's online documentation is comprised chiefly of the <a href="tutorials/">
+                Pivot tutorial</a> and the <a href="{$release}/docs/api/">API documentation</a>.
+                Also, the source code for all of the <a href="demos/">demos</a> is available in
+                <a href="http://svn.apache.org/repos/asf/pivot/tags/v{$release}/demos/src/org/apache/pivot/demos/">Subversion</a>.
+            </p>
+        </section>
+    </body>
 </document>

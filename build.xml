@@ -21,6 +21,10 @@ limitations under the License.
         <![CDATA[Usage: ant -Dfolder.trunk=<path-to-pivot-trunk> [target]]]>
     </fail>
 
+    <path id="classpath.javalib">
+        <fileset dir="${java.home}/lib" includes="**/*.jar"/>
+    </path>
+
     <property name="folder.bin" value="ant-bin"/>
     <property file="${folder.trunk}/build.properties"/>
 
@@ -74,6 +78,41 @@ limitations under the License.
         <copy todir="${folder.bin}">
             <fileset dir="www" excludes="**/*.xml"/>
         </copy>
+
+        <!-- Generate API documentation -->
+        <javadoc packagenames="org.apache.pivot.*" destdir="${folder.bin}/${version}/docs/api"
+            author="true" version="true" use="true"
+            classpath="${java.class.path}">
+            <classpath>
+                <fileset dir="${folder.trunk}/charts/lib" includes="**/*.jar"/>
+                <fileset dir="${folder.trunk}/web/lib" includes="**/*.jar"/>
+                <path refid="classpath.javalib"/>
+            </classpath>
+
+            <packageset dir="${folder.trunk}/charts/src" includes="**/*"/>
+            <packageset dir="${folder.trunk}/core/src" includes="**/*"/>
+            <packageset dir="${folder.trunk}/web/src" includes="**/*"/>
+            <packageset dir="${folder.trunk}/wtk/src" includes="**/*"/>
+            <packageset dir="${folder.trunk}/tools/src" includes="**/*"/>
+
+            <link href="http://java.sun.com/javase/6/docs/api"/>
+            <link href="http://java.sun.com/j2ee/1.4/docs/api"/>
+
+            <header>
+                <![CDATA[
+                <script type="text/javascript">
+                    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                <script type="text/javascript">
+                    try {
+                        var pageTracker = _gat._getTracker("UA-7977275-1");
+                        pageTracker._trackPageview();
+                    } catch(err) {}
+                </script>
+                ]]>
+            </header>
+        </javadoc>
     </target>
 
     <target name="clean" description="Removes build artifacts">
