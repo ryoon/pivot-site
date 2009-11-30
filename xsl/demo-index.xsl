@@ -88,18 +88,10 @@ limitations under the License.
         <xsl:param name="new-window"/>
         <xsl:param name="last"/>
 
-        <xsl:variable name="target">
-            <xsl:choose>
-                <xsl:when test="boolean($new-window)">_new</xsl:when>
-                <xsl:otherwise>_self</xsl:otherwise>
-            </xsl:choose>
-        </xsl:variable>
-
-        <xsl:variable name="list-item-style">
-            <xsl:if test="boolean($last)">margin-right:0;</xsl:if>
-        </xsl:variable>
-
-        <li style="{$list-item-style}">
+        <xsl:element name="li">
+            <xsl:if test="boolean($last)">
+                <xsl:attribute name="style">margin-right:0;</xsl:attribute>
+            </xsl:if>
             <h2><xsl:value-of select="$title"/></h2>
             <div class="featuredDemosBox">
                 <xsl:if test="$project/demo-screenshots/screenshot[@id=$id]">
@@ -108,19 +100,33 @@ limitations under the License.
                         <xsl:value-of select="$project/demo-screenshots/screenshot[@id=$id]"/>
                     </xsl:variable>
                     <p class="featuredDemoImg">
-                        <a href="{$href}" target="{$target}">
+                        <xsl:element name="a">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="$href"/>
+                            </xsl:attribute>
+                            <xsl:if test="boolean($new-window)">
+                                <xsl:attribute name="target">_new</xsl:attribute>
+                            </xsl:if>
                             <img src="{$src}" alt="{$title}"/>
-                        </a>
+                        </xsl:element>
                     </p>
                 </xsl:if>
                 <p class="featuredDemoDesc">
                     <xsl:value-of select="$description"/>
                 </p>
                 <p class="featuredDemoView">
-                    <a href="{$href}" target="{$target}">View</a>
+                    <xsl:element name="a">
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="$href"/>
+                        </xsl:attribute>
+                        <xsl:if test="boolean($new-window)">
+                            <xsl:attribute name="target">_new</xsl:attribute>
+                        </xsl:if>
+                        <xsl:value-of select="'View'"/>
+                    </xsl:element>
                 </p>
             </div>
-        </li>
+        </xsl:element>
     </xsl:template>
 
     <xsl:template name="other-demo">
@@ -129,17 +135,20 @@ limitations under the License.
         <xsl:param name="href"/>
         <xsl:param name="new-window"/>
 
-        <xsl:variable name="target">
-            <xsl:choose>
-                <xsl:when test="boolean($new-window)">_new</xsl:when>
-                <xsl:otherwise>_self</xsl:otherwise>
-            </xsl:choose>
-        </xsl:variable>
-
         <li>
             <strong><xsl:value-of select="$title"/></strong>
             <em><xsl:value-of select="$description"/></em>
-            <div class="btnView"><a href="{$href}" target="{$target}"><span>View</span></a></div>
+            <div class="btnView">
+                <xsl:element name="a">
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="$href"/>
+                    </xsl:attribute>
+                    <xsl:if test="boolean($new-window)">
+                        <xsl:attribute name="target">_new</xsl:attribute>
+                    </xsl:if>
+                    <span>View</span>
+                </xsl:element>
+            </div>
         </li>
     </xsl:template>
 </xsl:stylesheet>

@@ -40,30 +40,10 @@ limitations under the License.
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
                 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-                <title>
-                    <xsl:choose>
-                        <xsl:when test="properties/title">
-                            <xsl:value-of select="properties/title"/>
-                            <xsl:value-of select="' | '"/>
-                        </xsl:when>
-                    </xsl:choose>
-                    <xsl:value-of select="$project/title"/>
-                </title>
-                <link href="{$base}styles/pivot.css" rel="stylesheet" type="text/css"/>
-
+                <xsl:call-template name="page-title"/>
+                <xsl:call-template name="stylesheet-imports"/>
                 <xsl:apply-templates select="head"/>
-
-                <!-- Google Analytics Code -->
-                <script type="text/javascript">
-                    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-                    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-                </script>
-                <script type="text/javascript">
-                    try {
-                        var pageTracker = _gat._getTracker("UA-7977275-1");
-                        pageTracker._trackPageview();
-                    } catch(err) {}
-                </script>
+                <xsl:call-template name="google-analytics"/>
             </head>
 
             <body>
@@ -111,6 +91,35 @@ limitations under the License.
                 </div>
             </body>
         </html>
+    </xsl:template>
+
+    <xsl:template name="page-title">
+        <title>
+            <xsl:choose>
+                <xsl:when test="properties/title">
+                    <xsl:value-of select="properties/title"/>
+                    <xsl:value-of select="' | '"/>
+                </xsl:when>
+            </xsl:choose>
+            <xsl:value-of select="$project/title"/>
+        </title>
+    </xsl:template>
+
+    <xsl:template name="stylesheet-imports">
+        <link href="{$base}styles/pivot.css" rel="stylesheet" type="text/css"/>
+    </xsl:template>
+
+    <xsl:template name="google-analytics">
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-7977275-1");
+                pageTracker._trackPageview();
+            } catch(err) {}
+        </script>
     </xsl:template>
 
     <!-- The main site navigation -->
@@ -180,8 +189,7 @@ limitations under the License.
 
         <xsl:choose>
             <xsl:when test="@caption">
-                <xsl:variable name="class" select="@class"/>
-                <li class="{$class}">
+                <li class="{@class}">
                     <a href="{$href}">
                         <strong><xsl:value-of select="@name"/></strong>
                         <em><xsl:value-of select="@caption"/></em>
@@ -205,16 +213,17 @@ limitations under the License.
     -->
     <xsl:template match="application-item">
         <xsl:variable name="demo" select="document(concat($demos, '/', @id, '.xml'))/document"/>
-        <xsl:variable name="href">
-            <xsl:value-of select="concat($base, 'demos/', @id, '.html')"/>
-        </xsl:variable>
-        <xsl:variable name="target">
-            <xsl:choose>
-                <xsl:when test="boolean(@new-window)">_new</xsl:when>
-                <xsl:otherwise>_self</xsl:otherwise>
-            </xsl:choose>
-        </xsl:variable>
-        <li><a href="{$href}" target="{$target}"><xsl:value-of select="$demo/properties/title"/></a></li>
+        <li>
+            <xsl:element name="a">
+                <xsl:attribute name="href">
+                    <xsl:value-of select="concat($base, 'demos/', @id, '.html')"/>
+                </xsl:attribute>
+                <xsl:if test="boolean(@new-window)">
+                    <xsl:attribute name="target">_new</xsl:attribute>
+                </xsl:if>
+                <xsl:value-of select="$demo/properties/title"/>
+            </xsl:element>
+        </li>
     </xsl:template>
 
     <!--
@@ -223,20 +232,31 @@ limitations under the License.
     descriptor)
     -->
     <xsl:template match="application-item[remote]">
-        <xsl:variable name="target">
-            <xsl:choose>
-                <xsl:when test="boolean(@new-window)">_new</xsl:when>
-                <xsl:otherwise>_self</xsl:otherwise>
-            </xsl:choose>
-        </xsl:variable>
-        <xsl:variable name="href" select="remote/@href"/>
-        <li><a href="{$href}" target="{$target}"><xsl:value-of select="properties/title"/></a></li>
+        <li>
+            <xsl:element name="a">
+                <xsl:attribute name="href">
+                    <xsl:value-of select="remote/@href"/>
+                </xsl:attribute>
+                <xsl:if test="boolean(@new-window)">
+                    <xsl:attribute name="target">_new</xsl:attribute>
+                </xsl:if>
+                <xsl:value-of select="properties/title"/>
+            </xsl:element>
+        </li>
     </xsl:template>
 
-    <!-- Process everything else by just passing it through -->
-    <xsl:template match="*|@*">
+    <!-- Perform variable resolution on all attributes -->
+    <xsl:template match="@*">
+        <xsl:attribute name="{name(.)}">
+            <!-- TODO Resolve variables -->
+            <xsl:value-of select="."/>
+        </xsl:attribute>
+    </xsl:template>
+
+    <!-- Process everything else by just passing it through (including comments) -->
+    <xsl:template match="*|comment()">
         <xsl:copy>
-            <xsl:apply-templates select="@*|*|text()"/>
+            <xsl:apply-templates select="@*|*|text()|comment()"/>
         </xsl:copy>
     </xsl:template>
 </xsl:stylesheet>

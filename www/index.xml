@@ -29,7 +29,7 @@ limitations under the License.
         the Java platform.
       </p>
       <ul class="stageBtn">
-        <item class="stageDemos" name="Demos" href="~release/demos/"
+        <item class="stageDemos" name="Demos" href="demos/"
             caption="What you can do with Pivot"/>
         <item class="stageDl" name="Download" href="~download"
             caption="Get the current release (1.4)"/>

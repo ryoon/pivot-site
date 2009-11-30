@@ -19,6 +19,40 @@ limitations under the License.
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:import href="auxilliary.xsl"/>
 
+    <!-- Override document template to check for full-screen demos -->
+    <xsl:template match="document">
+        <xsl:choose>
+            <xsl:when test="boolean(properties/full-screen)">
+                <html xmlns="http://www.w3.org/1999/xhtml">
+                    <head>
+                        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+                        <xsl:call-template name="page-title"/>
+                        <style type="text/css">
+                            * {
+                                padding: 0px;
+                                margin: 0px;
+                            }
+
+                            html, body {
+                                height: 100%;
+                                overflow: hidden;
+                            }
+                        </style>
+                        <xsl:apply-templates select="head"/>
+                        <xsl:call-template name="google-analytics"/>
+                    </head>
+
+                    <body>
+                        <xsl:apply-templates select="//application"/>
+                    </body>
+                </html>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-imports/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
     <!-- Override group navigation to pull from the demos index -->
     <xsl:template name="group-navigation">
         <xsl:apply-templates select="$demos-index/body//application-item"/>
@@ -31,8 +65,7 @@ limitations under the License.
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"<xsl:value-of select="@width"/>",
-                height:"<xsl:value-of select="@height"/>",
-                style:"border:solid 1px #999999"
+                height:"<xsl:value-of select="@height"/>"
             };
 
             <xsl:for-each select="attributes/*">
