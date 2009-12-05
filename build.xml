@@ -17,74 +17,73 @@ limitations under the License.
 -->
 
 <project name="pivot-site" default="build" basedir=".">
-    <fail unless="folder.trunk">
-        <![CDATA[Usage: ant -Dfolder.trunk=<path-to-pivot-trunk> [target]]]>
-    </fail>
-
-    <path id="classpath.javalib">
-        <fileset dir="${java.home}/lib" includes="**/*.jar"/>
-    </path>
-
-    <property name="folder.bin" value="ant-bin"/>
+    <property name="folder.trunk" location="trunk"/>
+    <property name="folder.bin" location="ant-bin"/>
     <property file="${folder.trunk}/build.properties"/>
 
+    <fail unless="version">
+    <![CDATA[
+    Error:
+
+    Usage: ant [-Dfolder.trunk=pathtotrunk] [target]
+
+    Parameters:
+      folder.trunk    This specifies the absolute file system location of the pivot trunk. The site
+                      pulls the current Pivot version, the demos, and the tutorials from this
+                      location. If unspecified, it will default to 'trunk', meaning that you can
+                      either check the trunk out into this folder, or you can create a symbolic
+                      link named 'trunk' that links to the trunk.
+
+    ]]>
+    </fail>
+
+
+    <!-- Compile macro -->
+    <macrodef name="transform">
+        <attribute name="stylesheet"/>
+        <attribute name="destdir" default="${folder.bin}"/>
+        <element name="nested-elements" implicit="true"/>
+
+        <sequential>
+            <xslt force="true"
+                useImplicitFileset="false"
+                extension=".html"
+                destdir="@{destdir}"
+                style="@{stylesheet}">
+                <param name="release" expression="${version}"/>
+                <param name="trunk" expression="${folder.trunk}"/>
+                <param name="demos" expression="${folder.trunk}/demos/www"/>
+                <nested-elements/>
+            </xslt>
+        </sequential>
+    </macrodef>
+
     <target name="build" description="Builds the site">
-        <!-- Transform the index page -->
-        <xslt basedir="www"
-            includes="index.xml"
-            destdir="${folder.bin}"
-            extension=".html"
-            style="xsl/index.xsl">
-            <param name="release" expression="${version}"/>
-            <param name="demos" expression="${folder.trunk}/demos/www"/>
-        </xslt>
+        <!-- perform XSLT transformations -->
+        <transform stylesheet="xsl/index.xsl">
+            <fileset dir="www" includes="index.xml"/>
+        </transform>
 
-        <!-- Transform the auxilliary pages -->
-        <xslt basedir="www"
-            includes="**/*.xml"
-            excludes="index.xml"
-            destdir="${folder.bin}"
-            extension=".html"
-            style="xsl/auxilliary.xsl">
-            <param name="release" expression="${version}"/>
-            <param name="demos" expression="${folder.trunk}/demos/www"/>
-        </xslt>
+        <transform stylesheet="xsl/auxilliary.xsl">
+            <fileset dir="www" includes="**/*.xml" excludes="index.xml"/>
+        </transform>
 
-        <!-- Transform the demos index -->
-        <xslt basedir="${folder.trunk}/demos/www"
-            includes="index.xml"
-            destdir="${folder.bin}/demos"
-            extension=".html"
-            style="xsl/demo-index.xsl">
-            <param name="release" expression="${version}"/>
-            <param name="demos" expression="${folder.trunk}/demos/www"/>
+        <transform stylesheet="xsl/demo-index.xsl" destdir="${folder.bin}/demos">
             <param name="base" expression="../"/>
-        </xslt>
+            <fileset dir="${folder.trunk}/demos/www" includes="index.xml"/>
+        </transform>
 
-        <!-- Transform the demos pages -->
-        <xslt basedir="${folder.trunk}/demos/www"
-            includes="**/*.xml"
-            excludes="index.xml"
-            destdir="${folder.bin}/demos"
-            extension=".html"
-            style="xsl/demo.xsl">
-            <param name="release" expression="${version}"/>
-            <param name="demos" expression="${folder.trunk}/demos/www"/>
+        <transform stylesheet="xsl/demo.xsl" destdir="${folder.bin}/demos">
             <param name="base" expression="../"/>
             <param name="root" expression=""/>
-        </xslt>
+            <fileset dir="${folder.trunk}/demos/www" includes="**/*.xml" excludes="index.xml"/>
+        </transform>
 
-        <!-- Transform the tutorials index -->
-        <xslt basedir="${folder.trunk}/tutorials/www"
-            includes="index.xml"
-            destdir="${folder.bin}/tutorials"
-            extension=".html"
-            style="xsl/tutorial-index.xsl">
-            <param name="release" expression="${version}"/>
-            <param name="demos" expression="${folder.trunk}/demos/www"/>
+        <transform stylesheet="xsl/tutorial-index.xsl" destdir="${folder.bin}/tutorials">
             <param name="tutorials" expression="${folder.trunk}/tutorials/www"/>
             <param name="base" expression="../"/>
-        </xslt>
+            <fileset dir="${folder.trunk}/tutorials/www" includes="index.xml"/>
+        </transform>
 
         <!-- Copy static resource files -->
         <copy todir="${folder.bin}">
@@ -97,7 +96,7 @@ limitations under the License.
             classpath="${java.class.path}">
             <classpath>
                 <fileset dir="${folder.trunk}/web-server/lib" includes="**/*.jar"/>
-                <path refid="classpath.javalib"/>
+                <fileset dir="${java.home}/lib" includes="**/*.jar"/>
             </classpath>
 
             <packageset dir="${folder.trunk}/charts/src" includes="**/*"/>
