@@ -74,6 +74,18 @@ limitations under the License.
             <param name="root" expression=""/>
         </xslt>
 
+        <!-- Transform the tutorials index -->
+        <xslt basedir="${folder.trunk}/tutorials/www"
+            includes="index.xml"
+            destdir="${folder.bin}/tutorials"
+            extension=".html"
+            style="xsl/tutorial-index.xsl">
+            <param name="release" expression="${version}"/>
+            <param name="demos" expression="${folder.trunk}/demos/www"/>
+            <param name="tutorials" expression="${folder.trunk}/tutorials/www"/>
+            <param name="base" expression="../"/>
+        </xslt>
+
         <!-- Copy static resource files -->
         <copy todir="${folder.bin}">
             <fileset dir="www" excludes="**/*.xml"/>
@@ -84,16 +96,17 @@ limitations under the License.
             author="true" version="true" use="true"
             classpath="${java.class.path}">
             <classpath>
-                <fileset dir="${folder.trunk}/charts/lib" includes="**/*.jar"/>
-                <fileset dir="${folder.trunk}/web/lib" includes="**/*.jar"/>
+                <fileset dir="${folder.trunk}/web-server/lib" includes="**/*.jar"/>
                 <path refid="classpath.javalib"/>
             </classpath>
 
             <packageset dir="${folder.trunk}/charts/src" includes="**/*"/>
             <packageset dir="${folder.trunk}/core/src" includes="**/*"/>
-            <packageset dir="${folder.trunk}/web/src" includes="**/*"/>
-            <packageset dir="${folder.trunk}/wtk/src" includes="**/*"/>
             <packageset dir="${folder.trunk}/tools/src" includes="**/*"/>
+            <packageset dir="${folder.trunk}/web/src" includes="**/*"/>
+            <packageset dir="${folder.trunk}/web-server/src" includes="**/*"/>
+            <packageset dir="${folder.trunk}/wtk/src" includes="**/*"/>
+            <packageset dir="${folder.trunk}/wtk-terra/src" includes="**/*"/>
 
             <link href="http://java.sun.com/javase/6/docs/api"/>
             <link href="http://java.sun.com/j2ee/1.4/docs/api"/>
