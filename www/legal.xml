@@ -16,22 +16,21 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<document item-group="about">
+<document group="about">
+    <properties>
+        <title>Legal Stuff They Make Us Say</title>
+    </properties>
 
-  <properties>
-    <title>Legal Stuff They Make Us Say</title>
-  </properties>
+    <body>
 
-  <body>
+        <section name="The Apache License">
+            <p>
+                All software produced by The Apache Software Foundation (ASF) or any of
+                its projects or subjects is licensed according to the terms of
+                <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License,
+                Version 2.0 (current)</a>.
+            </p>
+        </section>
 
-    <section name="The Apache License">
-      <p>
-        All software produced by The Apache Software Foundation (ASF) or any of
-        its projects or subjects is licensed according to the terms of
-        <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License,
-        Version 2.0 (current)</a>.
-      </p>
-    </section>
-
-  </body>
+    </body>
 </document>

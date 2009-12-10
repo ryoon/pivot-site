@@ -16,20 +16,17 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<document item-group="about">
+<document group="about">
+    <properties>
+        <title>Contact Information</title>
+    </properties>
 
-  <properties>
-    <title>Contact Information</title>
-  </properties>
-
-  <body>
-
-    <section name="Product Support">
-      <p>
-        If you have questions or comments about the software or documentation on this site,
-        please subscribe to the appropriate <a href="lists.html">mailing list</a>.
-      </p>
-    </section>
-
-  </body>
+    <body>
+        <section name="Product Support">
+            <p>
+                If you have questions or comments about the software or documentation on this site,
+                please subscribe to the appropriate <a href="lists.html">mailing list</a>.
+            </p>
+        </section>
+    </body>
 </document>

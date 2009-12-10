@@ -17,12 +17,17 @@ limitations under the License.
 -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-    <xsl:import href="project.xsl"/>
+    <!-- Import parent stylesheet -->
+    <xsl:import href="html.xsl"/>
 
-    <!-- Override <body> to translate to the auxilliary body HTML -->
-    <xsl:template match="body">
+    <xsl:variable name="document-group" select="/document/@group"/>
+
+    <!-- Auxilliary envelope contains a title, the group navigation, and the content -->
+    <xsl:template name="envelope">
         <div id="contentBase" class="group">
-            <h1><xsl:value-of select="//document/properties/title"/></h1>
+            <h1>
+                <xsl:apply-templates select="/document/properties/title" mode="value"/>
+            </h1>
             <ul class="naviLeft">
                 <xsl:call-template name="group-navigation"/>
             </ul>
@@ -34,29 +39,37 @@ limitations under the License.
 
     <!-- Left side-bar group navigation -->
     <xsl:template name="group-navigation">
-        <xsl:apply-templates select="$project/item-groups/item-group[@id=$item-group]/item"/>
+        <xsl:for-each select="$project/document-groups/document-group[@id=$document-group]/documents/document">
+            <li>
+                <xsl:element name="a">
+                    <xsl:attribute name="href">
+                        <xsl:variable name="location">
+                            <xsl:apply-templates select="@href" mode="value"/>
+                        </xsl:variable>
+                        <xsl:if test="not(starts-with($location, 'http://'))">
+                            <xsl:value-of select="$root"/>
+                        </xsl:if>
+                        <xsl:value-of select="$location"/>
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
+                </xsl:element>
+            </li>
+        </xsl:for-each>
     </xsl:template>
 
-    <!-- Auxilliary content area -->
+    <!-- Content area -->
     <xsl:template name="content">
         <xsl:apply-templates/>
     </xsl:template>
 
-    <!-- <section> translates to an anchor, a title, and nested content -->
-    <xsl:template match="section">
-        <div class="section">
+    <!-- <section> and <subsection> translate to an anchor, a title, and nested content -->
+    <xsl:template match="section|subsection">
+        <div class="name(.)">
             <xsl:variable name="name">
-                <xsl:apply-templates select="@name">
-                    <xsl:with-param name="value-only">true</xsl:with-param>
-                </xsl:apply-templates>
+                <xsl:apply-templates select="@name" mode="value"/>
             </xsl:variable>
             <a name="{$name}"><h2><xsl:value-of select="$name"/></h2></a>
             <xsl:apply-templates/>
         </div>
-    </xsl:template>
-
-    <xsl:template match="subsection">
-        <!-- TODO -->
-        <xsl:apply-templates/>
     </xsl:template>
 </xsl:stylesheet>

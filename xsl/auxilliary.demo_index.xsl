@@ -17,7 +17,10 @@ limitations under the License.
 -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <!-- Import parent stylesheet -->
     <xsl:import href="auxilliary.xsl"/>
+
+    <xsl:variable name="demo-index" select="document(concat($trunk, '/demos/www/index.xml'))/document"/>
 
     <!-- Override group navigation to pull from the demos index -->
     <xsl:template name="group-navigation">
@@ -25,9 +28,21 @@ limitations under the License.
     </xsl:template>
 
     <!-- Override content area to show demos index -->
-    <xsl:template name="content">
+    <xsl:template name="payload">
         <ul class="featuredDemos">
-            <xsl:for-each select="application-item[boolean(@featured)]">
+            <xsl:for-each select="$project/featured-demos/demo">
+                <xsl:variable name="id" select="@id"/>
+                <xsl:choose>
+                    <xsl:when test="$project/external-demos/demo[@id=$id]">
+                        <xsl:variable name="demo" select="$project/external-demos/demo[@id=$id]"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:variable name="document" select="document(concat($trunk, '/demos/www/', $id, '.xml'))/document"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
+
+            <xsl:for-each select="//application-item[boolean(@featured)]">
                 <xsl:choose>
                     <xsl:when test="remote">
                         <xsl:call-template name="featured-demo">

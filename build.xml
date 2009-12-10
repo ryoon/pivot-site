@@ -18,7 +18,7 @@ limitations under the License.
 
 <project name="pivot-site" default="build" basedir=".">
     <property name="folder.trunk" location="trunk"/>
-    <property name="folder.bin" location="ant-bin"/>
+    <property name="folder.deploy" location="delpoy"/>
     <property file="${folder.trunk}/build.properties"/>
 
     <fail unless="version">
@@ -37,11 +37,10 @@ limitations under the License.
     ]]>
     </fail>
 
-
-    <!-- Compile macro -->
+    <!-- Transform macro -->
     <macrodef name="transform">
         <attribute name="stylesheet"/>
-        <attribute name="destdir" default="${folder.bin}"/>
+        <attribute name="destdir" default="${folder.deploy}"/>
         <element name="nested-elements" implicit="true"/>
 
         <sequential>
@@ -50,9 +49,8 @@ limitations under the License.
                 extension=".html"
                 destdir="@{destdir}"
                 style="@{stylesheet}">
-                <param name="release" expression="${version}"/>
+                <param name="version" expression="${version}"/>
                 <param name="trunk" expression="${folder.trunk}"/>
-                <param name="demos" expression="${folder.trunk}/demos/www"/>
                 <nested-elements/>
             </xslt>
         </sequential>
@@ -68,30 +66,29 @@ limitations under the License.
             <fileset dir="www" includes="**/*.xml" excludes="index.xml"/>
         </transform>
 
-        <transform stylesheet="xsl/demo-index.xsl" destdir="${folder.bin}/demos">
-            <param name="base" expression="../"/>
+        <!--
+        <transform stylesheet="xsl/auxilliary.demo_index.xsl" destdir="${folder.deploy}/demos">
             <fileset dir="${folder.trunk}/demos/www" includes="index.xml"/>
         </transform>
 
-        <transform stylesheet="xsl/demo.xsl" destdir="${folder.bin}/demos">
-            <param name="base" expression="../"/>
+        <transform stylesheet="xsl/auxilliary.demo.xsl" destdir="${folder.deploy}/demos">
             <param name="root" expression=""/>
             <fileset dir="${folder.trunk}/demos/www" includes="**/*.xml" excludes="index.xml"/>
         </transform>
 
-        <transform stylesheet="xsl/tutorial-index.xsl" destdir="${folder.bin}/tutorials">
-            <param name="tutorials" expression="${folder.trunk}/tutorials/www"/>
-            <param name="base" expression="../"/>
+        <transform stylesheet="xsl/auxilliary.tutorial_index.xsl" destdir="${folder.deploy}/tutorials">
             <fileset dir="${folder.trunk}/tutorials/www" includes="index.xml"/>
         </transform>
+        -->
 
         <!-- Copy static resource files -->
-        <copy todir="${folder.bin}">
+        <copy todir="${folder.deploy}">
             <fileset dir="www" excludes="**/*.xml"/>
         </copy>
 
         <!-- Generate API documentation -->
-        <javadoc packagenames="org.apache.pivot.*" destdir="${folder.bin}/${version}/docs/api"
+        <!--
+        <javadoc packagenames="org.apache.pivot.*" destdir="${folder.deploy}/${version}/docs/api"
             author="true" version="true" use="true"
             classpath="${java.class.path}">
             <classpath>
@@ -125,9 +122,10 @@ limitations under the License.
                 ]]>
             </header>
         </javadoc>
+        -->
     </target>
 
     <target name="clean" description="Removes build artifacts">
-        <delete dir="${folder.bin}"/>
+        <delete dir="${folder.deploy}"/>
     </target>
 </project>

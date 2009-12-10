@@ -21,62 +21,79 @@ limitations under the License.
         <home>true</home>
     </properties>
 
-  <body>
-    <div id="stage">
-      <p>
-        Building rich internet applications (RIA) in Java by combining the enhanced
-        productivity and usability features of a modern RIA toolkit with the robustness of
-        the Java platform.
-      </p>
-      <ul class="stageBtn">
-        <item class="stageDemos" name="Demos" href="demos/"
-            caption="What you can do with Pivot"/>
-        <item class="stageDl" name="Download" href="download.cgi#{$release}"
-            caption="Get the current release ({$release})"/>
-      </ul>
-    </div>
+    <body>
+        <div id="stage">
+            <p>
+                Building rich internet applications (RIA) in Java by combining the enhanced
+                productivity and usability features of a modern RIA toolkit with the robustness of
+                the Java platform.
+            </p>
 
-    <div id="featured" class="group">
-      <div class="homeCol1">
-        <h2>Why Pivot?</h2>
-        <p><img src="images/pivot_screen.jpg" alt="Pivot" /></p>
-        <p>
-          Pivot applications are written using a combination of Java and XML and can be run
-          either as an applet or as a standalone (optionally offline) desktop application.
-          Pivot includes features that make building modern GUI applications
-          much easier, including declarative UI, data binding, effects and transitions,
-          and web services integration.
-        </p>
-        <div class="btnMore"><a href="about.html"><span>More about Pivot</span></a></div>
-      </div>
+            <ul class="stageBtn">
+                <li class="stageDemos">
+                    <a href="demos/">
+                        <strong>Demos</strong>
+                        <em>What you can do with Pivot</em>
+                    </a>
+                </li>
+                <li class="stageDl">
+                    <a href="download.cgi#{$version}">
+                        <strong>Download</strong>
+                        <em>Get the current release (<version/>)</em>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-      <div class="homeCol2">
-        <h2>Pivot Resources</h2>
-        <ul>
-          <item name="Getting Started" href="getting-started.html"/>
-          <item name="Platform Overview" href="tutorials/platform-overview.html"/>
-          <item name="WTKX Primer" href="tutorials/wtkx-primer.html"/>
-          <item name="Component &amp; Container" href="tutorials/component-and-container.html"/>
-          <item name="Sample Application Walkthrough" href="http://www.ibm.com/developerworks/xml/tutorials/x-pivottut/index.html" new-window="true"/>
-          <item name="Drag and Drop" href="tutorials/drag-and-drop.html"/>
-          <item name="Web Queries" href="tutorials/web-queries.html"/>
-          <item name="Data Binding" href="tutorials/data-binding.html"/>
-        </ul>
-        <div class="btnDocs"><a href="documentation.html"><span>Documentation</span></a></div>
-      </div>
+        <div id="featured" class="group">
+            <div class="homeCol1">
+                <h2>Why Pivot?</h2>
+                <p><img src="images/pivot_screen.jpg" alt="Pivot" /></p>
+                <p>
+                    Pivot applications are written using a combination of Java and XML and can be
+                    run either as an applet or as a standalone (optionally offline) desktop
+                    application. Pivot includes features that make building modern GUI applications
+                    much easier, including declarative UI, data binding, effects and transitions,
+                    and web services integration.
+                </p>
+                <div class="btnMore"><a href="about.html"><span>More about Pivot</span></a></div>
+            </div>
 
-      <div class="homeCol3">
-        <h2>Latest Updates</h2>
-        <ul class="newsItems">
-          <item href="download.cgi#{$release}" name="Pivot 1.4 Released" caption="January 12th, 2010">
-            The latest version of Pivot is now available for download.
-          </item>
-          <item href="#" name="Pivot Has Graduated!" caption="December 16th, 2009" new-window="true">
-            Pivot has graduated from the Apache Incubator and is now a top-level Apache project.
-          </item>
-        </ul>
-        <div class="btnNewsArchive"><a href="news.html"><span>News archive</span></a></div>
-      </div>
-    </div>
-  </body>
+            <div class="homeCol2">
+                <h2>Pivot Resources</h2>
+                <ul>
+                    <li><a href="getting-started.html">Getting Started</a></li>
+                    <li><a href="tutorials/platform-overview.html">Platform Overview</a></li>
+                    <li><a href="tutorials/wtkx-primer.html">WTKX Primer</a></li>
+                    <li><a href="tutorials/component-and-container.html">Component &amp; Container</a></li>
+                    <li><a href="http://www.ibm.com/developerworks/xml/tutorials/x-pivottut/index.html" target="_new">Sample Application Walkthrough</a></li>
+                    <li><a href="tutorials/drag-and-drop.html">Drag and Drop</a></li>
+                    <li><a href="tutorials/web-queries.html">Web Queries</a></li>
+                    <li><a href="tutorials/data-binding.html">Data Binding</a></li>
+                </ul>
+                <div class="btnDocs"><a href="documentation.html"><span>Documentation</span></a></div>
+            </div>
+
+            <div class="homeCol3">
+                <h2>Latest Updates</h2>
+                <ul class="newsItems">
+                    <li>
+                        <a href="download.cgi#{$version}">
+                            <strong>Pivot 1.4 Released</strong>
+                            <em>January 12th, 2010</em>
+                            <p>The latest version of Pivot is now available for download.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <strong>Pivot Has Graduated!</strong>
+                            <em>December 16th, 2009</em>
+                            <p>Pivot has graduated from the Apache Incubator and is now a top-level Apache project.</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="btnNewsArchive"><a href="news.html"><span>News archive</span></a></div>
+            </div>
+        </div>
+    </body>
 </document>

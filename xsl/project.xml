@@ -16,7 +16,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<project href="http://pivot.apache.org/">
+<project href="http://people.apache.org/~tvolkert/tmp/site/">
     <title>Apache Pivot</title>
     <tagline>Rich Internet Applications (RIA) in Java (tm)</tagline>
     <copyright>
@@ -24,59 +24,95 @@ limitations under the License.
         <message>The Apache Software Foundation.</message>
     </copyright>
 
-    <global-items>
-        <item name="Demos" href="demos/"/>
-        <item name="Download" href="download.cgi#{$release}"/>
-        <item name="Documentation" href="documentation.html"/>
-        <item name="Get Involved" href="get-involved.html"/>
-        <item name="About" href="about.html"/>
-    </global-items>
+    <document-groups>
+        <document-group id="demos" href="demos/">
+            <title>Demos</title>
+            <documents>
+                <document href="demos/">More Demos</document>
+            </documents>
+        </document-group>
 
-    <item-groups>
-        <item-group id="demos" name="Demos">
-            <!-- <application-item> elements from demos/index.xml will be processed here-->
-            <item name="More Demos" href="demos/"/>
-        </item-group>
+        <document-group id="download" href="download.cgi#{$version}" footer="false">
+            <title>Download</title>
+            <documents>
+                <document href="download.cgi#{$version}">Downloads</document>
+                <document href="{$asf}/dist/pivot/KEYS">KEYS</document>
+                <document href="http://archive.apache.org/dist/pivot/">Archived Releases</document>
+            </documents>
+        </document-group>
 
-        <item-group id="download" name="Download" footer="false">
-            <item name="Downloads" href="download.cgi#{$release}"/>
-            <item name="KEYS" href="{$asf}/dist/pivot/KEYS"/>
-            <item name="Archived Releases" href="http://archive.apache.org/dist/pivot/"/>
-        </item-group>
+        <document-group id="documentation" href="documentation.html">
+            <title>Documentation</title>
+            <documents>
+                <document href="getting-started.html">Getting Started</document>
+                <document href="tutorials/">Tutorial</document>
+                <document href="{$wiki}/frequently-asked-questions-faq.html">FAQ</document>
+                <document href="{$version}/docs/api/">Javadoc (<version/>)</document>
+            </documents>
+        </document-group>
 
-        <item-group id="documentation" name="Documentation">
-            <item name="Getting Started" href="getting-started.html"/>
-            <item name="Tutorial" href="tutorials/"/>
-            <item name="FAQ" href="{$wiki}/frequently-asked-questions-faq.html"/>
-            <item name="Javadoc ({$release})" href="{$release}/docs/api/"/>
-        </item-group>
+        <document-group id="get-involved" href="get-involved.html">
+            <title>Get Involved</title>
+            <documents>
+                <document href="svn.html">SVN Repositories</document>
+                <document href="lists.html">Mailing Lists</document>
+                <document href="{$jira}/">Bug Database</document>
+                <document href="{$wiki}/">Wiki</document>
+            </documents>
+        </document-group>
 
-        <item-group id="get-involved" name="Get Involved">
-            <item name="SVN Repositories" href="svn.html"/>
-            <item name="Mailing Lists" href="lists.html"/>
-            <item name="Bug Database" href="{$jira}/"/>
-            <item name="Wiki" href="{$wiki}/"/>
-        </item-group>
+        <document-group id="related">
+            <title>Related</title>
+            <documents>
+                <document href="http://code.google.com/p/pivot-jfree/">JFreeChart Provider</document>
+            </documents>
+        </document-group>
 
-        <item-group id="related" name="Related">
-            <item name="JFreeChart Provider" href="http://code.google.com/p/pivot-jfree/"/>
-        </item-group>
+        <document-group id="about" href="about.html">
+            <title>About</title>
+            <documents>
+                <document href="who-we-are.html">Who We Are</document>
+                <document href="contact.html">Contact</document>
+                <document href="news.html">News</document>
+                <document href="legal.html">Legal/License</document>
+                <document href="{$asf}/foundation/sponsorship.html" footer="false">Sponshorship</document>
+                <document href="{$asf}/foundation/thanks.html" footer="false">Thanks</document>
+            </documents>
+        </document-group>
+    </document-groups>
 
-        <item-group id="about" name="About">
-            <item name="Who We Are" href="who-we-are.html"/>
-            <item name="Contact" href="contact.html"/>
-            <item name="News" href="news.html"/>
-            <item name="Legal/License" href="legal.html"/>
-            <item name="Sponshorship" href="{$asf}/foundation/sponsorship.html" footer="false"/>
-            <item name="Thanks" href="{$asf}/foundation/thanks.html" footer="false"/>
-        </item-group>
-    </item-groups>
+    <external-demos>
+        <demo id="charting" href="http://ixnay.biz/charts.html">
+            <properties>
+                <title>Charting</title>
+                <description>
+                    Demonstrates charting in Pivot using the JFreeChart chart provider (hosted at
+                    http://ixnay.biz/).
+                </description>
+            </properties>
+        </demo>
+        <demo id="ticker-slideshow" href="http://www.satelliteconsulting.com/">
+            <properties>
+                <title>News Ticker/Slide Show</title>
+                <description>
+                    Demonstrates Pivot used in a real-world context, used to show a news feed and
+                    a slide show of client logos (hosted at http://www.satelliteconsulting.com/).
+                </description>
+            </properties>
+        </demo>
+    </external-demos>
 
-    <demo-screenshots>
-        <screenshot id="kitchen-sink">images/demos_feat_kitchen.jpg</screenshot>
-        <screenshot id="stock-tracker">images/demos_feat_stock.jpg</screenshot>
-        <screenshot id="itunes-search">images/demos_feat_itunes.jpg</screenshot>
-        <screenshot id="charting">images/demos_feat_chart.jpg</screenshot>
-        <screenshot id="decorators">images/demos_feat_deco.jpg</screenshot>
-    </demo-screenshots>
+    <footer-demos>
+        <demo id="kitchen-sink"/>
+        <demo id="component-explorer"/>
+        <demo id="charting"/>
+    </footer-demos>
+
+    <featured-demos>
+        <demo id="kitchen-sink" screenshot="images/demos_feat_kitchen.jpg"/>
+        <demo id="stock-tracker" screenshot="images/demos_feat_stock.jpg"/>
+        <demo id="itunes-search" screenshot="images/demos_feat_itunes.jpg"/>
+        <demo id="charting" screenshot="images/demos_feat_chart.jpg"/>
+        <demo id="decorators" screenshot="images/demos_feat_deco.jpg"/>
+    </featured-demos>
 </project>
