@@ -36,7 +36,7 @@ limitations under the License.
             <title>Download</title>
             <documents>
                 <document href="download.cgi#{$version}">Downloads</document>
-                <document href="{$asf}/dist/pivot/KEYS">KEYS</document>
+                <document href="http://www.apache.org/dist/pivot/KEYS">KEYS</document>
                 <document href="http://archive.apache.org/dist/pivot/">Archived Releases</document>
             </documents>
         </document-group>
@@ -75,8 +75,8 @@ limitations under the License.
                 <document href="contact.html">Contact</document>
                 <document href="news.html">News</document>
                 <document href="legal.html">Legal/License</document>
-                <document href="{$asf}/foundation/sponsorship.html" footer="false">Sponshorship</document>
-                <document href="{$asf}/foundation/thanks.html" footer="false">Thanks</document>
+                <document href="http://www.apache.org/foundation/sponsorship.html" footer="false">Sponshorship</document>
+                <document href="http://www.apache.org/foundation/thanks.html" footer="false">Thanks</document>
             </documents>
         </document-group>
     </document-groups>

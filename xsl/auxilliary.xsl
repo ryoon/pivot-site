@@ -64,7 +64,7 @@ limitations under the License.
 
     <!-- <section> and <subsection> translate to an anchor, a title, and nested content -->
     <xsl:template match="section|subsection">
-        <div class="name(.)">
+        <div class="{name(.)}">
             <xsl:variable name="name">
                 <xsl:apply-templates select="@name" mode="value"/>
             </xsl:variable>

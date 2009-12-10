@@ -33,8 +33,8 @@ limitations under the License.
         <section name="Download Pivot">
             <p>
                 To follow along with the examples in the Pivot tutorial, you'll need a local copy
-                of the Pivot <release/> release. The binary and source distributions are available
-                for <a href="download.cgi#{$release}">download</a> through one of Apache's mirrors.
+                of the Pivot <version/> release. The binary and source distributions are available
+                for <a href="download.cgi#{$version}">download</a> through one of Apache's mirrors.
             </p>
         </section>
         <section name="Join the User Mailing List">

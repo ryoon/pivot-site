@@ -47,7 +47,7 @@ limitations under the License.
                 </ul>
             </p>
             <p>
-                You should also read <a href="{$asf}/foundation/how-it-works.html">How Apache
+                You should also read <a href="http://www.apache.org/foundation/how-it-works.html">How Apache
                 Works</a>.
             </p>
         </section>

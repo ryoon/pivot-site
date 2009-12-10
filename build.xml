@@ -18,7 +18,7 @@ limitations under the License.
 
 <project name="pivot-site" default="build" basedir=".">
     <property name="folder.trunk" location="trunk"/>
-    <property name="folder.deploy" location="delpoy"/>
+    <property name="folder.deploy" location="deploy"/>
     <property file="${folder.trunk}/build.properties"/>
 
     <fail unless="version">

@@ -32,8 +32,8 @@ limitations under the License.
 
         <section name="Quick Navigation">
             <p>
-                <a href="{$asf}/dist/pivot/KEYS">KEYS</a> |
-                <a href="#{$release}"><release/></a> |
+                <a href="http://www.apache.org/dist/pivot/KEYS">KEYS</a> |
+                <a href="#{$version}"><version/></a> |
                 <a href="[preferred]/pivot/">Browse</a> |
                 <a href="http://archive.apache.org/dist/pivot/">Archives</a>
             </p>
@@ -43,7 +43,7 @@ limitations under the License.
             <p>
                 You must verify the integrity of the downloaded files. We provide <code>PGP</code>
                 signatures for every release file. This signature should be matched against the
-                <a href="{$asf}/dist/pivot/KEYS">KEYS</a> file containing the PGP keys of Pivot's
+                <a href="http://www.apache.org/dist/pivot/KEYS">KEYS</a> file containing the PGP keys of Pivot's
                 Release Managers. We also provide an <code>MD5</code> checksum and a
                 <code>SHA</code> checksum for every release file. After you download the file, you
                 should calculate a checksum for your download and make sure it is the same as ours.
@@ -77,10 +77,10 @@ limitations under the License.
             </p>
         </section>
 
-        <section name="{$release}">
+        <section name="{$version}">
             <p>
-                Currently, Apache Pivot <release/> is the best available version
-                (<a href="[preferred]/pivot/RELEASE-NOTES-{$release}.html">release notes</a>).
+                Currently, Apache Pivot <version/> is the best available version
+                (<a href="[preferred]/pivot/RELEASE-NOTES-{$version}.html">release notes</a>).
                 See the <a href="[preferred]/pivot/README.html">README</a>
                 file for packaging information.  It explains what every distribution contains.
             </p>
@@ -88,16 +88,16 @@ limitations under the License.
             <subsection name="Binary Distributions">
                 <ul>
                     <li>
-                        <a href="[preferred]/pivot/binaries/apache-pivot-{$release}.zip">zip</a>
-                        (<a href="{$asf}/dist/pivot/binaries/apache-pivot-{$release}.zip.asc">pgp</a>,
-                        <a href="{$asf}/dist/pivot/binaries/apache-pivot-{$release}.zip.md5">md5</a>,
-                        <a href="{$asf}/dist/pivot/binaries/apache-pivot-{$release}.zip.sha">sha</a>)
+                        <a href="[preferred]/pivot/binaries/apache-pivot-{$version}.zip">zip</a>
+                        (<a href="http://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.zip.asc">pgp</a>,
+                        <a href="http://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.zip.md5">md5</a>,
+                        <a href="http://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.zip.sha">sha</a>)
                     </li>
                     <li>
-                        <a href="[preferred]/pivot/binaries/apache-pivot-{$release}.tar.gz">tar.gz</a>
-                        (<a href="{$asf}/dist/pivot/binaries/apache-pivot-{$release}.tar.gz.asc">pgp</a>,
-                        <a href="{$asf}/dist/pivot/binaries/apache-pivot-{$release}.tar.gz.md5">md5</a>,
-                        <a href="{$asf}/dist/pivot/binaries/apache-pivot-{$release}.tar.gz.sha">sha</a>)
+                        <a href="[preferred]/pivot/binaries/apache-pivot-{$version}.tar.gz">tar.gz</a>
+                        (<a href="http://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.tar.gz.asc">pgp</a>,
+                        <a href="http://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.tar.gz.md5">md5</a>,
+                        <a href="http://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.tar.gz.sha">sha</a>)
                     </li>
                 </ul>
             </subsection>
@@ -105,16 +105,16 @@ limitations under the License.
             <subsection name="Source Code Distributions">
                 <ul>
                     <li>
-                        <a href="[preferred]/pivot/source/apache-pivot-{$release}-src.tar.gz">tar.gz</a>
-                        (<a href="{$asf}/dist/pivot/source/apache-pivot-{$release}-src.tar.gz.asc">pgp</a>,
-                        <a href="{$asf}/dist/pivot/source/apache-pivot-{$release}-src.tar.gz.md5">md5</a>,
-                        <a href="{$asf}/dist/pivot/source/apache-pivot-{$release}-src.tar.gz.sha">sha</a>)
+                        <a href="[preferred]/pivot/source/apache-pivot-{$version}-src.tar.gz">tar.gz</a>
+                        (<a href="http://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.tar.gz.asc">pgp</a>,
+                        <a href="http://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.tar.gz.md5">md5</a>,
+                        <a href="http://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.tar.gz.sha">sha</a>)
                     </li>
                     <li>
-                        <a href="[preferred]/pivot/source/apache-pivot-{$release}-src.zip">zip</a>
-                        (<a href="{$asf}/dist/pivot/source/apache-pivot-{$release}-src.zip.asc">pgp</a>,
-                        <a href="{$asf}/dist/pivot/source/apache-pivot-{$release}-src.zip.md5">md5</a>,
-                        <a href="{$asf}/dist/pivot/source/apache-pivot-{$release}-src.zip.sha">sha</a>)
+                        <a href="[preferred]/pivot/source/apache-pivot-{$version}-src.zip">zip</a>
+                        (<a href="http://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.zip.asc">pgp</a>,
+                        <a href="http://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.zip.md5">md5</a>,
+                        <a href="http://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.zip.sha">sha</a>)
                     </li>
                 </ul>
             </subsection>
