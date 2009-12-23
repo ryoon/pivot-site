@@ -51,26 +51,15 @@
 
     </section>
 
-    <section name="Incubation At Apache">
-
+    <section name="News">
       <p>
-        Apache Pivot is an effort undergoing incubation at The ASF, sponsored
-        by the Apache Incubator Project Management Committee (PMC).
+        <i>12/16/2009</i> Pivot has graduated! We are currently putting the finishing
+        touches on our new site design and forthcoming 1.4 release, and will soon be 
+        moving to our new home at 
+        <a href="http://pivot.apache.org/">http://pivot.apache.org/</a>. Our mailing 
+        lists and Subversion repository will also be moving; check here for updates over
+        the next few weeks.
       </p>
-
-      <p>
-        Incubation is required of all newly accepted projects until a further
-        review indicates that the infrastructure, communications, and decision
-        making process have stabilized in a manner consistent with other
-        successful ASF projects.
-      </p>
-
-      <p>
-        While incubation status is not necessarily a reflection of the
-        completeness or stability of the code, it does indicate that the project
-        has yet to be fully endorsed by the ASF.
-      </p>
-
     </section>
 
   </body>
