@@ -7,18 +7,18 @@
   <body>
     <menu name="Apache Pivot">
       <item name="Home"                 href="/index.html"/>
-      <item name="Demos"                href="/1.3/demos/"/>
+      <item name="Demos"                href="/1.4/demos/"/>
     </menu>
 
     <menu name="Download">
-      <item name="Pivot 1.3"            href="/download.cgi#1.3"/>
+      <item name="Pivot 1.4"            href="/download.cgi#1.4"/>
       <item name="Archives"             href="http://archive.apache.org/dist/incubator/pivot/"/>
     </menu>
 
     <menu name="Documentation">
       <item name="FAQ"                  href="http://cwiki.apache.org/PIVOT/frequently-asked-questions-faq.html"/>
-      <item name="Tutorial"             href="/1.3/tutorials/"/>
-      <item name="Javadoc (1.3)"        href="/1.3/docs/api/"/>
+      <item name="Tutorial"             href="/1.4/tutorials/"/>
+      <item name="Javadoc (1.4)"        href="/1.4/docs/api/"/>
     </menu>
 
     <menu name="Problems?">
