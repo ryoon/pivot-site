@@ -23,8 +23,8 @@
     <section name="Repository Structure">
 
       <p>The root of the repository is
-      <a href="http://svn.apache.org/repos/asf/incubator/pivot">
-      http://svn.apache.org/repos/asf/incubator/pivot</a>.</p>
+      <a href="http://svn.apache.org/repos/asf/pivot">
+      http://svn.apache.org/repos/asf/pivot</a>.</p>
 
       <p>The directories below this level are:</p>
       <table>
@@ -33,17 +33,17 @@
           <th>Contents</th>
         </tr>
         <tr>
-          <td><a href="http://svn.apache.org/repos/asf/incubator/pivot/site">
+          <td><a href="http://svn.apache.org/repos/asf/pivot/site">
           <code>/site/</code></a></td>
           <td>The Apache Pivot website</td>
         </tr>
         <tr>
-          <td><a href="http://svn.apache.org/repos/asf/incubator/pivot/tags">
+          <td><a href="http://svn.apache.org/repos/asf/pivot/tags">
           <code>/tags/</code></a></td>
           <td>Named snapshots.</td>
         </tr>
         <tr>
-          <td><a href="http://svn.apache.org/repos/asf/incubator/pivot/trunk">
+          <td><a href="http://svn.apache.org/repos/asf/pivot/trunk">
           <code>/trunk/</code></a></td>
           <td>The primary development branch.</td>
         </tr>

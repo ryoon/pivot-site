@@ -78,7 +78,7 @@
           <tr>
             <td>
               <xsl:comment>PROJECT LOGO</xsl:comment>
-              <a href="http://incubator.apache.org/pivot/">
+              <a href="http://pivot.apache.org/">
                 <img src="./img/pivot.png" align="left" alt="Pivot Logo" border="0"/>
               </a>
             </td>
@@ -90,10 +90,10 @@
             </td>
             -->
             <td>
-              <xsl:comment>APACHE INCUBATOR LOGO</xsl:comment>
-              <a href="http://incubator.apache.org/">
-                <img src="http://incubator.apache.org/images/apache-incubator-logo.png"
-                     align="right" alt="Apache Incubator Logo" border="0"/>
+              <xsl:comment>APACHE LOGO</xsl:comment>
+              <a href="http://www.apache.org/">
+                <img src="http://www.apache.org/images/asf-logo.gif"
+                     align="right" alt="Apache Logo" border="0"/>
               </a>
             </td>
           </tr>
@@ -102,7 +102,7 @@
         <!-- Search box: uses CSS positioning -->
         <div class="searchbox noPrint">
           <form action="http://www.google.com/search" method="get">
-            <input value="site:cwiki.apache.org/pivot site:incubator.apache.org/pivot" name="as_oq" type="hidden" />
+            <input value="site:cwiki.apache.org/pivot site:pivot.apache.org" name="as_oq" type="hidden" />
             <input value="Search the Site" size="25" name="q" id="query" type="text" />
             <input name="Search" value="Search Site" type="submit" />
           </form>
@@ -141,7 +141,7 @@
           <xsl:comment>PAGE FOOTER</xsl:comment>
           <tr><td colspan="2">
             <div align="center"><font color="{$body-link}" size="-1"><em>
-              Copyright &#169; 1999-2009, The Apache Software Foundation
+              Copyright &#169; 1999-2010, The Apache Software Foundation
             </em></font></div>
           </td></tr>
 
@@ -169,7 +169,7 @@
           <xsl:value-of select="@href"/>
         </xsl:when>
         <xsl:when test="starts-with(@href, '/site')">
-          <xsl:text>http://incubator.apache.org/pivot</xsl:text><xsl:value-of select="@href"/>
+          <xsl:text>http://pivot.apache.org</xsl:text><xsl:value-of select="@href"/>
         </xsl:when>
         <xsl:otherwise>
           <xsl:value-of select="$relative-path"/><xsl:value-of select="@href"/>
