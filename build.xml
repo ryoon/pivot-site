@@ -66,17 +66,16 @@ limitations under the License.
             <fileset dir="www" includes="**/*.xml" excludes="index.xml"/>
         </transform>
 
-        <!--
-        <transform stylesheet="xsl/auxilliary.demo_index.xsl" destdir="${folder.deploy}/demos">
+        <transform stylesheet="xsl/demos/index.xsl" destdir="${folder.deploy}/demos">
             <fileset dir="${folder.trunk}/demos/www" includes="index.xml"/>
         </transform>
 
-        <transform stylesheet="xsl/auxilliary.demo.xsl" destdir="${folder.deploy}/demos">
-            <param name="root" expression=""/>
+        <transform stylesheet="xsl/demos/auxilliary.xsl" destdir="${folder.deploy}/demos">
             <fileset dir="${folder.trunk}/demos/www" includes="**/*.xml" excludes="index.xml"/>
         </transform>
 
-        <transform stylesheet="xsl/auxilliary.tutorial_index.xsl" destdir="${folder.deploy}/tutorials">
+        <!--
+        <transform stylesheet="xsl/tutorials/index.xsl" destdir="${folder.deploy}/tutorials">
             <fileset dir="${folder.trunk}/tutorials/www" includes="index.xml"/>
         </transform>
         -->

@@ -75,7 +75,7 @@ limitations under the License.
         </html>
     </xsl:template>
 
-    <!-- <body> content gets wrapped within the site header, left navigation, and footer -->
+    <!-- <body> content gets wrapped within the site header, content envelope, and footer -->
     <xsl:template match="body" mode="value">
         <div id="wrapper">
             <div id="main">
