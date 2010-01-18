@@ -35,8 +35,8 @@ limitations under the License.
         </section>
         <section name="Repository Structure">
             <p>
-                The root of the repository is <a href="http://svn.apache.org/repos/asf/pivot">
-                http://svn.apache.org/repos/asf/pivot</a>.
+                The root of the repository is <a href="http://svn.apache.org/repos/asf/pivot/">
+                http://svn.apache.org/repos/asf/pivot/</a>.
             </p>
             <p>
                 The directories below this level are:
@@ -47,32 +47,32 @@ limitations under the License.
                     <th>Contents</th>
                 </tr>
                 <tr>
-                    <td><a href="http://svn.apache.org/repos/asf/pivot/trunk">
+                    <td><a href="http://svn.apache.org/repos/asf/pivot/trunk/">
                     <tt>/trunk/</tt></a></td>
                     <td>The primary development branch</td>
                 </tr>
                 <tr>
-                    <td><a href="http://svn.apache.org/repos/asf/pivot/tags">
+                    <td><a href="http://svn.apache.org/repos/asf/pivot/tags/">
                     <tt>/tags/</tt></a></td>
                     <td>Named snapshots</td>
                 </tr>
                 <tr>
-                    <td><a href="http://svn.apache.org/repos/asf/pivot/site">
+                    <td><a href="http://svn.apache.org/repos/asf/pivot/site/">
                     <tt>/site/</tt></a></td>
                     <td>The Apache Pivot website</td>
                 </tr>
                 <tr>
-                    <td><a href="http://svn.apache.org/repos/asf/pivot/dist">
+                    <td><a href="http://svn.apache.org/repos/asf/pivot/dist/">
                     <tt>/dist/</tt></a></td>
                     <td>Files related to release distribution</td>
                 </tr>
                 <tr>
-                    <td><a href="http://svn.apache.org/repos/asf/pivot/infra">
+                    <td><a href="http://svn.apache.org/repos/asf/pivot/infra/">
                     <tt>/infra/</tt></a></td>
                     <td>Project infrastructure files, such as shell scripts</td>
                 </tr>
                 <tr>
-                    <td><a href="http://svn.apache.org/repos/asf/pivot/project">
+                    <td><a href="http://svn.apache.org/repos/asf/pivot/project/">
                     <tt>/project/</tt></a></td>
                     <td>General project files</td>
                 </tr>

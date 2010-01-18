@@ -18,39 +18,7 @@ limitations under the License.
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <!-- Import parent stylesheet -->
-    <xsl:import href="../auxilliary.xsl"/>
-
-    <xsl:variable name="demo-index" select="document(concat($trunk, '/demos/www/index.xml'))/document"/>
-
-    <!-- Override group navigation to pull from the demos index -->
-    <xsl:template name="group-navigation">
-        <xsl:for-each select="$demo-index/body//document-item">
-            <xsl:variable name="id" select="@id"/>
-            <xsl:variable name="document" select="document(concat($trunk, '/demos/www/', $id, '.xml'))/document"/>
-            <li>
-                <xsl:element name="a">
-                    <xsl:attribute name="href">
-                        <xsl:value-of select="concat($root, 'demos/', $id, '.html')"/>
-                    </xsl:attribute>
-                    <xsl:if test="boolean($document/properties/full-screen)">
-                        <xsl:attribute name="target">_new</xsl:attribute>
-                    </xsl:if>
-                    <xsl:apply-templates select="$document/properties/title" mode="value"/>
-                </xsl:element>
-            </li>
-        </xsl:for-each>
-        <xsl:for-each select="$project/external-demos/demo">
-            <li>
-                <xsl:element name="a">
-                    <xsl:attribute name="href">
-                        <xsl:value-of select="@href"/>
-                    </xsl:attribute>
-                    <xsl:attribute name="target">_new</xsl:attribute>
-                    <xsl:apply-templates select="properties/title" mode="value"/>
-                </xsl:element>
-            </li>
-        </xsl:for-each>
-    </xsl:template>
+    <xsl:import href="common.xsl"/>
 
     <!-- Override content area to show demos index -->
     <xsl:template name="content">

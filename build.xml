@@ -74,11 +74,13 @@ limitations under the License.
             <fileset dir="${folder.trunk}/demos/www" includes="**/*.xml" excludes="index.xml"/>
         </transform>
 
-        <!--
         <transform stylesheet="xsl/tutorials/index.xsl" destdir="${folder.deploy}/tutorials">
             <fileset dir="${folder.trunk}/tutorials/www" includes="index.xml"/>
         </transform>
-        -->
+
+        <transform stylesheet="xsl/tutorials/auxilliary.xsl" destdir="${folder.deploy}/tutorials">
+            <fileset dir="${folder.trunk}/tutorials/www" includes="**/*.xml" excludes="index.xml"/>
+        </transform>
 
         <!-- Copy static resource files -->
         <copy todir="${folder.deploy}">
@@ -86,7 +88,6 @@ limitations under the License.
         </copy>
 
         <!-- Generate API documentation -->
-        <!--
         <javadoc packagenames="org.apache.pivot.*" destdir="${folder.deploy}/${version}/docs/api"
             author="true" version="true" use="true"
             classpath="${java.class.path}">
@@ -109,19 +110,17 @@ limitations under the License.
             <header>
                 <![CDATA[
                 <script type="text/javascript">
-                    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-                    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
                 </script>
                 <script type="text/javascript">
-                    try {
-                        var pageTracker = _gat._getTracker("UA-7977275-1");
-                        pageTracker._trackPageview();
-                    } catch(err) {}
-                </script>
+                try {
+                var pageTracker = _gat._getTracker("UA-7977275-3");
+                pageTracker._trackPageview();
+                } catch(err) {}</script>
                 ]]>
             </header>
         </javadoc>
-        -->
     </target>
 
     <target name="clean" description="Removes build artifacts">

@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to you under the Apache License,
+Version 2.0 (the "License"); you may not use this file except in
+compliance with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+--><html xmlns="http://www.w3.org/1999/xhtml"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><title>Background Tasks | Apache Pivot</title><link xmlns="" type="text/css" rel="stylesheet" href="/~tvolkert/tmp/site/styles/pivot.css"><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                </script><script type="text/javascript">
+                try {
+                var pageTracker = _gat._getTracker("UA-7977275-3");
+                pageTracker._trackPageview();
+                } catch(err) {}</script></head><body><div xmlns="" id="wrapper"><div id="main"><div id="header"><div class="logo"><a href="/~tvolkert/tmp/site/index.html"><img title="Apache Pivot Homepage" alt="Apache Pivot" src="/~tvolkert/tmp/site/images/logo.png"></a></div><div class="tagline"><img alt="Rich Internet Applications (RIA) in Java (tm)" src="/~tvolkert/tmp/site/images/tagline.png"></div><ul class="navi"><li><a href="/~tvolkert/tmp/site/demos/">Demos</a></li><li><a href="/~tvolkert/tmp/site/download.cgi#1.4">Download</a></li><li><a href="/~tvolkert/tmp/site/documentation.html">Documentation</a></li><li><a href="/~tvolkert/tmp/site/get-involved.html">Get Involved</a></li><li><a href="/~tvolkert/tmp/site/about.html">About</a></li></ul></div><div class="group" id="contentBase"><h1>Background Tasks</h1><ul class="naviLeft"><li><a href="/~tvolkert/tmp/site/tutorials/sample-application.html">Sample Application</a></li><li><a href="/~tvolkert/tmp/site/tutorials/platform-overview.html">Platform Overview</a></li><li><a href="/~tvolkert/tmp/site/tutorials/hello-world.html">Hello, World!</a></li><li><a href="/~tvolkert/tmp/site/tutorials/hello-wtkx.html">Hello, WTKX!</a></li><li><a href="/~tvolkert/tmp/site/tutorials/component-and-container.html">Component &amp; Container</a></li><li><a href="/~tvolkert/tmp/site/tutorials/labels-and-image-views.html">Labels &amp; Image Views</a></li><li><a href="/~tvolkert/tmp/site/tutorials/buttons.html">Buttons</a></li><li><a href="/~tvolkert/tmp/site/tutorials/push-buttons.html">Push Buttons</a></li><li><a href="/~tvolkert/tmp/site/tutorials/toggle-buttons.html">Toggle Buttons</a></li><li><a href="/~tvolkert/tmp/site/tutorials/radio-buttons.html">Radio Buttons</a></li><li><a href="/~tvolkert/tmp/site/tutorials/checkboxes.html">Checkboxes</a></li><li><a href="/~tvolkert/tmp/site/tutorials/link-buttons.html">Link Buttons</a></li><li><a href="/~tvolkert/tmp/site/tutorials/lists.html">Lists</a></li><li><a href="/~tvolkert/tmp/site/tutorials/list-buttons.html">List Buttons</a></li><li><a href="/~tvolkert/tmp/site/tutorials/text.html">Text</a></li><li><a href="/~tvolkert/tmp/site/tutorials/text-areas.html">Text Areas</a></li><li><a href="/~tvolkert/tmp/site/tutorials/separators.html">Separators</a></li><li><a href="/~tvolkert/tmp/site/tutorials/layout-containers.html">Layout Containers</a></li><li><a href="/~tvolkert/tmp/site/tutorials/flow-panes.html">Flow Panes</a></li><li><a href="/~tvolkert/tmp/site/tutorials/box-panes.html">Box Panes</a></li><li><a href="/~tvolkert/tmp/site/tutorials/grid-panes.html">Grid Panes</a></li><li><a href="/~tvolkert/tmp/site/tutorials/table-panes.html">Table Panes</a></li><li><a href="/~tvolkert/tmp/site/tutorials/borders.html">Borders</a></li><li><a href="/~tvolkert/tmp/site/tutorials/stack-panes.html">Stack Panes</a></li><li><a href="/~tvolkert/tmp/site/tutorials/split-panes.html">Split Panes</a></li><li><a href="/~tvolkert/tmp/site/tutorials/forms.html">Forms</a></li><li><a href="/~tvolkert/tmp/site/tutorials/panels.html">Panels</a></li><li><a href="/~tvolkert/tmp/site/tutorials/navigation-containers.html">Navigation Containers</a></li><li><a href="/~tvolkert/tmp/site/tutorials/card-panes.html">Card Panes</a></li><li><a href="/~tvolkert/tmp/site/tutorials/tab-panes.html">Tab Panes</a></li><li><a href="/~tvolkert/tmp/site/tutorials/accordions.html">Accordions</a></li><li><a href="/~tvolkert/tmp/site/tutorials/expanders.html">Expanders</a></li><li><a href="/~tvolkert/tmp/site/tutorials/rollups.html">Rollups</a></li><li><a href="/~tvolkert/tmp/site/tutorials/viewports.html">Viewports</a></li><li><a href="/~tvolkert/tmp/site/tutorials/scroll-panes.html">Scroll Panes</a></li><li><a href="/~tvolkert/tmp/site/tutorials/panoramas.html">Panoramas</a></li><li><a href="/~tvolkert/tmp/site/tutorials/progress-indicators.html">Progress Indicators</a></li><li><a href="/~tvolkert/tmp/site/tutorials/meters.html">Meters</a></li><li><a href="/~tvolkert/tmp/site/tutorials/activity-indicators.html">Activity Indicators</a></li><li><a href="/~tvolkert/tmp/site/tutorials/bounded-range-components.html">Bounded Range Components</a></li><li><a href="/~tvolkert/tmp/site/tutorials/sliders.html">Sliders</a></li><li><a href="/~tvolkert/tmp/site/tutorials/scroll-bars.html">Scroll Bars</a></li><li><a href="/~tvolkert/tmp/site/tutorials/spinners.html">Spinners</a></li><li><a href="/~tvolkert/tmp/site/tutorials/calendars.html">Calendars</a></li><li><a href="/~tvolkert/tmp/site/tutorials/menus.html">Menus</a></li><li><a href="/~tvolkert/tmp/site/tutorials/context-menus.html">Context Menus</a></li><li><a href="/~tvolkert/tmp/site/tutorials/menu-bars.html">Menu Bars</a></li><li><a href="/~tvolkert/tmp/site/tutorials/menu-buttons.html">Menu Buttons</a></li><li><a href="/~tvolkert/tmp/site/tutorials/color-choosers.html">Color Choosers</a></li><li><a href="/~tvolkert/tmp/site/tutorials/table-views.html">Table Views</a></li><li><a href="/~tvolkert/tmp/site/tutorials/table-views.json.html">JSON-based TableView</a></li><li><a href="/~tvolkert/tmp/site/tutorials/table-views.custom.html">Custom TableView</a></li><li><a href="/~tvolkert/tmp/site/tutorials/tree-views.html">Tree Views</a></li><li><a href="/~tvolkert/tmp/site/tutorials/file-browsing.html">File Browsing</a></li><li><a href="/~tvolkert/tmp/site/tutorials/windows.html">Windows</a></li><li><a href="/~tvolkert/tmp/site/tutorials/clipboard.html">Clipboard</a></li><li><a href="/~tvolkert/tmp/site/tutorials/drag-and-drop.html">Drag and Drop</a></li><li><a href="/~tvolkert/tmp/site/tutorials/drawing.html">Drawing</a></li><li><a href="/~tvolkert/tmp/site/tutorials/effects.html">Effects</a></li><li><a href="/~tvolkert/tmp/site/tutorials/effects.transitions.html">Transitions</a></li><li><a href="/~tvolkert/tmp/site/tutorials/background-tasks.html">Background Tasks</a></li><li><a href="/~tvolkert/tmp/site/tutorials/web-queries.html">Web Queries</a></li><li><a href="/~tvolkert/tmp/site/tutorials/data-binding.html">Data Binding</a></li><li><a href="/~tvolkert/tmp/site/tutorials/localization.html">Localization</a></li><li><a href="/~tvolkert/tmp/site/tutorials/scripting.html">Scripting</a></li><li><a href="/~tvolkert/tmp/site/tutorials/summary.html">Summary</a></li><li><a href="/~tvolkert/tmp/site/tutorials/stock-tracker.html">The "Stock Tracker" Application</a></li><li><a href="/~tvolkert/tmp/site/tutorials/stock-tracker.ui.html">UI Markup Using WTKX</a></li><li><a href="/~tvolkert/tmp/site/tutorials/stock-tracker.events.html">Event Handling</a></li><li><a href="/~tvolkert/tmp/site/tutorials/stock-tracker.web-queries.html">Web Queries</a></li><li><a href="/~tvolkert/tmp/site/tutorials/stock-tracker.data-binding.html">Data Binding</a></li><li><a href="/~tvolkert/tmp/site/tutorials/stock-tracker.localization.html">Localization</a></li><li><a href="/~tvolkert/tmp/site/tutorials/wtkx-primer.html">WTKX Primer</a></li></ul><div class="content"><!--NOTE: Syntax highlighting script is LGPL--><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJava.js" type="text/javascript"></script><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js" type="text/javascript"></script><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js" type="text/javascript"></script><link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css"><link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css"><script type="text/javascript">
+            SyntaxHighlighter.all();
+        </script>
+        <p>
+            Often, an application will need to perform a long-running task (such as loading a large
+            file or executing a computationally-intensive operation). Executing such code on the UI
+            thread will cause the application to stop responding to repaints while the operation is
+            running, giving the appearance that it is "hung".
+        </p>
+
+        <p>
+            Pivot includes the <tt>org.apache.pivot.util.concurrent.Task</tt> class to help resolve
+            this problem. A <tt>Task</tt> represents an instance of an operation that may be
+            performed by a background thread. It is an abstract class, whose <tt>execute()</tt>
+            method is overridden by an application to perform the actual task, optionally returning
+            a value when it is complete.
+        </p>
+
+        <p>
+            Though callers can invoke the <tt>execute()</tt> method directly, this would have the
+            same effect as simply executing the code inline: the UI will appear to hang until
+            <tt>execute()</tt> returns. However, <tt>Task</tt> provides an additional version of
+            the <tt>execute()</tt> method that takes an instance of
+            <tt>org.apache.pivot.util.concurrent.TaskListener</tt>. When this version of the method
+            is invoked, the <tt>Task</tt> class creates (or obtains) an instance of a background
+            thread and calls the abstract version of the method on this thread instead of the UI
+            thread. When the abstract <tt>execute()</tt> returns, the task notifies the caller by
+            invoking one of the methods defined by the listener interface:
+        </p>
+
+        <p>
+            <tt>public void taskExecuted(Task&lt;V&gt; task);</tt><br>
+            <tt>public void executeFailed(Task&lt;V&gt; task);</tt><br>
+        </p>
+
+        <p>
+            If the <tt>execute()</tt> method returns successfully, the <tt>taskExecuted()</tt>
+            method is called, and the result of the operation can be obtained by calling the
+            <tt>getResult()</tt> method of the task object. However, if the <tt>execute()</tt> call
+            fails (by throwing an exception), the <tt>executeFailed()</tt> listener method is
+            called, and the exception that was thrown can be obtained via the <tt>getFault()</tt>
+            method of the task object.
+        </p>
+
+        <p>
+            The following application demonstrates the behavior of an application when a task is
+            executed synchronously vs. asynchronously. It uses a simple "sleep task" to simulate an
+            operation that runs for five seconds:
+        </p>
+
+        <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
+            
+            var attributes = {
+                code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
+                width:"240",
+                height:"240"
+            };
+
+            
+            
+
+            
+            var libraries = [];
+            libraries.push("/~tvolkert/tmp/site/lib/pivot-core-1.4.jar");
+                libraries.push("/~tvolkert/tmp/site/lib/pivot-wtk-1.4.jar");
+                libraries.push("/~tvolkert/tmp/site/lib/pivot-wtk-terra-1.4.jar");
+                libraries.push("/~tvolkert/tmp/site/lib/pivot-tutorials-1.4.jar");
+                
+            attributes.archive = libraries.join(",");
+
+            
+            var parameters = {
+                codebase_lookup:false,
+                java_arguments:"-Dsun.awt.noerasebackground=true -Dsun.awt.erasebackgroundonresize=true",
+                application_class_name:"org.apache.pivot.tutorials.backgroundtasks.BackgroundTasks"
+            };
+
+            
+            
+
+            deployJava.runApplet(attributes, parameters, "1.6");
+        </script>
+
+        <p>
+            Pressing the "Execute Synchronously" button activates an activity indicator component
+            and calls the synchronous version of the <tt>execute()</tt> method of the sleep task.
+            Though the task runs and returns correctly, the activity indicator is never shown,
+            because the UI thread has been unable to respond to repaints while the task was
+            running. However, when the "Execute Asynchronously" button is pressed, the activity
+            indicator appears correctly and runs for five seconds until the task is complete.
+        </p>
+
+        <p>
+            The WTKX for this example is shown below:
+        </p>
+
+        <pre class="brush:xml">
+            
+            &lt;Window title="Background Tasks" maximized="true"
+                xmlns:wtkx="http://pivot.apache.org/wtkx"
+                xmlns="org.apache.pivot.wtk"&gt;
+                &lt;content&gt;
+                    &lt;BoxPane orientation="vertical"
+                        styles="{horizontalAlignment:'center', verticalAlignment:'center'}"&gt;
+                        &lt;Border styles="{padding:2}"&gt;
+                            &lt;content&gt;
+                                &lt;ActivityIndicator wtkx:id="activityIndicator"/&gt;
+                            &lt;/content&gt;
+                        &lt;/Border&gt;
+
+                        &lt;PushButton wtkx:id="executeSynchronousButton" buttonData="Execute Synchronously"/&gt;
+                        &lt;PushButton wtkx:id="executeAsynchronousButton" buttonData="Execute Asynchronously"/&gt;
+                    &lt;/BoxPane&gt;
+                &lt;/content&gt;
+            &lt;/Window&gt;
+            
+        </pre>
+
+        <p>
+            The Java source for <tt>SleepTask</tt> is as follows. It simply sleeps for 5000
+            milliseconds and then returns a simulated result value:
+        </p>
+
+        <pre class="brush:java">
+            
+            package org.apache.pivot.tutorials.backgroundtasks;
+
+            import org.apache.pivot.util.concurrent.Task;
+            import org.apache.pivot.util.concurrent.TaskExecutionException;
+
+            public class SleepTask extends Task&lt;String&gt; {
+                @Override
+                public String execute() throws TaskExecutionException {
+                    // Simulate a long-running activity (5s)
+                    try {
+                        Thread.sleep(5000);
+                    } catch (InterruptedException exception) {
+                        throw new TaskExecutionException(exception);
+                    }
+
+                    // Return a simulated result value
+                    return "Done sleeping!";
+                }
+            }
+            
+        </pre>
+
+        <p>
+            The Java source for the application is shown below:
+        </p>
+
+        <pre class="brush:java">
+            
+            package org.apache.pivot.tutorials.backgroundtasks;
+
+            import org.apache.pivot.collections.Map;
+            import org.apache.pivot.util.concurrent.Task;
+            import org.apache.pivot.util.concurrent.TaskExecutionException;
+            import org.apache.pivot.util.concurrent.TaskListener;
+            import org.apache.pivot.wtk.ActivityIndicator;
+            import org.apache.pivot.wtk.Application;
+            import org.apache.pivot.wtk.Button;
+            import org.apache.pivot.wtk.ButtonPressListener;
+            import org.apache.pivot.wtk.DesktopApplicationContext;
+            import org.apache.pivot.wtk.Display;
+            import org.apache.pivot.wtk.PushButton;
+            import org.apache.pivot.wtk.TaskAdapter;
+            import org.apache.pivot.wtk.Window;
+            import org.apache.pivot.wtkx.WTKXSerializer;
+
+            public class BackgroundTasks implements Application {
+                private Window window = null;
+
+                private ActivityIndicator activityIndicator = null;
+                private PushButton executeSynchronousButton = null;
+                private PushButton executeAsynchronousButton = null;
+
+                @Override
+                public void startup(Display display, Map&lt;String, String&gt; properties) throws Exception {
+                    WTKXSerializer wtkxSerializer = new WTKXSerializer();
+                    window = (Window)wtkxSerializer.readObject(this, "background_tasks.wtkx");
+
+                    activityIndicator = (ActivityIndicator)wtkxSerializer.get("activityIndicator");
+
+                    executeSynchronousButton = (PushButton)wtkxSerializer.get("executeSynchronousButton");
+                    executeSynchronousButton.getButtonPressListeners().add(new ButtonPressListener() {
+                        @Override
+                        public void buttonPressed(Button button) {
+                            activityIndicator.setActive(true);
+
+                            System.out.println("Starting synchronous task execution.");
+
+                            SleepTask sleepTask = new SleepTask();
+
+                            String result = null;
+                            try {
+                                result = sleepTask.execute();
+                            } catch (TaskExecutionException exception) {
+                                System.err.println(exception);
+                            }
+
+                            System.out.println("Synchronous task execution complete: \"" + result + "\"");
+
+                            activityIndicator.setActive(false);
+                        }
+                    });
+
+                    executeAsynchronousButton = (PushButton)wtkxSerializer.get("executeAsynchronousButton");
+                    executeAsynchronousButton.getButtonPressListeners().add(new ButtonPressListener() {
+                        @Override
+                        public void buttonPressed(Button button) {
+                            activityIndicator.setActive(true);
+                            window.setEnabled(false);
+
+                            System.out.println("Starting asynchronous task execution.");
+
+                            SleepTask sleepTask = new SleepTask();
+                            TaskListener&lt;String&gt; taskListener = new TaskListener&lt;String&gt;() {
+                                @Override
+                                public void taskExecuted(Task&lt;String&gt; task) {
+                                    activityIndicator.setActive(false);
+                                    window.setEnabled(true);
+
+                                    System.out.println("Synchronous task execution complete: \""
+                                        + task.getResult() + "\"");
+                                }
+
+                                @Override
+                                public void executeFailed(Task&lt;String&gt; task) {
+                                    activityIndicator.setActive(false);
+                                    window.setEnabled(true);
+
+                                    System.err.println(task.getFault());
+                                }
+                            };
+
+                            sleepTask.execute(new TaskAdapter&lt;String&gt;(taskListener));
+                        }
+                    });
+
+                    window.open(display);
+                }
+
+                @Override
+                public boolean shutdown(boolean optional) {
+                    if (window != null) {
+                        window.close();
+                    }
+
+                    return false;
+                }
+
+                @Override
+                public void suspend() {
+                }
+
+                @Override
+                public void resume() {
+                }
+
+                public static void main(String[] args) {
+                    DesktopApplicationContext.main(BackgroundTasks.class, args);
+                }
+            }
+            
+        </pre>
+
+        <p>
+            Note that the button press listener for the "Execute Asynchronously" button wraps the
+            actual task listener in an instance of <tt>org.apache.pivot.wtk.TaskAdapter</tt>. This
+            is because, like most UI toolkits, Pivot user interfaces are single-threaded: all UI
+            operations must occur on the same thread (which AWT calls the "event dispatch thread").
+            Wrapping the task listener in a <tt>TaskAdapter</tt> ensures that the result listener
+            will be called on the UI thread, rather than the background thread, which is what would
+            occur if the listener was not wrapped in the adapter.
+        </p>
+    <p>Next: <a href="web-queries.html">Web Queries</a></p></div></div></div><div class="group" id="footer"><div class="footerLogo">Copyright (c) 1999-2010<br>The Apache Software Foundation.</div><div class="footerLinks"><ul class="footerMenuGr"><li><strong>Demos</strong><ul><li><a href="/~tvolkert/tmp/site/demos/kitchen-sink.html" target="_new">"Kitchen Sink"</a></li><li><a href="/~tvolkert/tmp/site/demos/component-explorer.html" target="_new">Component Explorer</a></li><li><a href="http://ixnay.biz/charts.html" target="_new">Charting</a></li><li><a href="/~tvolkert/tmp/site/demos/">More Demos</a></li></ul></li><li><strong>Documentation</strong><ul><li><a href="/~tvolkert/tmp/site/getting-started.html">Getting Started</a></li><li><a href="/~tvolkert/tmp/site/tutorials/">Tutorial</a></li><li><a href="http://cwiki.apache.org/PIVOT/frequently-asked-questions-faq.html">FAQ</a></li><li><a href="/~tvolkert/tmp/site/1.4/docs/api/">Javadoc (1.4)</a></li></ul></li><li><strong>Get Involved</strong><ul><li><a href="/~tvolkert/tmp/site/svn.html">SVN Repositories</a></li><li><a href="/~tvolkert/tmp/site/lists.html">Mailing Lists</a></li><li><a href="http://issues.apache.org/jira/browse/PIVOT/">Bug Database</a></li><li><a href="http://cwiki.apache.org/PIVOT/">Wiki</a></li></ul></li><li><strong>Related</strong><ul><li><a href="http://code.google.com/p/pivot-jfree/">JFreeChart Provider</a></li></ul></li><li><strong>About</strong><ul><li><a href="/~tvolkert/tmp/site/who-we-are.html">Who We Are</a></li><li><a href="/~tvolkert/tmp/site/contact.html">Contact</a></li><li><a href="/~tvolkert/tmp/site/news.html">News</a></li><li><a href="/~tvolkert/tmp/site/legal.html">Legal/License</a></li></ul></li></ul></div></div></div></body></html>

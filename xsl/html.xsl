@@ -27,12 +27,9 @@ limitations under the License.
 
     <!-- Absolute URL (not fully qualified) to the project root -->
     <xsl:variable name="root">
-        <xsl:value-of select="$project/@href"/>
-        <!--
         <xsl:variable name="tmp" select="substring-after($project/@href, 'http://')"/>
         <xsl:text>/</xsl:text>
         <xsl:value-of select="substring-after($tmp, '/')"/>
-        -->
     </xsl:variable>
 
     <!-- <document> translates to an HTML page -->
@@ -58,15 +55,14 @@ limitations under the License.
 
                 <!-- Google analytics -->
                 <script type="text/javascript">
-                    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-                    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
                 </script>
                 <script type="text/javascript">
-                    try {
-                        var pageTracker = _gat._getTracker("UA-7977275-1");
-                        pageTracker._trackPageview();
-                    } catch(err) {}
-                </script>
+                try {
+                var pageTracker = _gat._getTracker("UA-7977275-3");
+                pageTracker._trackPageview();
+                } catch(err) {}</script>
             </head>
 
             <body>
@@ -203,5 +199,60 @@ limitations under the License.
 
     <xsl:template name="envelope">
         <xsl:apply-templates/>
+    </xsl:template>
+
+    <!-- <application> translates to Javascript that creates an applet -->
+    <xsl:template match="application">
+        <script type="text/javascript" src="http://java.com/js/deployJava.js"></script>
+        <script type="text/javascript">
+            <!-- Base attributes -->
+            var attributes = {
+                code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
+                width:"<xsl:value-of select="@width"/>",
+                height:"<xsl:value-of select="@height"/>"
+            };
+
+            <!-- Additional attributes -->
+            <xsl:for-each select="attributes/*">
+                attributes.<xsl:value-of select="name(.)"/> = '<xsl:value-of select="."/>';
+            </xsl:for-each>
+
+            <!-- Archive attribute -->
+            var libraries = [];
+            <xsl:variable name="signed" select="libraries/@signed"/>
+            <xsl:for-each select="libraries/library">
+                <xsl:text><![CDATA[libraries.push("]]></xsl:text>
+                <xsl:value-of select="$root"/>
+                <xsl:value-of select="'lib/pivot-'"/>
+                <xsl:value-of select="."/>
+                <xsl:value-of select="'-'"/>
+                <xsl:value-of select="$version"/>
+                <xsl:if test="$signed">
+                    <xsl:value-of select="'.signed'"/>
+                </xsl:if>
+                <xsl:value-of select="'.jar'"/>
+                <xsl:text><![CDATA[");
+                ]]></xsl:text>
+            </xsl:for-each>
+            attributes.archive = libraries.join(",");
+
+            <!-- Base parameters -->
+            var parameters = {
+                codebase_lookup:false,
+                java_arguments:"-Dsun.awt.noerasebackground=true -Dsun.awt.erasebackgroundonresize=true",
+                application_class_name:"<xsl:value-of select="@class"/>"
+            };
+
+            <!-- Startup properties -->
+            <xsl:if test="startup-properties">
+                var startupProperties = [];
+                <xsl:for-each select="startup-properties/*">
+                    startupProperties.push("<xsl:value-of select="name(.)"/>=<xsl:apply-templates/>");
+                </xsl:for-each>
+                parameters.startup_properties = startupProperties.join("&amp;");
+            </xsl:if>
+
+            deployJava.runApplet(attributes, parameters, "1.6");
+        </script>
     </xsl:template>
 </xsl:stylesheet>
