@@ -204,6 +204,7 @@ limitations under the License.
     <!-- <application> translates to Javascript that creates an applet -->
     <xsl:template match="application">
         <script type="text/javascript" src="http://java.com/js/deployJava.js"></script>
+
         <script type="text/javascript">
             <!-- Base attributes -->
             var attributes = {

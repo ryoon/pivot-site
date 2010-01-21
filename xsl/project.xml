@@ -16,9 +16,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<project href="http://people.apache.org/~tvolkert/tmp/site/">
+<project href="http://pivot.apache.org/">
     <title>Apache Pivot</title>
-    <tagline>Rich Internet Applications (RIA) in Java (tm)</tagline>
+    <tagline>Rich Internet Applications in Java</tagline>
     <copyright>
         <message>Copyright (c) 1999-2010</message>
         <message>The Apache Software Foundation.</message>
@@ -41,12 +41,16 @@ limitations under the License.
             </documents>
         </document-group>
 
-        <document-group id="documentation" href="documentation.html">
+        <document-group id="tutorial" href="tutorials/" footer="false">
+            <title>Tutorial</title>
+        </document-group>
+
+        <document-group id="documentation">
             <title>Documentation</title>
             <documents>
                 <document href="getting-started.html">Getting Started</document>
                 <document href="tutorials/">Tutorial</document>
-                <document href="{$wiki}/frequently-asked-questions-faq.html">FAQ</document>
+                <document href="http://cwiki.apache.org/PIVOT/frequently-asked-questions-faq.html">FAQ</document>
                 <document href="{$version}/docs/api/">Javadoc (<version/>)</document>
             </documents>
         </document-group>
@@ -56,8 +60,8 @@ limitations under the License.
             <documents>
                 <document href="svn.html">SVN Repositories</document>
                 <document href="lists.html">Mailing Lists</document>
-                <document href="{$jira}/">Bug Database</document>
-                <document href="{$wiki}/">Wiki</document>
+                <document href="http://issues.apache.org/jira/browse/PIVOT">Bug Database</document>
+                <document href="http://cwiki.apache.org/PIVOT/">Wiki</document>
             </documents>
         </document-group>
 

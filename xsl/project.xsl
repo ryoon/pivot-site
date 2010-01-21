@@ -23,10 +23,6 @@ limitations under the License.
 
     <!-- Variables (not overrideable) -->
     <xsl:variable name="version-token">{$version}</xsl:variable>
-    <xsl:variable name="wiki-token">{$wiki}</xsl:variable>
-    <xsl:variable name="jira-token">{$jira}</xsl:variable>
-    <xsl:variable name="wiki">http://cwiki.apache.org/PIVOT</xsl:variable>
-    <xsl:variable name="jira">http://issues.apache.org/jira/browse/PIVOT</xsl:variable>
     <xsl:variable name="project" select="document('project.xml')/project"/>
 
     <!-- <version> gets translated to the current version (text) -->
@@ -48,16 +44,6 @@ limitations under the License.
                 <xsl:value-of select="substring-before(., $version-token)"/>
                 <xsl:value-of select="$version"/>
                 <xsl:value-of select="substring-after(., $version-token)"/>
-            </xsl:when>
-            <xsl:when test="contains(., $wiki-token)">
-                <xsl:value-of select="substring-before(., $wiki-token)"/>
-                <xsl:value-of select="$wiki"/>
-                <xsl:value-of select="substring-after(., $wiki-token)"/>
-            </xsl:when>
-            <xsl:when test="contains(., $jira-token)">
-                <xsl:value-of select="substring-before(., $jira-token)"/>
-                <xsl:value-of select="$jira"/>
-                <xsl:value-of select="substring-after(., $jira-token)"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of select="."/>

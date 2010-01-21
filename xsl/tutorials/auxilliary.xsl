@@ -21,6 +21,12 @@ limitations under the License.
     <xsl:import href="common.xsl"/>
 
     <xsl:template name="content">
+        <style type="text/css">
+            applet {
+                border: 1px solid #999999;
+            }
+        </style>
+
         <xsl:comment>NOTE: Syntax highlighting script is LGPL</xsl:comment>
         <script xmlns="" type="text/javascript" src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"/>
         <script xmlns="" type="text/javascript" src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJava.js"/>
@@ -32,7 +38,9 @@ limitations under the License.
             SyntaxHighlighter.all();
         </script>
 
-        <xsl:apply-templates/>
+        <div class="section">
+            <xsl:apply-templates/>
+        </div>
 
         <xsl:variable name="index" select="document(concat($trunk, '/tutorials/www/index.xml'))/document"/>
         <xsl:variable name="id" select="/document/@id"/>

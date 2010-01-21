@@ -81,6 +81,12 @@ limitations under the License.
         <transform stylesheet="xsl/tutorials/auxilliary.xsl" destdir="${folder.deploy}/tutorials">
             <fileset dir="${folder.trunk}/tutorials/www" includes="**/*.xml" excludes="index.xml"/>
         </transform>
+        <copy todir="${folder.deploy}/tutorials">
+            <fileset dir="${folder.trunk}/tutorials/www">
+                <include name="**/*.png"/>
+                <include name="**/*.jpg"/>
+            </fileset>
+        </copy>
 
         <!-- Copy static resource files -->
         <copy todir="${folder.deploy}">
