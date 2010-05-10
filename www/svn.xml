@@ -76,6 +76,11 @@ limitations under the License.
                     <tt>/project/</tt></a></td>
                     <td>General project files</td>
                 </tr>
+                <tr>
+                    <td><a href="http://svn.apache.org/repos/asf/pivot/skunk/">
+                    <tt>/skunk/</tt></a></td>
+                    <td>Experimental area</td>
+                </tr>
             </table>
         </section>
     </body>
