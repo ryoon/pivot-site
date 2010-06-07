@@ -50,7 +50,7 @@ limitations under the License.
             <documents>
                 <document href="getting-started.html">Getting Started</document>
                 <document href="tutorials/">Tutorial</document>
-                <document href="http://cwiki.apache.org/PIVOT/frequently-asked-questions-faq.html">FAQ</document>
+                <document href="faq.html">FAQ</document>
                 <document href="{$version}/docs/api/">Javadoc (<version/>)</document>
             </documents>
         </document-group>
