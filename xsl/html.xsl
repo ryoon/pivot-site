@@ -26,8 +26,8 @@ limitations under the License.
         doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"/>
 
     <!-- Absolute URL (not fully qualified) to the project root -->
+    <xsl:variable name="tmp" select="substring-after($project/@href, 'http://')"/>
     <xsl:variable name="root">
-        <xsl:variable name="tmp" select="substring-after($project/@href, 'http://')"/>
         <xsl:text>/</xsl:text>
         <xsl:value-of select="substring-after($tmp, '/')"/>
     </xsl:variable>
