@@ -24,9 +24,9 @@ limitations under the License.
     <body>
         <div id="stage">
             <p>
-                Building rich internet applications (RIA) in Java by combining the enhanced
-                productivity and usability features of a modern RIA toolkit with the robustness of
-                the Java platform.
+                Apache Pivot is an open-source platform for building rich Internet applications in
+                Java. It combines the enhanced productivity and usability features of a modern RIA
+                toolkit with the robustness of the Java platform.
             </p>
 
             <ul class="stageBtn">
@@ -39,7 +39,7 @@ limitations under the License.
                 <li class="stageDl">
                     <a href="download.cgi#{$version}">
                         <strong>Download</strong>
-                        <em>Get the current release (<version/>)</em>
+                        <em>The current release (<version/>)</em>
                     </a>
                 </li>
             </ul>
@@ -48,13 +48,17 @@ limitations under the License.
         <div id="featured" class="group">
             <div class="homeCol1">
                 <h2>Why Pivot?</h2>
-                <p><img src="images/pivot_screen.jpg" alt="Pivot" /></p>
                 <p>
-                    Pivot applications are written using a combination of Java and XML and can be
-                    run either as an applet or as a standalone (optionally offline) desktop
-                    application. Pivot includes features that make building modern GUI applications
-                    much easier, including declarative UI, data binding, effects and transitions,
-                    and web services integration.
+                    Pivot is the only RIA framework that enables developers to build applications
+                    for the Java platform using Java or any other JVM scripting language, such as
+                    JavaScript, Groovy, or Scala. Pivot is also the only truly open RIA framework:
+                    it is completely open source, and is driven entirely by the software
+                    development community.<br/><br/>
+                </p>
+
+                <p>
+                    Pivot allows developers to work with the tools and APIs they already know,
+                    reducing technology sprawl and streamlining solution technology stacks.
                 </p>
                 <div class="btnMore"><a href="about.html"><span>More about Pivot</span></a></div>
             </div>
