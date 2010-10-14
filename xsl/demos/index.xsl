@@ -23,6 +23,11 @@ limitations under the License.
     <!-- Override content area to show demos index -->
     <xsl:template name="content">
         <ul class="featuredDemos">
+            <p style="padding-bottom:10px;">
+                <em>
+                    Note: all demos require <a href="http://www.java.com/">Java 6</a> or greater.
+                </em>
+            </p>
             <xsl:for-each select="$project/featured-demos/demo">
                 <xsl:variable name="id" select="@id"/>
                 <xsl:choose>
