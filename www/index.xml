@@ -97,16 +97,9 @@ limitations under the License.
                 <ul class="newsItems">
                     <li>
                         <a href="download.cgi#{$version}">
-                            <strong>Pivot 1.5.1 Released</strong>
-                            <em>August 20, 2010</em>
+                            <strong>Pivot 1.5.2 Released</strong>
+                            <em>October ??, 2010</em>
                             <p>The latest version of Pivot is now available for download.</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://na.apachecon.com/c/acna2010/sessions/632">
-                            <strong>ApacheCon 2010 Registration Now Open</strong>
-                            <em>August 2, 2010</em>
-                            <p>Join Pivot founder Greg Brown in Atlanta for an introduction to Apache Pivot!</p>
                         </a>
                     </li>
                 </ul>

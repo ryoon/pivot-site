@@ -26,7 +26,7 @@ limitations under the License.
         <p>This section answers questions related to the Pivot platform.</p>
 
         <h2>What is Apache Pivot?</h2>
-        <p>Apache Pivot is an open-source platform for building rich internet applications in Java. It combines the enhanced productivity and usability features of a modern RIA toolkit with the robustness of the Java platform. Pivot applications are written using a combination of Java and XML and can be run either as an applet or as a standalone, optionally offline, desktop application.</p>
+        <p>Apache Pivot is an open-source platform for building rich internet applications in Java. It combines the enhanced productivity and usability features of a modern RIA toolkit with the robustness of the Java platform. Pivot applications are generally written using a combination of Java and XML, though they can also be written using other JVM languages such as Groovy or Scala, and markup is not required (user interfaces can also be constructed "by hand" using only code). They can be run either in a web browser using the Java Plugin or as a standalone, optionally offline, desktop application.</p>
 
         <p>Like other modern development platforms, Pivot provides a comprehensive set of foundation classes that together comprise a "framework". These classes form the building blocks upon which more complex and sophisticated applications can be built.</p>
 
