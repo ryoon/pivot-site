@@ -24,9 +24,10 @@ limitations under the License.
     <body>
         <div id="stage">
             <p>
-                Apache Pivot is an open-source platform for building rich Internet applications in
-                Java. It combines the enhanced productivity and usability features of a modern RIA
-                toolkit with the robustness of the Java platform.
+                Apache Pivot is an open-source platform for building installable Internet 
+                applications (IIAs). It combines the enhanced productivity and usability features 
+                of a modern user interface toolkit with the robustness of the industry-standard 
+                Java platform.
             </p>
 
             <ul class="stageBtn">
@@ -48,17 +49,17 @@ limitations under the License.
         <div id="featured" class="group">
             <div class="homeCol1">
                 <h2>Why Pivot?</h2>
-                <p>
-                    Pivot is the only RIA framework that enables developers to build applications
-                    for the Java platform using Java or any other JVM language, such as
-                    JavaScript, Groovy, or Scala. Pivot is also the only truly open RIA framework:
-                    it is completely open source, and is driven entirely by the software
-                    development community.<br/><br/>
+                <p>                
+                    Pivot allows developers to easily construct visually-engaging, cross-platform, 
+                    connected applications in Java or any other JVM language, such as JavaScript, 
+                    Groovy, or Scala. Pivot is also the only truly open IIA framework: it is 
+                    completely open source, and is driven entirely by the software development 
+                    community.<br/><br/>
                 </p>
 
-                <p>
-                    Pivot allows developers to work with the tools and APIs they already know,
-                    reducing technology sprawl and streamlining solution technology stacks.
+                <p>                
+                    Pivot enables developers to build solutions using the tools they already know 
+                    and love, decreasing delivery time and reducing technology sprawl.
                 </p>
                 <!-- <div class="btnMore"><a href="about.html"><span>More about Pivot</span></a></div> -->
             </div>

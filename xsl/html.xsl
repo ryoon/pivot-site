@@ -92,7 +92,7 @@ limitations under the License.
 
                     <!-- Tagline -->
                     <div class="tagline">
-                        <img src="{$root}images/tagline.png" alt="{$project/tagline}"/>
+                        <!-- <img src="{$root}images/tagline.png" alt="{$project/tagline}"/> -->
                     </div>
 
                     <!-- Global navigation -->
