@@ -77,7 +77,7 @@ limitations under the License.
         </ul>
 
         <h2>How does Pivot compare to JavaFX?</h2>
-        <p>Pivot primarily differentiates itself from the current version of JavaFX by allowing developers to build applications in Java rather than the JavaFX scripting language. However, at the Java One conference in September, 2010, Oracle announced that future versions of JavaFX will be based on the Java language rather than JavaFX Script. JavaFX 2.0 is tenatively scheduled for release in late 2011.</p>
+        <p>Pivot primarily differentiates itself from the current version of JavaFX by allowing developers to build applications in Java rather than the JavaFX scripting language. However, at the Java One conference in September, 2010, Oracle announced that it would be dropping support for JavaFX Script in future versions. JavaFX 2.0 is tenatively scheduled for release in late 2011.</p>
 
         <h2>How does Pivot compare to the Google Widget Toolkit (GWT)?</h2>
         <p>While GWT allows developers to use the Java language to write web-based applications, the runtime enviroment for a GWT application is the browser itself, not a JVM. This has a number of drawbacks:</p>
