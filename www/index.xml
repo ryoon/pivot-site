@@ -26,8 +26,7 @@ limitations under the License.
             <p>
                 Apache Pivot is an open-source platform for building installable Internet 
                 applications (IIAs). It combines the enhanced productivity and usability features 
-                of a modern user interface toolkit with the robustness of the industry-standard 
-                Java platform.
+                of a modern user interface toolkit with the robustness of the Java platform.
             </p>
 
             <ul class="stageBtn">
@@ -58,8 +57,8 @@ limitations under the License.
                 </p>
 
                 <p>                
-                    Pivot enables developers to build solutions using the tools they already know 
-                    and love, decreasing delivery time and reducing technology sprawl.
+                    Pivot enables developers to build solutions using the tools they already know,
+                    decreasing delivery time and reducing technology sprawl.
                 </p>
                 <!-- <div class="btnMore"><a href="about.html"><span>More about Pivot</span></a></div> -->
             </div>
