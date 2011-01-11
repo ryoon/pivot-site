@@ -104,14 +104,13 @@ limitations under the License.
 
             <packageset dir="${folder.trunk}/charts/src" includes="**/*"/>
             <packageset dir="${folder.trunk}/core/src" includes="**/*"/>
-            <packageset dir="${folder.trunk}/tools/src" includes="**/*"/>
             <packageset dir="${folder.trunk}/web/src" includes="**/*"/>
             <packageset dir="${folder.trunk}/web-server/src" includes="**/*"/>
             <packageset dir="${folder.trunk}/wtk/src" includes="**/*"/>
             <packageset dir="${folder.trunk}/wtk-terra/src" includes="**/*"/>
 
-            <link href="http://java.sun.com/javase/6/docs/api"/>
-            <link href="http://java.sun.com/j2ee/1.4/docs/api"/>
+            <link href="http://download.oracle.com/javase/6/docs/api"/>
+            <link href="http://download.oracle.com/javaee/1.4/api/"/>
 
             <header>
                 <![CDATA[
