@@ -86,7 +86,7 @@ limitations under the License.
     </document-groups>
 
     <external-demos>
-        <demo id="charting" href="http://ixnay.biz/charts.html">
+        <demo id="charting" href="http://ixnay.biz/pivot-jfree-demos/charts_demo.html">
             <properties>
                 <title>Charting</title>
                 <description>
