@@ -237,6 +237,15 @@ limitations under the License.
             </xsl:for-each>
             attributes.archive = libraries.join(",");
 
+            <xsl:choose>
+                <xsl:when test='$signed'>
+                    libraries.push("lib/svgSalamander-tiny.signed.jar");
+                </xsl:when>
+                <xsl:otherwise>
+                    libraries.push("lib/svgSalamander-tiny.jar");
+                </xsl:otherwise>
+            </xsl:choose>
+
             <!-- Base parameters -->
             var parameters = {
                 codebase_lookup:false,

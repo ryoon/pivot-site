@@ -99,6 +99,7 @@ limitations under the License.
             classpath="${java.class.path}">
             <classpath>
                 <fileset dir="${folder.trunk}/web-server/lib" includes="**/*.jar"/>
+                <fileset dir="${folder.trunk}/wtk/lib" includes="**/*.jar"/>
                 <fileset dir="${java.home}/lib" includes="**/*.jar"/>
             </classpath>
 
