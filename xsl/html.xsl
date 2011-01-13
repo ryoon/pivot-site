@@ -235,16 +235,17 @@ limitations under the License.
                 <xsl:text><![CDATA[");
                 ]]></xsl:text>
             </xsl:for-each>
-            attributes.archive = libraries.join(",");
 
             <xsl:choose>
                 <xsl:when test='$signed'>
-                    libraries.push("lib/svgSalamander-tiny.signed.jar");
+                    libraries.push("/lib/svgSalamander-tiny.signed.jar");
                 </xsl:when>
                 <xsl:otherwise>
-                    libraries.push("lib/svgSalamander-tiny.jar");
+                    libraries.push("/lib/svgSalamander-tiny.jar");
                 </xsl:otherwise>
             </xsl:choose>
+
+            attributes.archive = libraries.join(",");
 
             <!-- Base parameters -->
             var parameters = {
