@@ -25,13 +25,6 @@ limitations under the License.
         doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
         doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"/>
 
-    <!-- Absolute URL (not fully qualified) to the project root -->
-    <xsl:variable name="tmp" select="substring-after($project/@href, 'http://')"/>
-    <xsl:variable name="root">
-        <xsl:text>/</xsl:text>
-        <xsl:value-of select="substring-after($tmp, '/')"/>
-    </xsl:variable>
-
     <!-- <document> translates to an HTML page -->
     <xsl:template match="document">
         <html xmlns="http://www.w3.org/1999/xhtml">
@@ -84,15 +77,15 @@ limitations under the License.
                                 <xsl:otherwise>logo</xsl:otherwise>
                             </xsl:choose>
                         </xsl:attribute>
-                        <a href="{$root}index.html">
-                            <img src="{$root}images/logo.png" alt="{$project/title}"
+                        <a href="/index.html">
+                            <img src="/images/logo.png" alt="{$project/title}"
                                 title="{$project/title} Homepage"/>
                         </a>
                     </xsl:element>
 
                     <!-- Tagline -->
                     <div class="tagline">
-                        <img src="{$root}images/tagline.png" alt="{$project/tagline}" style="visibility:hidden"/>
+                        <img src="/images/tagline.png" alt="{$project/tagline}" style="visibility:hidden"/>
                     </div>
 
                     <!-- Global navigation -->
@@ -105,7 +98,7 @@ limitations under the License.
                                             <xsl:apply-templates select="@href" mode="value"/>
                                         </xsl:variable>
                                         <xsl:if test="not(starts-with($location, 'http://'))">
-                                            <xsl:value-of select="$root"/>
+                                            <xsl:value-of select="'/'"/>
                                         </xsl:if>
                                         <xsl:value-of select="$location"/>
                                     </xsl:attribute>
@@ -155,7 +148,7 @@ limitations under the License.
                                                         <xsl:otherwise>
                                                             <xsl:variable name="document" select="document(concat($trunk, '/demos/www/', $id, '.xml'))/document"/>
                                                             <xsl:attribute name="href">
-                                                                <xsl:value-of select="concat($root, 'demos/', @id, '.html')"/>
+                                                                <xsl:value-of select="concat('/demos/', @id, '.html')"/>
                                                             </xsl:attribute>
                                                             <xsl:if test="boolean($document/properties/full-screen)">
                                                                 <xsl:attribute name="target">_new</xsl:attribute>
@@ -176,7 +169,7 @@ limitations under the License.
                                                         <xsl:apply-templates select="@href" mode="value"/>
                                                     </xsl:variable>
                                                     <xsl:if test="not(starts-with($location, 'http://'))">
-                                                        <xsl:value-of select="$root"/>
+                                                        <xsl:value-of select="'/'"/>
                                                     </xsl:if>
                                                     <xsl:value-of select="$location"/>
                                                 </xsl:attribute>
@@ -194,7 +187,7 @@ limitations under the License.
     </xsl:template>
 
     <xsl:template name="css">
-        <link href="{$root}styles/pivot.css" rel="stylesheet" type="text/css"/>
+        <link href="/styles/pivot.css" rel="stylesheet" type="text/css"/>
     </xsl:template>
 
     <xsl:template name="envelope">
@@ -223,8 +216,7 @@ limitations under the License.
             <xsl:variable name="signed" select="libraries/@signed"/>
             <xsl:for-each select="libraries/library">
                 <xsl:text><![CDATA[libraries.push("]]></xsl:text>
-                <xsl:value-of select="$root"/>
-                <xsl:value-of select="'lib/pivot-'"/>
+                <xsl:value-of select="'/lib/pivot-'"/>
                 <xsl:value-of select="."/>
                 <xsl:value-of select="'-'"/>
                 <xsl:value-of select="$version"/>
@@ -262,7 +254,7 @@ limitations under the License.
                     javaArguments.push("-D<xsl:value-of select="name(.)"/>=<xsl:apply-templates/>");
                 </xsl:for-each>
             </xsl:if>
-            
+
             parameters.java_arguments = javaArguments.join(" ");
 
             <!-- Startup properties -->

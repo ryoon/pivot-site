@@ -37,7 +37,7 @@ limitations under the License.
                 </style>
             </xsl:when>
             <xsl:otherwise>
-                <link href="{$root}styles/pivot.css" rel="stylesheet" type="text/css"/>
+                <link href="/styles/pivot.css" rel="stylesheet" type="text/css"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -52,10 +52,5 @@ limitations under the License.
                 <xsl:apply-imports/>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
-
-    <!-- <root> gets resolved to the 'root' XSL parameter -->
-    <xsl:template match="root">
-      <!-- TODO -->
     </xsl:template>
 </xsl:stylesheet>

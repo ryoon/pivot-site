@@ -45,7 +45,7 @@ limitations under the License.
                                             <xsl:value-of select="$demo/@href"/>
                                         </xsl:attribute>
                                         <xsl:attribute name="target">_new</xsl:attribute>
-                                        <img src="{$root}{@screenshot}" alt="{$demo/properties/title}"/>
+                                        <img src="/{@screenshot}" alt="{$demo/properties/title}"/>
                                     </xsl:element>
                                 </p>
                                 <p class="featuredDemoDesc">
@@ -74,12 +74,12 @@ limitations under the License.
                                 <p class="featuredDemoImg">
                                     <xsl:element name="a">
                                         <xsl:attribute name="href">
-                                            <xsl:value-of select="concat($root, 'demos/', $id, '.html')"/>
+                                            <xsl:value-of select="concat('/demos/', $id, '.html')"/>
                                         </xsl:attribute>
                                         <xsl:if test="boolean($document/properties/full-screen)">
                                             <xsl:attribute name="target">_new</xsl:attribute>
                                         </xsl:if>
-                                        <img src="{$root}{@screenshot}" alt="{$document/properties/title}"/>
+                                        <img src="/{@screenshot}" alt="{$document/properties/title}"/>
                                     </xsl:element>
                                 </p>
                                 <p class="featuredDemoDesc">
@@ -88,7 +88,7 @@ limitations under the License.
                                 <p class="featuredDemoView">
                                     <xsl:element name="a">
                                         <xsl:attribute name="href">
-                                            <xsl:value-of select="concat($root, 'demos/', $id, '.html')"/>
+                                            <xsl:value-of select="concat('/demos/', $id, '.html')"/>
                                         </xsl:attribute>
                                         <xsl:if test="boolean($document/properties/full-screen)">
                                             <xsl:attribute name="target">_new</xsl:attribute>
@@ -115,7 +115,7 @@ limitations under the License.
                         <div class="btnView">
                             <xsl:element name="a">
                                 <xsl:attribute name="href">
-                                    <xsl:value-of select="concat($root, 'demos/', $id, '.html')"/>
+                                    <xsl:value-of select="concat('/demos/', $id, '.html')"/>
                                 </xsl:attribute>
                                 <xsl:if test="boolean($document/properties/full-screen)">
                                     <xsl:attribute name="target">_new</xsl:attribute>

@@ -47,7 +47,7 @@ limitations under the License.
                             <xsl:apply-templates select="@href" mode="value"/>
                         </xsl:variable>
                         <xsl:if test="not(starts-with($location, 'http://'))">
-                            <xsl:value-of select="$root"/>
+                            <xsl:value-of select="'/'"/>
                         </xsl:if>
                         <xsl:value-of select="$location"/>
                     </xsl:attribute>

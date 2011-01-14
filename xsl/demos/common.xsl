@@ -30,7 +30,7 @@ limitations under the License.
             <li>
                 <xsl:element name="a">
                     <xsl:attribute name="href">
-                        <xsl:value-of select="concat($root, 'demos/', $id, '.html')"/>
+                        <xsl:value-of select="concat('/demos/', $id, '.html')"/>
                     </xsl:attribute>
                     <xsl:if test="boolean($document/properties/full-screen)">
                         <xsl:attribute name="target">_new</xsl:attribute>
