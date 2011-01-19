@@ -44,13 +44,13 @@ limitations under the License.
                 learning curve and are ready and willing to help.
             </p>
         </section>
-        <section name="Learn About WTKX">
+        <section name="Learn About BXML">
             <p>
                 One of the benefits of using Pivot is the optional use of the GUI markup language,
-                WTKX. Its use can dramatically speed up development of visual user interfaces. To
-                develop a firm understanding of the relationship between WTKX and the Java code
-                that it represents, we recommend reading the <a href="tutorials/wtkx-primer.html">
-                WTKX primer</a>.
+                BXML. Its use can dramatically speed up development of visual user interfaces. To
+                develop a firm understanding of the relationship between BXML and the Java code
+                that it represents, we recommend reading the <a href="tutorials/bxml-primer.html">
+                BXML primer</a>.
             </p>
         </section>
     </body>

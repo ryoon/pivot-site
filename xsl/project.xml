@@ -79,7 +79,7 @@ limitations under the License.
                 <document href="contact.html">Contact</document>
                 <document href="news.html">News</document>
                 <document href="legal.html">Legal/License</document>
-                <document href="http://www.apache.org/foundation/sponsorship.html" footer="false">Sponshorship</document>
+                <document href="http://www.apache.org/foundation/sponsorship.html" footer="false">Sponsorship</document>
                 <document href="http://www.apache.org/foundation/thanks.html" footer="false">Thanks</document>
             </documents>
         </document-group>
