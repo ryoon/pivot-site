@@ -24,29 +24,23 @@ limitations under the License.
     <body>
         <section name="What is Apache Pivot?">
             <p>
-                Apache Pivot is an open-source platform for building rich internet applications in
-                Java. It combines the enhanced productivity and usability features of a modern RIA
-                toolkit with the robustness of the Java platform. Pivot applications are written
-                using a combination of Java and XML and can be run either as an applet or as a
-                standalone, optionally offline, desktop application.
-            </p>
-            <p>
-                Like other modern development platforms, Pivot provides a comprehensive set of
-                foundation classes that together comprise a "framework". These classes form the
-                building blocks upon which more complex and sophisticated applications can be built.
+                Apache Pivot is an open-source platform for building installable Internet 
+                applications (IIAs). It combines the enhanced productivity and usability features 
+                of a modern user interface toolkit with the robustness of the Java platform.
             </p>
         </section>
-        <section name="Who is Pivot's target audience?">
-            <p>
-                Pivot was designed to be familiar to web developers who have experience building
-                AJAX applications using HTML, CSS, and JavaScript. However, it provides a much
-                richer set of standard widgets than HTML, and allows developers to create
-                sophisticated user experiences much more quickly and easily. Pivot will also seem
-                familiar to Swing developers, as both Swing and Pivot are based on Java2D and
-                employ a model-view-controller (MVC) architecture to separate component data from
-                presentation. However, Pivot includes additional features that make building modern
-                GUI applications much easier, including declarative UI, data binding, effects and
-                transitions, and web services integration.
+        <section name="Why Pivot?">
+            <p>                
+                Pivot allows developers to easily construct visually-engaging, cross-platform, 
+                connected applications in Java or any other JVM language, such as JavaScript, 
+                Groovy, or Scala. Pivot is also the only truly open IIA framework: it is 
+                completely open source, and is driven entirely by the software development 
+                community.<br/><br/>
+            </p>
+
+            <p>                
+                Pivot enables developers to build solutions using the tools they already know,
+                decreasing delivery time and reducing technology sprawl.
             </p>
         </section>
         <section name="Pivot's History">
