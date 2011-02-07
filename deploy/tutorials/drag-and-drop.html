@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to you under the Apache License,
+Version 2.0 (the "License"); you may not use this file except in
+compliance with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+--><html xmlns="http://www.w3.org/1999/xhtml"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><title>Drag and Drop | Apache Pivot</title><link xmlns="" type="text/css" rel="stylesheet" href="/styles/pivot.css"><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                </script><script type="text/javascript">
+                try {
+                var pageTracker = _gat._getTracker("UA-7977275-3");
+                pageTracker._trackPageview();
+                } catch(err) {}</script></head><body><div xmlns="" id="wrapper"><div id="main"><div id="header"><div class="logo"><a href="/index.html"><img title="Apache Pivot Homepage" alt="Apache Pivot" src="/images/logo.png"></a></div><div class="tagline"><img style="visibility:hidden" alt="Rich Internet Applications in Java" src="/images/tagline.png"></div><ul class="navi"><li><a href="/demos/">Demos</a></li><li><a href="/download.cgi#2.0">Download</a></li><li><a href="/tutorials/">Tutorial</a></li><li><a href="/get-involved.html">Get Involved</a></li><li><a href="/about.html">About</a></li></ul></div><div class="group" id="contentBase"><h1>Drag and Drop</h1><ul class="naviLeft"><li><a href="/tutorials/sample-application.html">Sample Application</a></li><li><a href="/tutorials/platform-overview.html">Platform Overview</a></li><li><a href="/tutorials/hello-world.html">Hello, World!</a></li><li><a href="/tutorials/hello-bxml.html">Hello, BXML!</a></li><li><a href="/tutorials/component-and-container.html">Component &amp; Container</a></li><li><a href="/tutorials/labels-and-image-views.html">Labels &amp; Image Views</a></li><li><a href="/tutorials/svg-images.html">SVG Images</a></li><li><a href="/tutorials/buttons.html">Buttons</a></li><li><a href="/tutorials/push-buttons.html">Push Buttons</a></li><li><a href="/tutorials/toggle-buttons.html">Toggle Buttons</a></li><li><a href="/tutorials/radio-buttons.html">Radio Buttons</a></li><li><a href="/tutorials/checkboxes.html">Checkboxes</a></li><li><a href="/tutorials/link-buttons.html">Link Buttons</a></li><li><a href="/tutorials/lists.html">Lists</a></li><li><a href="/tutorials/list-buttons.html">List Buttons</a></li><li><a href="/tutorials/repeatable-list-buttons.html">Repeatable List Buttons</a></li><li><a href="/tutorials/text.html">Text</a></li><li><a href="/tutorials/suggestion-popups.html">Suggestion Popups</a></li><li><a href="/tutorials/text-areas.html">Text Areas</a></li><li><a href="/tutorials/separators.html">Separators</a></li><li><a href="/tutorials/layout-containers.html">Layout Containers</a></li><li><a href="/tutorials/flow-panes.html">Flow Panes</a></li><li><a href="/tutorials/box-panes.html">Box Panes</a></li><li><a href="/tutorials/grid-panes.html">Grid Panes</a></li><li><a href="/tutorials/table-panes.html">Table Panes</a></li><li><a href="/tutorials/borders.html">Borders</a></li><li><a href="/tutorials/stack-panes.html">Stack Panes</a></li><li><a href="/tutorials/split-panes.html">Split Panes</a></li><li><a href="/tutorials/forms.html">Forms</a></li><li><a href="/tutorials/panels.html">Panels</a></li><li><a href="/tutorials/navigation-containers.html">Navigation Containers</a></li><li><a href="/tutorials/card-panes.html">Card Panes</a></li><li><a href="/tutorials/tab-panes.html">Tab Panes</a></li><li><a href="/tutorials/accordions.html">Accordions</a></li><li><a href="/tutorials/expanders.html">Expanders</a></li><li><a href="/tutorials/rollups.html">Rollups</a></li><li><a href="/tutorials/viewports.html">Viewports</a></li><li><a href="/tutorials/scroll-panes.html">Scroll Panes</a></li><li><a href="/tutorials/panoramas.html">Panoramas</a></li><li><a href="/tutorials/progress-indicators.html">Progress Indicators</a></li><li><a href="/tutorials/meters.html">Meters</a></li><li><a href="/tutorials/activity-indicators.html">Activity Indicators</a></li><li><a href="/tutorials/bounded-range-components.html">Bounded Range Components</a></li><li><a href="/tutorials/sliders.html">Sliders</a></li><li><a href="/tutorials/scroll-bars.html">Scroll Bars</a></li><li><a href="/tutorials/spinners.html">Spinners</a></li><li><a href="/tutorials/calendars.html">Calendars</a></li><li><a href="/tutorials/menus.html">Menus</a></li><li><a href="/tutorials/context-menus.html">Context Menus</a></li><li><a href="/tutorials/menu-bars.html">Menu Bars</a></li><li><a href="/tutorials/menu-buttons.html">Menu Buttons</a></li><li><a href="/tutorials/color-choosers.html">Color Choosers</a></li><li><a href="/tutorials/table-views.html">Table Views</a></li><li><a href="/tutorials/table-views.json.html">JSON-based TableView</a></li><li><a href="/tutorials/table-views.custom.html">Custom TableView</a></li><li><a href="/tutorials/tree-views.html">Tree Views</a></li><li><a href="/tutorials/file-browsing.html">File Browsing</a></li><li><a href="/tutorials/windows.html">Windows</a></li><li><a href="/tutorials/clipboard.html">Clipboard</a></li><li><a href="/tutorials/drag-and-drop.html">Drag and Drop</a></li><li><a href="/tutorials/effects.html">Effects</a></li><li><a href="/tutorials/effects.transitions.html">Transitions</a></li><li><a href="/tutorials/data-binding.html">Data Binding</a></li><li><a href="/tutorials/property-binding.html">Property Binding</a></li><li><a href="/tutorials/localization.html">Localization</a></li><li><a href="/tutorials/background-tasks.html">Background Tasks</a></li><li><a href="/tutorials/web-queries.html">Web Queries</a></li><li><a href="/tutorials/query-servlet.html">QueryServlet</a></li><li><a href="/tutorials/scripting.html">Scripting</a></li><li><a href="/tutorials/summary.html">Summary</a></li><li><a href="/tutorials/stock-tracker.html">The "Stock Tracker" Application</a></li><li><a href="/tutorials/stock-tracker.ui.html">UI Markup Using BXML</a></li><li><a href="/tutorials/stock-tracker.events.html">Event Handling</a></li><li><a href="/tutorials/stock-tracker.web-queries.html">Web Queries</a></li><li><a href="/tutorials/stock-tracker.data-binding.html">Data Binding</a></li><li><a href="/tutorials/stock-tracker.localization.html">Localization</a></li><li><a href="/tutorials/bxml-primer.html">BXML Primer</a></li></ul><div class="content"><style type="text/css">
+            applet {
+                border: 1px solid #999999;
+            }
+        </style><!--NOTE: Syntax highlighting script is LGPL--><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJava.js" type="text/javascript"></script><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js" type="text/javascript"></script><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js" type="text/javascript"></script><link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css"><link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css"><script type="text/javascript">
+            SyntaxHighlighter.all();
+        </script><div class="section">
+        <p>
+            Like the clipboard, drag and drop is a common metaphor for data transfer. By clicking
+            and dragging with the mouse, the user can move, copy, or link data within or between
+            applications. It is signed to allow drag/drop integration with other applications; as
+            with the clipboard, untrusted applications can only perform local drag and drop
+            operations.
+        </p>
+
+        <p>
+            The following application demonstrates Pivot's support for drag and drop. Users can
+            drag the sample images from this page into the applet (the area within the border), or
+            drag the image out of the applet into any other application that supports images:
+        </p>
+
+        <table>
+            <tr>
+                <td rowspan="2">
+                    <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
+            
+            var attributes = {
+                code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
+                width:"420",
+                height:"240"
+            };
+
+            
+            
+
+            
+            var libraries = [];
+            libraries.push("/lib/pivot-core-2.0.signed.jar");
+                libraries.push("/lib/pivot-wtk-2.0.signed.jar");
+                libraries.push("/lib/pivot-wtk-terra-2.0.signed.jar");
+                libraries.push("/lib/pivot-tutorials-2.0.signed.jar");
+                
+                    libraries.push("/lib/svgSalamander-tiny.signed.jar");
+                
+
+            attributes.archive = libraries.join(",");
+
+            
+            var parameters = {
+                codebase_lookup:false,
+                application_class_name:'org.apache.pivot.wtk.ScriptApplication'
+            };
+
+            
+            var javaArguments = ["-Dsun.awt.noerasebackground=true",
+                "-Dsun.awt.erasebackgroundonresize=true"];
+
+            
+
+            parameters.java_arguments = javaArguments.join(" ");
+
+            
+            
+                var startupProperties = [];
+                
+                    startupProperties.push("src=/org/apache/pivot/tutorials/dragdrop/drag_drop.bxml");
+                
+                parameters.startup_properties = startupProperties.join("&");
+            
+
+            deployJava.runApplet(attributes, parameters, "1.6");
+        </script>
+                </td>
+                <td>
+                    <img src="IMG_0725_2.jpg">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="IMG_0735_2.jpg">
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            The BXML source for this example is as follows. It creates an <tt>ImageView</tt> and
+            attaches a drag source and drop target to it via the <tt>dragSource</tt> and
+            <tt>dropTarget</tt> attributes, respectively. The code for these handlers is defined
+            in "dragdrop.js", discussed next:
+        </p>
+
+        <pre class="brush:xml">
+            
+            &lt;Window title="Drag and Drop" maximized="true"
+                xmlns:bxml="http://pivot.apache.org/bxml"
+                xmlns="org.apache.pivot.wtk"&gt;
+                &lt;bxml:script src="dragdrop.js"/&gt;
+                &lt;Border styles="{padding:2}"&gt;
+                    &lt;ImageView bxml:id="imageView" image="/org/apache/pivot/tutorials/IMG_0767_2.jpg"
+                        dragSource="$dragSoure" dropTarget="$dropTarget"/&gt;
+                &lt;/Border&gt;
+            &lt;/Window&gt;
+            
+        </pre>
+
+        <p>
+            The contents of "dragdrop.js" are as follows:
+        </p>
+
+        <pre class="brush:jscript">
+            
+            importPackage(org.apache.pivot.wtk);
+
+            var dragSoure = new DragSource() {
+                beginDrag: function(component, x, y) {
+                    return true;
+                },
+
+                endDrag: function(component, dropAction) {
+                    // No-op
+                },
+
+                getContent: function() {
+                    var content = new LocalManifest();
+                    content.putImage(imageView.getImage());
+
+                    return content;
+                },
+
+                getOffset: function() {
+                    // No-op; not used for native drags
+                    return null;
+                },
+
+                getRepresentation: function() {
+                    // No-op; not used for native drags
+                    return null;
+                },
+
+                getSupportedDropActions: function() {
+                    return DropAction.COPY.getMask();
+                },
+
+                isNative: function() {
+                    return true;
+                }
+            };
+
+            var dropTarget = new DropTarget() {
+                dragEnter: function(component, dragContent, supportedDropActions, userDropAction) {
+                    return (dragContent.containsImage()) ? DropAction.COPY : null;
+                },
+
+                dragExit: function(component) {
+                    // No-op
+                },
+
+                dragMove: function(component, dragContent, supportedDropActions, x, y, userDropAction) {
+                    return (dragContent.containsImage()) ? DropAction.COPY : null;
+                },
+
+                userDropActionChange: function(component, dragContent, supportedDropActions,
+                    x, y, userDropAction) {
+                    return (dragContent.containsImage()) ? DropAction.COPY : null;
+                },
+
+                drop: function(component, dragContent, supportedDropActions, x, y, userDropAction) {
+                    var dropAction = null;
+
+                    if (dragContent.containsImage()) {
+                        imageView.setImage(dragContent.getImage());
+                        dropAction = DropAction.COPY;
+                    }
+
+                    return dropAction;
+                }
+            };
+            
+        </pre>
+
+        <p>
+            When the user initiates a drag operation, the Pivot platform detects the gesture and
+            walks the component hierarchy looking for a drag source. When it finds one, it calls
+            <tt>beginDrag()</tt>. If this method returns <tt>true</tt>, the platform calls
+            <tt>getContent()</tt> and begins the drag. Like the clipboard, drag/drop content is
+            also stored in a <tt>Manifest</tt>. In the case of a drag source, a
+            <tt>LocalManifest</tt> is used. The drag source in this example simply places the
+            image that is currently displayed by the image view in the manifest. It also reports
+            that the only supported action for this drag operation is COPY, by returning the
+            bitmask value of <tt>DropAction.COPY</tt> from <tt>getSupportedDropActions()</tt>.
+        </p>
+
+        <p>
+            When the user drags an image over the image view, the platform walks the component
+            hierarchy looking for a drop target. When it finds one, it calls <tt>dragEnter()</tt>.
+            If the drop target is capable of accepting the drop, it returns its preferred drop
+            action (the action that would result if the user dropped the drag content at that
+            point). The platform repeatedly calls <tt>dragMove()</tt> while the mouse remains over
+            the drop target, giving the application the opportunity to report a different drop
+            action depending on the current mouse location.
+        </p>
+
+        <p>
+            Finally, when the user releases the mouse button, the <tt>drop()</tt> method is
+            called. This method actually performs the drop, and returns the actual drop action
+            that was performed (or <tt>null</tt> if nothing was dropped).
+        </p>
+    </div><p>Next: <a href="effects.html">Effects</a></p></div></div></div><div class="group" id="footer"><div class="footerLogo">Copyright (c) 1999-2011<br>The Apache Software Foundation.</div><div class="footerLinks"><ul class="footerMenuGr"><li><strong>Demos</strong><ul><li><a href="/demos/kitchen-sink.html" target="_new">"Kitchen Sink"</a></li><li><a href="/demos/component-explorer.html" target="_new">Component Explorer</a></li><li><a href="http://ixnay.biz/pivot-jfree-demos/charts_demo.html" target="_new">Charting</a></li><li><a href="/demos/">More Demos</a></li></ul></li><li><strong>Documentation</strong><ul><li><a href="/getting-started.html">Getting Started</a></li><li><a href="/tutorials/">Tutorial</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/2.0/docs/api/">Javadoc (2.0)</a></li></ul></li><li><strong>Get Involved</strong><ul><li><a href="/svn.html">SVN Repositories</a></li><li><a href="/lists.html">Mailing Lists</a></li><li><a href="http://issues.apache.org/jira/browse/PIVOT">Bug Database</a></li><li><a href="http://cwiki.apache.org/PIVOT/">Wiki</a></li></ul></li><li><strong>Related</strong><ul><li><a href="http://code.google.com/p/pivot-jfree/">JFreeChart Provider</a></li></ul></li><li><strong>About</strong><ul><li><a href="/who-we-are.html">Who We Are</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/news.html">News</a></li><li><a href="/legal.html">Legal/License</a></li></ul></li></ul></div></div></div></body></html>

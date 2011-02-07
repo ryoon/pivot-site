@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to you under the Apache License,
+Version 2.0 (the "License"); you may not use this file except in
+compliance with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+--><html xmlns="http://www.w3.org/1999/xhtml"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><title>JSON-based TableView | Apache Pivot</title><link xmlns="" type="text/css" rel="stylesheet" href="/styles/pivot.css"><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                </script><script type="text/javascript">
+                try {
+                var pageTracker = _gat._getTracker("UA-7977275-3");
+                pageTracker._trackPageview();
+                } catch(err) {}</script></head><body><div xmlns="" id="wrapper"><div id="main"><div id="header"><div class="logo"><a href="/index.html"><img title="Apache Pivot Homepage" alt="Apache Pivot" src="/images/logo.png"></a></div><div class="tagline"><img style="visibility:hidden" alt="Rich Internet Applications in Java" src="/images/tagline.png"></div><ul class="navi"><li><a href="/demos/">Demos</a></li><li><a href="/download.cgi#2.0">Download</a></li><li><a href="/tutorials/">Tutorial</a></li><li><a href="/get-involved.html">Get Involved</a></li><li><a href="/about.html">About</a></li></ul></div><div class="group" id="contentBase"><h1>JSON-based TableView</h1><ul class="naviLeft"><li><a href="/tutorials/sample-application.html">Sample Application</a></li><li><a href="/tutorials/platform-overview.html">Platform Overview</a></li><li><a href="/tutorials/hello-world.html">Hello, World!</a></li><li><a href="/tutorials/hello-bxml.html">Hello, BXML!</a></li><li><a href="/tutorials/component-and-container.html">Component &amp; Container</a></li><li><a href="/tutorials/labels-and-image-views.html">Labels &amp; Image Views</a></li><li><a href="/tutorials/svg-images.html">SVG Images</a></li><li><a href="/tutorials/buttons.html">Buttons</a></li><li><a href="/tutorials/push-buttons.html">Push Buttons</a></li><li><a href="/tutorials/toggle-buttons.html">Toggle Buttons</a></li><li><a href="/tutorials/radio-buttons.html">Radio Buttons</a></li><li><a href="/tutorials/checkboxes.html">Checkboxes</a></li><li><a href="/tutorials/link-buttons.html">Link Buttons</a></li><li><a href="/tutorials/lists.html">Lists</a></li><li><a href="/tutorials/list-buttons.html">List Buttons</a></li><li><a href="/tutorials/repeatable-list-buttons.html">Repeatable List Buttons</a></li><li><a href="/tutorials/text.html">Text</a></li><li><a href="/tutorials/suggestion-popups.html">Suggestion Popups</a></li><li><a href="/tutorials/text-areas.html">Text Areas</a></li><li><a href="/tutorials/separators.html">Separators</a></li><li><a href="/tutorials/layout-containers.html">Layout Containers</a></li><li><a href="/tutorials/flow-panes.html">Flow Panes</a></li><li><a href="/tutorials/box-panes.html">Box Panes</a></li><li><a href="/tutorials/grid-panes.html">Grid Panes</a></li><li><a href="/tutorials/table-panes.html">Table Panes</a></li><li><a href="/tutorials/borders.html">Borders</a></li><li><a href="/tutorials/stack-panes.html">Stack Panes</a></li><li><a href="/tutorials/split-panes.html">Split Panes</a></li><li><a href="/tutorials/forms.html">Forms</a></li><li><a href="/tutorials/panels.html">Panels</a></li><li><a href="/tutorials/navigation-containers.html">Navigation Containers</a></li><li><a href="/tutorials/card-panes.html">Card Panes</a></li><li><a href="/tutorials/tab-panes.html">Tab Panes</a></li><li><a href="/tutorials/accordions.html">Accordions</a></li><li><a href="/tutorials/expanders.html">Expanders</a></li><li><a href="/tutorials/rollups.html">Rollups</a></li><li><a href="/tutorials/viewports.html">Viewports</a></li><li><a href="/tutorials/scroll-panes.html">Scroll Panes</a></li><li><a href="/tutorials/panoramas.html">Panoramas</a></li><li><a href="/tutorials/progress-indicators.html">Progress Indicators</a></li><li><a href="/tutorials/meters.html">Meters</a></li><li><a href="/tutorials/activity-indicators.html">Activity Indicators</a></li><li><a href="/tutorials/bounded-range-components.html">Bounded Range Components</a></li><li><a href="/tutorials/sliders.html">Sliders</a></li><li><a href="/tutorials/scroll-bars.html">Scroll Bars</a></li><li><a href="/tutorials/spinners.html">Spinners</a></li><li><a href="/tutorials/calendars.html">Calendars</a></li><li><a href="/tutorials/menus.html">Menus</a></li><li><a href="/tutorials/context-menus.html">Context Menus</a></li><li><a href="/tutorials/menu-bars.html">Menu Bars</a></li><li><a href="/tutorials/menu-buttons.html">Menu Buttons</a></li><li><a href="/tutorials/color-choosers.html">Color Choosers</a></li><li><a href="/tutorials/table-views.html">Table Views</a></li><li><a href="/tutorials/table-views.json.html">JSON-based TableView</a></li><li><a href="/tutorials/table-views.custom.html">Custom TableView</a></li><li><a href="/tutorials/tree-views.html">Tree Views</a></li><li><a href="/tutorials/file-browsing.html">File Browsing</a></li><li><a href="/tutorials/windows.html">Windows</a></li><li><a href="/tutorials/clipboard.html">Clipboard</a></li><li><a href="/tutorials/drag-and-drop.html">Drag and Drop</a></li><li><a href="/tutorials/effects.html">Effects</a></li><li><a href="/tutorials/effects.transitions.html">Transitions</a></li><li><a href="/tutorials/data-binding.html">Data Binding</a></li><li><a href="/tutorials/property-binding.html">Property Binding</a></li><li><a href="/tutorials/localization.html">Localization</a></li><li><a href="/tutorials/background-tasks.html">Background Tasks</a></li><li><a href="/tutorials/web-queries.html">Web Queries</a></li><li><a href="/tutorials/query-servlet.html">QueryServlet</a></li><li><a href="/tutorials/scripting.html">Scripting</a></li><li><a href="/tutorials/summary.html">Summary</a></li><li><a href="/tutorials/stock-tracker.html">The "Stock Tracker" Application</a></li><li><a href="/tutorials/stock-tracker.ui.html">UI Markup Using BXML</a></li><li><a href="/tutorials/stock-tracker.events.html">Event Handling</a></li><li><a href="/tutorials/stock-tracker.web-queries.html">Web Queries</a></li><li><a href="/tutorials/stock-tracker.data-binding.html">Data Binding</a></li><li><a href="/tutorials/stock-tracker.localization.html">Localization</a></li><li><a href="/tutorials/bxml-primer.html">BXML Primer</a></li></ul><div class="content"><style type="text/css">
+            applet {
+                border: 1px solid #999999;
+            }
+        </style><!--NOTE: Syntax highlighting script is LGPL--><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJava.js" type="text/javascript"></script><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js" type="text/javascript"></script><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js" type="text/javascript"></script><link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css"><link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css"><script type="text/javascript">
+            SyntaxHighlighter.all();
+        </script><div class="section">
+        <p>
+            The previous example showed a basic table view that was populated by string-based hash
+            map data and did not support sorting on the Olympic medal count data. This example
+            populates the same table view with JSON values, which represent the medal counts as
+            numbers, rather than strings:
+        </p>
+
+        <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
+            
+            var attributes = {
+                code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
+                width:"480",
+                height:"240"
+            };
+
+            
+            
+
+            
+            var libraries = [];
+            libraries.push("/lib/pivot-core-2.0.jar");
+                libraries.push("/lib/pivot-wtk-2.0.jar");
+                libraries.push("/lib/pivot-wtk-terra-2.0.jar");
+                libraries.push("/lib/pivot-tutorials-2.0.jar");
+                
+                    libraries.push("/lib/svgSalamander-tiny.jar");
+                
+
+            attributes.archive = libraries.join(",");
+
+            
+            var parameters = {
+                codebase_lookup:false,
+                application_class_name:'org.apache.pivot.wtk.ScriptApplication'
+            };
+
+            
+            var javaArguments = ["-Dsun.awt.noerasebackground=true",
+                "-Dsun.awt.erasebackgroundonresize=true"];
+
+            
+
+            parameters.java_arguments = javaArguments.join(" ");
+
+            
+            
+                var startupProperties = [];
+                
+                    startupProperties.push("src=/org/apache/pivot/tutorials/tableviews/json_table_view.bxml");
+                
+                parameters.startup_properties = startupProperties.join("&");
+            
+
+            deployJava.runApplet(attributes, parameters, "1.6");
+        </script>
+
+        <p>The BXML source is as follows:</p>
+
+        <pre class="brush:xml">
+            
+            &lt;Window title="Table Views" maximized="true"
+                xmlns:bxml="http://pivot.apache.org/bxml"
+                xmlns="org.apache.pivot.wtk"&gt;
+                &lt;Border&gt;
+                    &lt;ScrollPane horizontalScrollBarPolicy="fill_to_capacity"&gt;
+                        &lt;TableView bxml:id="tableView" styles="{includeTrailingVerticalGridLine:true}"&gt;
+                            &lt;columns&gt;
+                                &lt;TableView.Column name="nation" width="180" headerData="Nation"/&gt;
+                                &lt;TableView.Column name="gold" width="60" headerData="Gold"/&gt;
+                                &lt;TableView.Column name="silver" width="60" headerData="Silver"/&gt;
+                                &lt;TableView.Column name="bronze" width="60" headerData="Bronze"/&gt;
+                                &lt;TableView.Column name="total" width="60" headerData="Total"/&gt;
+                            &lt;/columns&gt;
+
+                            &lt;tableViewSortListeners&gt;
+                                function sortChanged(tableView) {
+                                    var tableData = tableView.getTableData();
+                                    tableData.setComparator(new org.apache.pivot.wtk.content.TableViewRowComparator(tableView));
+                                }
+                            &lt;/tableViewSortListeners&gt;
+
+                            &lt;tableData&gt;
+                                &lt;bxml:include src="standings.json"/&gt;
+                            &lt;/tableData&gt;
+                        &lt;/TableView&gt;
+
+                        &lt;columnHeader&gt;
+                            &lt;TableViewHeader tableView="$tableView" sortMode="single_column"
+                                styles="{includeTrailingVerticalGridLine:true}"/&gt;
+                        &lt;/columnHeader&gt;
+                    &lt;/ScrollPane&gt;
+                &lt;/Border&gt;
+            &lt;/Window&gt;
+            
+        </pre>
+
+        <p>It is very similar to the previous example, with the following exceptions:</p>
+
+        <ul>
+            <li>
+                <p>
+                    The <tt>ScrollPane</tt> is given a <tt>horizontalScrollBarPolicy</tt> value of
+                    "fill_to_capacity". This tells the scroll pane to expand the width of its
+                    contents to fit the available horizontal space when necessary, but not
+                    constrain the content width to that space when the content wants to be larger.
+                    This is what allows the table view to display a "filler" column when its total
+                    column width is less than the current viewport width in the scroll pane.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    It populates the table with data from the "standings.json" file. The contents
+                    of this file are shown below.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    It defines a listener that responds to table view sorts. Table views do not
+                    implement sorting internally. This is the responsibility of the application,
+                    since the application may want to delegate sorting to another process, such as
+                    a JDBC query executed as a background task. When a user presses a column
+                    header, the <tt>TableViewHeader</tt> skin responds by modifying the table
+                    view's "sort dictionary", which maps column names to sort directions
+                    (ascending, descending, or neither). <tt>TableView</tt> fires a "sortChanged"
+                    event in response to a sort dictionary change, to which the listener responds
+                    by setting a comparator on the table data:
+                </p>
+
+                <pre class="brush:xml">
+                    
+                    &lt;tableViewSortListeners&gt;
+                        function sortChanged(tableView) {
+                            var tableData = tableView.getTableData();
+                            tableData.setComparator(new org.apache.pivot.wtk.content.TableViewRowComparator(tableView));
+                        }
+                    &lt;/tableViewSortListeners&gt;
+                    
+                </pre>
+                <p>
+                    In this case, the listener assigns an instance of
+                    <tt>TableViewRowComparator</tt> to the table data. This class is capable of
+                    sorting many types of table data given the sort dictionary of the
+                    <tt>TableView</tt> passed to its constructor.
+                </p>
+            </li>
+        </ul>
+
+        <p>
+            The contents of "standings.json" are as follows. Medal counts are represented as actual
+            numeric data rather than strings, allowing <tt>TableViewRowComparator</tt> to sort
+            them properly:
+        </p>
+
+        <pre class="brush:javascript">
+            
+            // Source: http://en.wikipedia.org/wiki/2008_Summer_Olympics_medal_table
+            [   {nation:"China", gold:51, silver:21, bronze:28, total:100},
+                {nation:"United States", gold:36, silver:38, bronze:36, total:110},
+                {nation:"Russia", gold:23, silver:21, bronze:28, total:72},
+                {nation:"Great Britain", gold:19, silver:13, bronze:15, total:47},
+                {nation:"Germany", gold:16, silver:10, bronze:15, total:41},
+                {nation:"Australia", gold:14, silver:15, bronze:17, total:46},
+                {nation:"South Korea", gold:13, silver:10, bronze:8, total:31},
+                {nation:"Japan", gold:9, silver:6, bronze:11, total:26},
+                {nation:"Italy", gold:8, silver:10, bronze:10, total:28},
+                {nation:"France", gold:7, silver:16, bronze:17, total:40}
+            ]
+            
+        </pre>
+
+        <p>
+            There is no associated Java source code for this example.
+        </p>
+    </div><p>Next: <a href="table-views.custom.html">Custom TableView</a></p></div></div></div><div class="group" id="footer"><div class="footerLogo">Copyright (c) 1999-2011<br>The Apache Software Foundation.</div><div class="footerLinks"><ul class="footerMenuGr"><li><strong>Demos</strong><ul><li><a href="/demos/kitchen-sink.html" target="_new">"Kitchen Sink"</a></li><li><a href="/demos/component-explorer.html" target="_new">Component Explorer</a></li><li><a href="http://ixnay.biz/pivot-jfree-demos/charts_demo.html" target="_new">Charting</a></li><li><a href="/demos/">More Demos</a></li></ul></li><li><strong>Documentation</strong><ul><li><a href="/getting-started.html">Getting Started</a></li><li><a href="/tutorials/">Tutorial</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/2.0/docs/api/">Javadoc (2.0)</a></li></ul></li><li><strong>Get Involved</strong><ul><li><a href="/svn.html">SVN Repositories</a></li><li><a href="/lists.html">Mailing Lists</a></li><li><a href="http://issues.apache.org/jira/browse/PIVOT">Bug Database</a></li><li><a href="http://cwiki.apache.org/PIVOT/">Wiki</a></li></ul></li><li><strong>Related</strong><ul><li><a href="http://code.google.com/p/pivot-jfree/">JFreeChart Provider</a></li></ul></li><li><strong>About</strong><ul><li><a href="/who-we-are.html">Who We Are</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/news.html">News</a></li><li><a href="/legal.html">Legal/License</a></li></ul></li></ul></div></div></div></body></html>

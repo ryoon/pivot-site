@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to you under the Apache License,
+Version 2.0 (the "License"); you may not use this file except in
+compliance with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+--><html xmlns="http://www.w3.org/1999/xhtml"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><title>Accordions | Apache Pivot</title><link xmlns="" type="text/css" rel="stylesheet" href="/styles/pivot.css"><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                </script><script type="text/javascript">
+                try {
+                var pageTracker = _gat._getTracker("UA-7977275-3");
+                pageTracker._trackPageview();
+                } catch(err) {}</script></head><body><div xmlns="" id="wrapper"><div id="main"><div id="header"><div class="logo"><a href="/index.html"><img title="Apache Pivot Homepage" alt="Apache Pivot" src="/images/logo.png"></a></div><div class="tagline"><img style="visibility:hidden" alt="Rich Internet Applications in Java" src="/images/tagline.png"></div><ul class="navi"><li><a href="/demos/">Demos</a></li><li><a href="/download.cgi#2.0">Download</a></li><li><a href="/tutorials/">Tutorial</a></li><li><a href="/get-involved.html">Get Involved</a></li><li><a href="/about.html">About</a></li></ul></div><div class="group" id="contentBase"><h1>Accordions</h1><ul class="naviLeft"><li><a href="/tutorials/sample-application.html">Sample Application</a></li><li><a href="/tutorials/platform-overview.html">Platform Overview</a></li><li><a href="/tutorials/hello-world.html">Hello, World!</a></li><li><a href="/tutorials/hello-bxml.html">Hello, BXML!</a></li><li><a href="/tutorials/component-and-container.html">Component &amp; Container</a></li><li><a href="/tutorials/labels-and-image-views.html">Labels &amp; Image Views</a></li><li><a href="/tutorials/svg-images.html">SVG Images</a></li><li><a href="/tutorials/buttons.html">Buttons</a></li><li><a href="/tutorials/push-buttons.html">Push Buttons</a></li><li><a href="/tutorials/toggle-buttons.html">Toggle Buttons</a></li><li><a href="/tutorials/radio-buttons.html">Radio Buttons</a></li><li><a href="/tutorials/checkboxes.html">Checkboxes</a></li><li><a href="/tutorials/link-buttons.html">Link Buttons</a></li><li><a href="/tutorials/lists.html">Lists</a></li><li><a href="/tutorials/list-buttons.html">List Buttons</a></li><li><a href="/tutorials/repeatable-list-buttons.html">Repeatable List Buttons</a></li><li><a href="/tutorials/text.html">Text</a></li><li><a href="/tutorials/suggestion-popups.html">Suggestion Popups</a></li><li><a href="/tutorials/text-areas.html">Text Areas</a></li><li><a href="/tutorials/separators.html">Separators</a></li><li><a href="/tutorials/layout-containers.html">Layout Containers</a></li><li><a href="/tutorials/flow-panes.html">Flow Panes</a></li><li><a href="/tutorials/box-panes.html">Box Panes</a></li><li><a href="/tutorials/grid-panes.html">Grid Panes</a></li><li><a href="/tutorials/table-panes.html">Table Panes</a></li><li><a href="/tutorials/borders.html">Borders</a></li><li><a href="/tutorials/stack-panes.html">Stack Panes</a></li><li><a href="/tutorials/split-panes.html">Split Panes</a></li><li><a href="/tutorials/forms.html">Forms</a></li><li><a href="/tutorials/panels.html">Panels</a></li><li><a href="/tutorials/navigation-containers.html">Navigation Containers</a></li><li><a href="/tutorials/card-panes.html">Card Panes</a></li><li><a href="/tutorials/tab-panes.html">Tab Panes</a></li><li><a href="/tutorials/accordions.html">Accordions</a></li><li><a href="/tutorials/expanders.html">Expanders</a></li><li><a href="/tutorials/rollups.html">Rollups</a></li><li><a href="/tutorials/viewports.html">Viewports</a></li><li><a href="/tutorials/scroll-panes.html">Scroll Panes</a></li><li><a href="/tutorials/panoramas.html">Panoramas</a></li><li><a href="/tutorials/progress-indicators.html">Progress Indicators</a></li><li><a href="/tutorials/meters.html">Meters</a></li><li><a href="/tutorials/activity-indicators.html">Activity Indicators</a></li><li><a href="/tutorials/bounded-range-components.html">Bounded Range Components</a></li><li><a href="/tutorials/sliders.html">Sliders</a></li><li><a href="/tutorials/scroll-bars.html">Scroll Bars</a></li><li><a href="/tutorials/spinners.html">Spinners</a></li><li><a href="/tutorials/calendars.html">Calendars</a></li><li><a href="/tutorials/menus.html">Menus</a></li><li><a href="/tutorials/context-menus.html">Context Menus</a></li><li><a href="/tutorials/menu-bars.html">Menu Bars</a></li><li><a href="/tutorials/menu-buttons.html">Menu Buttons</a></li><li><a href="/tutorials/color-choosers.html">Color Choosers</a></li><li><a href="/tutorials/table-views.html">Table Views</a></li><li><a href="/tutorials/table-views.json.html">JSON-based TableView</a></li><li><a href="/tutorials/table-views.custom.html">Custom TableView</a></li><li><a href="/tutorials/tree-views.html">Tree Views</a></li><li><a href="/tutorials/file-browsing.html">File Browsing</a></li><li><a href="/tutorials/windows.html">Windows</a></li><li><a href="/tutorials/clipboard.html">Clipboard</a></li><li><a href="/tutorials/drag-and-drop.html">Drag and Drop</a></li><li><a href="/tutorials/effects.html">Effects</a></li><li><a href="/tutorials/effects.transitions.html">Transitions</a></li><li><a href="/tutorials/data-binding.html">Data Binding</a></li><li><a href="/tutorials/property-binding.html">Property Binding</a></li><li><a href="/tutorials/localization.html">Localization</a></li><li><a href="/tutorials/background-tasks.html">Background Tasks</a></li><li><a href="/tutorials/web-queries.html">Web Queries</a></li><li><a href="/tutorials/query-servlet.html">QueryServlet</a></li><li><a href="/tutorials/scripting.html">Scripting</a></li><li><a href="/tutorials/summary.html">Summary</a></li><li><a href="/tutorials/stock-tracker.html">The "Stock Tracker" Application</a></li><li><a href="/tutorials/stock-tracker.ui.html">UI Markup Using BXML</a></li><li><a href="/tutorials/stock-tracker.events.html">Event Handling</a></li><li><a href="/tutorials/stock-tracker.web-queries.html">Web Queries</a></li><li><a href="/tutorials/stock-tracker.data-binding.html">Data Binding</a></li><li><a href="/tutorials/stock-tracker.localization.html">Localization</a></li><li><a href="/tutorials/bxml-primer.html">BXML Primer</a></li></ul><div class="content"><style type="text/css">
+            applet {
+                border: 1px solid #999999;
+            }
+        </style><!--NOTE: Syntax highlighting script is LGPL--><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJava.js" type="text/javascript"></script><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js" type="text/javascript"></script><script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js" type="text/javascript"></script><link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css"><link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css"><script type="text/javascript">
+            SyntaxHighlighter.all();
+        </script><div class="section">
+        <p>
+            Accordions serve a similar purpose to tab panes and card panes, only showing one
+            of a collection of components at a time. Like tab panes, accordions provide built-in
+            navigation support. However, rather than representing the content as a stack of
+            components, they are presented like the folds of an accordion, with headers for
+            navigating between panels.
+        </p>
+        <p>
+            The following application demonstrates the use of the <tt>Accordion</tt> component.
+            It is a simplified online checkout process consisting of three pages - shipping
+            info, payment info, and order summary:
+        </p>
+
+        <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
+            
+            var attributes = {
+                code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
+                width:"260",
+                height:"380"
+            };
+
+            
+            
+
+            
+            var libraries = [];
+            libraries.push("/lib/pivot-core-2.0.jar");
+                libraries.push("/lib/pivot-wtk-2.0.jar");
+                libraries.push("/lib/pivot-wtk-terra-2.0.jar");
+                libraries.push("/lib/pivot-tutorials-2.0.jar");
+                
+                    libraries.push("/lib/svgSalamander-tiny.jar");
+                
+
+            attributes.archive = libraries.join(",");
+
+            
+            var parameters = {
+                codebase_lookup:false,
+                application_class_name:'org.apache.pivot.wtk.ScriptApplication'
+            };
+
+            
+            var javaArguments = ["-Dsun.awt.noerasebackground=true",
+                "-Dsun.awt.erasebackgroundonresize=true"];
+
+            
+
+            parameters.java_arguments = javaArguments.join(" ");
+
+            
+            
+                var startupProperties = [];
+                
+                    startupProperties.push("src=/org/apache/pivot/tutorials/navigation/accordions.bxml");
+                
+                parameters.startup_properties = startupProperties.join("&");
+            
+
+            deployJava.runApplet(attributes, parameters, "1.6");
+        </script>
+
+        <p>
+            Note that, like <tt>TabPane</tt>, the default behavior of an accordion is to allow
+            the user to freely navigate between panels. However, in this example, the user is
+            only allowed to progress forward in the accordion by pressing the "Next" button.
+            This restriction is imposed programmatically by the application, since the content
+            of a subsequent page in such a checkout process may depend on the user's entries on
+            a previous page. The user may freely navigate backward at any point, however.
+            The last panel simulates the order confirmation by displaying an
+            <a href="activity-indicators.html">activity indicator</a>.
+        </p>
+
+        <p>
+            The BXML source for the example is shown below. It includes a number of external BXML
+            files that define the content of each panel:
+        </p>
+
+        <pre class="brush:xml">
+            
+            &lt;navigation:Accordions title="Accordions" maximized="true"
+                xmlns:bxml="http://pivot.apache.org/bxml"
+                xmlns:navigation="org.apache.pivot.tutorials.navigation"
+                xmlns="org.apache.pivot.wtk"&gt;
+                &lt;Accordion bxml:id="accordion" styles="{padding:0}"&gt;
+                    &lt;bxml:include bxml:id="shippingPanel" src="shipping.bxml" Accordion.headerData="Shipping Information"/&gt;
+                    &lt;bxml:include bxml:id="paymentPanel" src="payment.bxml" Accordion.headerData="Payment Information"/&gt;
+                    &lt;bxml:include bxml:id="summaryPanel" src="summary.bxml" Accordion.headerData="Summary &amp;amp; Confirmation"/&gt;
+                &lt;/Accordion&gt;
+            &lt;/navigation:Accordions&gt;
+            
+        </pre>
+
+        <p>
+            The Java source is as follows. The primary logic for maintaining the enabled state
+            of the panels is defined in the <tt>updateAccordion()</tt> method; an
+            <tt>AccordionSelectionListener</tt> is used to enable or disable panels when a
+            selection change transition is about to occur, rather than waiting until it is
+            complete, to provide a smoother user experience:
+        </p>
+
+        <pre class="brush:java">
+            
+            package org.apache.pivot.tutorials.navigation;
+
+            import java.net.URL;
+
+            import org.apache.pivot.beans.Bindable;
+            import org.apache.pivot.collections.Map;
+            import org.apache.pivot.collections.Sequence;
+            import org.apache.pivot.util.Resources;
+            import org.apache.pivot.util.Vote;
+            import org.apache.pivot.wtk.Accordion;
+            import org.apache.pivot.wtk.AccordionSelectionListener;
+            import org.apache.pivot.wtk.Component;
+            import org.apache.pivot.wtk.Window;
+
+            public class Accordions extends Window implements Bindable {
+                private Accordion accordion = null;
+
+                @Override
+                public void initialize(Map&lt;String, Object&gt; namespace, URL location, Resources resources) {
+                    accordion = (Accordion)namespace.get("accordion");
+                    accordion.getAccordionSelectionListeners().add(new AccordionSelectionListener() {
+                        private int selectedIndex = -1;
+
+                        @Override
+                        public Vote previewSelectedIndexChange(Accordion accordion, int selectedIndex) {
+                            this.selectedIndex = selectedIndex;
+
+                            // Enable the next panel or disable the previous panel so the
+                            // transition looks smoother
+                            if (selectedIndex != -1) {
+                                int previousSelectedIndex = accordion.getSelectedIndex();
+                                if (selectedIndex &gt; previousSelectedIndex) {
+                                    accordion.getPanels().get(selectedIndex).setEnabled(true);
+                                } else {
+                                    accordion.getPanels().get(previousSelectedIndex).setEnabled(false);
+                                }
+
+                            }
+
+                            return Vote.APPROVE;
+                        }
+
+                        @Override
+                        public void selectedIndexChangeVetoed(Accordion accordion, Vote reason) {
+                            if (reason == Vote.DENY
+                                &amp;&amp; selectedIndex != -1) {
+                                Component panel = accordion.getPanels().get(selectedIndex);
+                                panel.setEnabled(!panel.isEnabled());
+                            }
+                        }
+
+                        @Override
+                        public void selectedIndexChanged(Accordion accordion, int previousSelection) {
+                            updateAccordion();
+                        }
+                    });
+
+                    updateAccordion();
+                }
+
+                private void updateAccordion() {
+                    int selectedIndex = accordion.getSelectedIndex();
+
+                    Sequence&lt;Component&gt; panels = accordion.getPanels();
+                    for (int i = 0, n = panels.getLength(); i &lt; n; i++) {
+                        panels.get(i).setEnabled(i &lt;= selectedIndex);
+                    }
+                }
+            }
+            
+        </pre>
+    </div><p>Next: <a href="expanders.html">Expanders</a></p></div></div></div><div class="group" id="footer"><div class="footerLogo">Copyright (c) 1999-2011<br>The Apache Software Foundation.</div><div class="footerLinks"><ul class="footerMenuGr"><li><strong>Demos</strong><ul><li><a href="/demos/kitchen-sink.html" target="_new">"Kitchen Sink"</a></li><li><a href="/demos/component-explorer.html" target="_new">Component Explorer</a></li><li><a href="http://ixnay.biz/pivot-jfree-demos/charts_demo.html" target="_new">Charting</a></li><li><a href="/demos/">More Demos</a></li></ul></li><li><strong>Documentation</strong><ul><li><a href="/getting-started.html">Getting Started</a></li><li><a href="/tutorials/">Tutorial</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/2.0/docs/api/">Javadoc (2.0)</a></li></ul></li><li><strong>Get Involved</strong><ul><li><a href="/svn.html">SVN Repositories</a></li><li><a href="/lists.html">Mailing Lists</a></li><li><a href="http://issues.apache.org/jira/browse/PIVOT">Bug Database</a></li><li><a href="http://cwiki.apache.org/PIVOT/">Wiki</a></li></ul></li><li><strong>Related</strong><ul><li><a href="http://code.google.com/p/pivot-jfree/">JFreeChart Provider</a></li></ul></li><li><strong>About</strong><ul><li><a href="/who-we-are.html">Who We Are</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/news.html">News</a></li><li><a href="/legal.html">Legal/License</a></li></ul></li></ul></div></div></div></body></html>

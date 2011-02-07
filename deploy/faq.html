@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to you under the Apache License,
+Version 2.0 (the "License"); you may not use this file except in
+compliance with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+--><html xmlns="http://www.w3.org/1999/xhtml"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><title>Frequently Asked Questions (FAQ) | Apache Pivot</title><link xmlns="" type="text/css" rel="stylesheet" href="/styles/pivot.css"><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                </script><script type="text/javascript">
+                try {
+                var pageTracker = _gat._getTracker("UA-7977275-3");
+                pageTracker._trackPageview();
+                } catch(err) {}</script></head><body><div xmlns="" id="wrapper"><div id="main"><div id="header"><div class="logo"><a href="/index.html"><img title="Apache Pivot Homepage" alt="Apache Pivot" src="/images/logo.png"></a></div><div class="tagline"><img style="visibility:hidden" alt="Rich Internet Applications in Java" src="/images/tagline.png"></div><ul class="navi"><li><a href="/demos/">Demos</a></li><li><a href="/download.cgi#2.0">Download</a></li><li><a href="/tutorials/">Tutorial</a></li><li><a href="/get-involved.html">Get Involved</a></li><li><a href="/about.html">About</a></li></ul></div><div class="group" id="contentBase"><h1>Frequently Asked Questions (FAQ)</h1><ul class="naviLeft"></ul><div class="content">
+        <h1>Platform</h1>
+        <p>This section answers questions related to the Pivot platform.</p>
+
+        <h2>What is Apache Pivot?</h2>
+        <p>Apache Pivot is an open-source platform for building installable Internet applications (IIAs). It combines the enhanced productivity and usability features of a modern user interface toolkit with the robustness of the Java platform.</p>
+        
+        <p>Pivot allows developers to easily construct visually-engaging, cross-platform, connected applications in Java or any other JVM language, such as JavaScript, Groovy, or Scala. Pivot is also the only truly open IIA framework: it is completely open source, and is driven entirely by the software development community.</p>
+
+        <p>Pivot enables developers to build solutions using the tools they already know, decreasing delivery time and reducing technology sprawl.</p>
+
+        <h2>What is an "Installable Internet Application (IIA)"?</h2>
+        
+        <p>An "installable Internet application" is an application that takes advantage of the internet but does not require a web browser. A simple example is an email or IM client. A more sophisticated one is Apple's iTunes. Pivot and Java are a great alternative for building these types of applications, especially for projects that don't have the budget or resources to produce multiple native ports.</p>
+        
+        <p>Note that, although it is not required, Pivot applications can still run in a web browser via the Java plugin. In this case, the "installation" is handled by the plugin, which downloads the application's source code and stores it in a local cache, whereas in most other deployment scenarios it is generally managed explicitly by the user.</p>
+
+        <h2>Why IIA?</h2>
+        <p>The web has become the defacto standard method for application delivery. However, functional requirements for many web applications have begun to scale beyond the capabilities of the browser. Even with the addition of scripting support, dynamic element manipulation, and asynchronous server communication, it is still difficult to create a user experience in HTML that is truly on par with that of a desktop application.</p>
+
+        <p>Installable Internet application development platforms are a means of bridging the gap between the web and desktop experiences. These platforms allow developers to build applications that offer the user experience of a desktop application but take advantage of services and data available via the Internet.</p>
+
+        <h2>Who is Pivot's target audience?</h2>
+        <p>Pivot was designed to be familiar to web developers who have experience building AJAX applications using HTML, CSS, and JavaScript. However, it provides a much richer set of standard widgets than HTML, and allows developers to create sophisticated user experiences much more quickly and easily. Pivot will also seem familiar to Swing developers, as both Swing and Pivot are based on Java2D and employ a model-view-controller (MVC) architecture to separate component data from presentation. However, Pivot includes additional features that make building modern GUI applications much easier, including declarative UI, data binding, effects and transitions, and web services integration.</p>
+
+        <h2>Where did Pivot come from?</h2>
+        <p>Pivot began as an R&amp;D effort in the Web UI group at VMware in 2007, and was released as an open-source project in June, 2008 under the Apache 2.0 license. Pivot joined the Apache Incubator in January, 2009 and graduated as a top-level Apache project in December, 2009.</p>
+
+        <h2>What platforms does Pivot support?</h2>
+        <p>Pivot applications run on any operating system with a Java Runtime Environment (JRE) version 6 or greater (though Java 6 update 14 or later is recommended). They can be run locally as desktop applications or via the web using the Java plugin or Java Web Start.</p>
+
+        <h2>How does Pivot compare to Swing?</h2>
+        <p>While it is technically feasible to build an IIA in Java using the <a href="http://java.sun.com/docs/books/tutorial/uiswing">Swing toolkit</a>, Pivot offers a number of advantages that make it a more compelling, modern alternative:</p>
+
+        <ul>
+        <li><p>Pivot provides an XML markup language called BXML for simplifying user interface construction. Other IIA platforms including Adobe Flex and Microsoft Silverlight offer a similar feature; web developers are comfortable with the markup metaphor, and it can considerably reduce overall development time.</p></li>
+
+        <li><p>Components are not limited to an "atomic" preferred size; they are allowed to report a preferred size as constrained by either width or height - this facilitates such features as label wrapping, which Swing does not support.</p></li>
+
+        <li><p>Pivot employs a consistent data model that is used throughout the entire framework; for example, JSON data returned from a REST service is serialized into the same data structures used by a table view component to present data. No additional translation is necessary, which can significantly improve performance. A common data model also reduces the learning curve for new developers.</p></li>
+
+        <li><p>Pivot includes built-in support for REST-based data services, which Pivot calls "web queries". This provides parity with Flex, which comes with out-of-the-box support for RPC via the AMF protocol, and Silverlight, which supports both SOAP and REST-style services. Swing does not include any built-in facilities for server communication, making it less convenient to work with.
+        Note, however, that Pivot is not limited to REST for server communication. Because it runs in a JRE, a Pivot application can take advantage of any client/server protocol that has a Java API; for example SOAP-based services via <a href="http://ws.apache.org/axis">Axis</a> or Flex RPC using the BlazeDS <a href="http://opensource.adobe.com/wiki/display/blazeds/Java+AMF+Client">AMF client</a>.</p></li>
+
+        <li><p>Pivot includes built-in data binding support, which allows data returned from web queries (as well as other types of data services) to easily be mapped to form contents.</p></li>
+
+        <li><p>Pivot includes (and takes advantage of) platform-level support for visual effects and transitions (i.e. animations).</p></li>
+
+        <li><p>Pivot applications are inherently resolution independent. Bitmapped and vector images are interchangeable, and the entire user interface can be scaled to take advantage of high-resolution displays or for accessibility purposes.</p></li>
+
+        <li><p>Pivot defines a single Application inteface that is used for launching both desktop and web-based applications - multiple codebases for applets and applications are not required.</p></li>
+
+        <li><p>Because it requires Java 6, Pivot is able to take advantage of newer Java language features such as generics, enums, for..each loops, varargs, and annotations.</p></li>
+        </ul>
+
+        <h2>How does Pivot compare to JavaFX?</h2>
+        <p>Pivot primarily differentiates itself from the current version of JavaFX by allowing developers to build applications in Java rather than the JavaFX scripting language. However, at the Java One conference in September, 2010, Oracle announced that it would be dropping support for JavaFX Script in future versions. JavaFX 2.0 is tenatively scheduled for release in late 2011.</p>
+
+        <h2>How does Pivot compare to the Google Widget Toolkit (GWT)?</h2>
+        <p>While GWT allows developers to use the Java language to write web-based applications, the runtime enviroment for a GWT application is the browser itself, not a JVM. This has a number of drawbacks:</p>
+
+        <ul>
+        <li><p>The compiled code executes as interpreted JavaScript, not bytecode. While browser vendors have made great strides recently in improving JavaScript performance, there are still many layers between the application code and the actual runtime environment. There are far fewer layers in a Pivot application - this results in less code to execute and translates to better overall performance.</p></li>
+
+        <li><p>The only language features and APIs available are those that can be supported by the browser and have been ported to GWT by Google. For example, there is no support for multi-threading, network, or I/O operations. Pivot applications have access to the full feature set of the Java Virtual Machine, including all standard Java libraries and APIs as well as any third-party libraries.</p></li>
+
+        <li><p>All presentation must be done via CSS and DOM manipulation. Fundamentally, HTML is a page layout language and is not optimized for general-purpose drawing. Pivot uses Java2D for presentation and can also take advantage of 3D APIs including Java3D and JOGL.</p></li>
+
+        <li><p>GWT's native means of server communication, GWT RPC, is a closed protocol, which limits options for sharing back-end functionality. REST services are not natively supported, and SOAP/AMF services are not supported at all.</p></li>
+        </ul>
+
+        <p>Pivot allows developers to efficiently construct applications that can truly take advantage of the Java platform.</p>
+
+        <div class="section"><a name=""><h2></h2></a>Features</div>
+        <p>This section answers questions related to Pivot features.</p>
+
+        <h2>Where can I find information on how to use Pivot?</h2>
+        <p>Javadoc for Pivot is available <a href="http://incubator.apache.org/pivot/2.0/docs/api">online</a>, and a complete tutorial is available <a href="http://incubator.apache.org/pivot/tutorials">here</a>.</p>
+
+        <p>Readers who want a quicker introduction to the platform may prefer to jump directly to the <a href="http://incubator.apache.org/pivot/tutorials/stock-tracker.html">final section</a> of the tutorial, which walks through the implementation of a simple but practical sample application called "Stock Tracker". Stock Tracker demonstrates a number of key features used by many "real world" applications, including UI markup, event handling, web queries, data binding, and localization, among others.</p>
+
+        <p>Readers may also find it helpful to review the <a href="http://incubator.apache.org/pivot/tutorials/bxml-primer.html">BXML Primer</a>, which provides an introduction to Pivot's markup language, before browsing the tutorials themsevles.</p>
+
+        <h2>Where can I find documentation on what BXML attributes and styles a component supports?</h2>
+        <p>Component attributes are simply the Java bean properties of the component class itself. Styles are the bean properties of the currently installed skin. So, you can simply refer to the Javadoc for the component to identify the supported attributes, and for the skin (generally either in <tt>org.apache.pivot.skin</tt> or <tt>org.apache.pivot.skin.terra</tt>) to identify the supported styles.</p>
+
+        <p>How Java classes map to BXML is discussed in more detail in the <a href="http://incubator.apache.org/pivot/tutorials/bxml-primer.html">BXML Primer</a>.</p>
+
+        <h2>How can I create a Pivot project in Eclipse?</h2>
+        <p>It is very easy to set up a Pivot project using Eclipse (the Pivot platform itself is actually built using Eclipse):</p>
+
+        <ul>
+        <li><p>Create a new Java project (File &gt; New Java Project).</p></li>
+
+        <li><p>Add a lib folder to the project.</p></li>
+
+        <li><p>Copy the Pivot JARs you need to the lib folder. At a minimum, you'll need pivot-core-2.0.jar, pivot-wtk-2.0.jar, and pivot-wtk-terra-2.0.jar. The contents of all the Pivot JARs are discussed in the <a href="http://pivot.apache.org/tutorials/platform-overview.html">Platform Overview</a> section of the tutorial.</p></li>
+
+        <li><p>Right-click on the project in Eclipse and select Properties. Click on Java Build Path.</p></li>
+
+        <li><p>Select the Libraries tab and click Add JARs.</p></li>
+
+        <li><p>Navigate to the lib directory in your newly created project, select the Pivot JARs, and
+        click OK.</p></li>
+        </ul>
+
+        <p>You can now create your main application class (the one that implements org.apache.pivot.wtk.Application). The <a href="http://pivot.apache.org/tutorials/hello-world.html">Hello World</a> tutorial page discusses this interface in more detail and provides information on how to deploy as a desktop application or in a browser.</p>
+        
+        <p>An <a href="http://cwiki.apache.org/confluence/download/attachments/108483/org.apache.pivot.eclipse_2.0.0.jar">Eclipse plugin</a> is also available that simplifies the task of creating launch configurations for Pivot applications. When the plugin is installed, a Pivot application can be launched simply by right-clicking on the name of the implementing class in the source tree.</p>
+        
+        <h2>How can I reference the Pivot source code in Eclipse?</h2>
+        <p>Assuming you have followed the previous steps for setting up a Pivot project in Eclipse, you can do the following to link the source code from the source distribution the libraries in Eclipse:</p>
+
+        <ul>
+        <li><p>Expand the Pivot source distribution, available from the <a href="http://pivot.apache.org/download.cgi#2.0">Downloads</a> page.</p></li>
+
+        <li><p>In Eclipse, expand the Referenced Libraries node in the tree view and right-click on the library name (e.g. pivot-core-2.0.jar). </p></li>
+
+        <li><p>Select Java Source Attachment. </p></li>
+
+        <li><p>Click External Folder. </p></li>
+        </ul>
+
+        <p>Browse to the location of the source folder in the expanded source distribution (e.g. core/src) and click OK. Repeat this process for all Pivot libraries. </p>
+
+        <h2>Why does Pivot include its own collection classes?</h2>
+        <p>The short answer is that they make the API easier to use, and provide a consistent API across all classes that require indexed or keyed access.</p>
+
+        <p>The longer answer: </p>
+
+        <ul>
+        <li><p>Pivot's collection classes fire events that notify listeners when collections are modified. This makes it very easy to wire an application data structure directly into a UI.</p></li>
+
+        <li><p>Pivot's collection interfaces enable construction of arbitrary object hierarchies using XML. Any class that implements the Sequence or Dictionary interface can be instantiated and configured completely in markup. </p></li>
+        </ul>
+
+        <p>Note, however, that developers aren't required to use these collection classes. Pivot includes various wrapper classes that allow existing model and collection data to be incorporated directly into a Pivot user interface.</p>
+
+        <h2>Why doesn't copy/paste work in Pivot?</h2>
+        <p>Copy/paste does work in Pivot. However, untrusted Java applets aren't allowed to interact with the system clipboard for security reasons. Trusted (signed) applets and applications running locally have full access to the system clipboard and can share data with native applications as well as other Pivot applications.</p>
+    </div></div></div><div class="group" id="footer"><div class="footerLogo">Copyright (c) 1999-2011<br>The Apache Software Foundation.</div><div class="footerLinks"><ul class="footerMenuGr"><li><strong>Demos</strong><ul><li><a href="/demos/kitchen-sink.html" target="_new">"Kitchen Sink"</a></li><li><a href="/demos/component-explorer.html" target="_new">Component Explorer</a></li><li><a href="http://ixnay.biz/pivot-jfree-demos/charts_demo.html" target="_new">Charting</a></li><li><a href="/demos/">More Demos</a></li></ul></li><li><strong>Documentation</strong><ul><li><a href="/getting-started.html">Getting Started</a></li><li><a href="/tutorials/">Tutorial</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/2.0/docs/api/">Javadoc (2.0)</a></li></ul></li><li><strong>Get Involved</strong><ul><li><a href="/svn.html">SVN Repositories</a></li><li><a href="/lists.html">Mailing Lists</a></li><li><a href="http://issues.apache.org/jira/browse/PIVOT">Bug Database</a></li><li><a href="http://cwiki.apache.org/PIVOT/">Wiki</a></li></ul></li><li><strong>Related</strong><ul><li><a href="http://code.google.com/p/pivot-jfree/">JFreeChart Provider</a></li></ul></li><li><strong>About</strong><ul><li><a href="/who-we-are.html">Who We Are</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/news.html">News</a></li><li><a href="/legal.html">Legal/License</a></li></ul></li></ul></div></div></div></body></html>
