@@ -146,6 +146,16 @@ limitations under the License.
 
         <p>Browse to the location of the source folder in the expanded source distribution (e.g. core/src) and click OK. Repeat this process for all Pivot libraries. </p>
 
+        <h2>How do I associate BXML files with the XML editor in Eclipse?</h2>
+        <ul>
+        <li><p>Open Eclipse Preferences.</p></li>
+        <li><p>Select General > Content Types from the tree navigation on the left.</p></li>
+        <li><p>Select Text > XML from the "Content types" list on the right.</p></li>
+        <li><p>Click "Add" and enter "*.wtkx" in the popup to create a new file association.</p></li>
+        <li><p>Select General > Editors > File Assocations from the tree navigation on the left.</p></li>
+        <li><p>Click "Add" and enter "*.wtkx" in the popup to add the "*.wtkx" assocation to the list.</p></li>
+        </ul>
+        
         <h2>Why does Pivot include its own collection classes?</h2>
         <p>The short answer is that they make the API easier to use, and provide a consistent API across all classes that require indexed or keyed access.</p>
 
