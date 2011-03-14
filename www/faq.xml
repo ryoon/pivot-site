@@ -171,6 +171,8 @@ limitations under the License.
 
         <h2>Why doesn't copy/paste work in Pivot?</h2>
         <p>Copy/paste does work in Pivot. However, untrusted Java applets aren't allowed to interact with the system clipboard for security reasons. Trusted (signed) applets and applications running locally have full access to the system clipboard and can share data with native applications as well as other Pivot applications.</p>
+        
+        <p><a href="http://webhostingrating.com/libs/pivot-apache-be">Belorussian translation of this document (Беларускі пераклад)</a></p>
     </body>
 </document>
 
