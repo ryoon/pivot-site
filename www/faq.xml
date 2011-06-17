@@ -33,9 +33,9 @@ limitations under the License.
         <p>Pivot enables developers to build solutions using the tools they already know, decreasing delivery time and reducing technology sprawl.</p>
 
         <h2>What is an "Installable Internet Application (IIA)"?</h2>
-        
+
         <p>An "installable Internet application" is an application that takes advantage of the internet but does not require a web browser. A simple example is an email or IM client. A more sophisticated one is Apple's iTunes. Pivot and Java are a great alternative for building these types of applications, especially for projects that don't have the budget or resources to produce multiple native ports.</p>
-        
+
         <p>Note that, although it is not required, Pivot applications can still run in a web browser via the Java plugin. In this case, the "installation" is handled by the plugin, which downloads the application's source code and stores it in a local cache, whereas in most other deployment scenarios it is generally managed explicitly by the user.</p>
 
         <h2>Why IIA?</h2>
@@ -128,9 +128,9 @@ limitations under the License.
         </ul>
 
         <p>You can now create your main application class (the one that implements org.apache.pivot.wtk.Application). The <a href="http://pivot.apache.org/tutorials/hello-world.html">Hello World</a> tutorial page discusses this interface in more detail and provides information on how to deploy as a desktop application or in a browser.</p>
-        
+
         <p>An <a href="http://cwiki.apache.org/confluence/download/attachments/108483/org.apache.pivot.eclipse_2.0.0.jar">Eclipse plugin</a> is also available that simplifies the task of creating launch configurations for Pivot applications. When the plugin is installed, a Pivot application can be launched simply by right-clicking on the name of the implementing class in the source tree.</p>
-        
+
         <h2>How can I reference the Pivot source code in Eclipse?</h2>
         <p>Assuming you have followed the previous steps for setting up a Pivot project in Eclipse, you can do the following to link the source code from the source distribution the libraries in Eclipse:</p>
 
@@ -155,7 +155,7 @@ limitations under the License.
         <li><p>Select General > Editors > File Assocations from the tree navigation on the left.</p></li>
         <li><p>Click "Add" and enter "*.wtkx" in the popup to add the "*.wtkx" assocation to the list.</p></li>
         </ul>
-        
+
         <h2>Why does Pivot include its own collection classes?</h2>
         <p>The short answer is that they make the API easier to use, and provide a consistent API across all classes that require indexed or keyed access.</p>
 
@@ -171,8 +171,8 @@ limitations under the License.
 
         <h2>Why doesn't copy/paste work in Pivot?</h2>
         <p>Copy/paste does work in Pivot. However, untrusted Java applets aren't allowed to interact with the system clipboard for security reasons. Trusted (signed) applets and applications running locally have full access to the system clipboard and can share data with native applications as well as other Pivot applications.</p>
-        
-        <p><a href="http://webhostingrating.com/libs/pivot-apache-be">Belorussian translation of this document (Беларускі пераклад)</a></p>
+
+        <p><a href="http://webhostingrating.com/libs/pivot-apache-be">Belorussian translation of this document (Белару�?кі пераклад)</a></p>
     </body>
 </document>
 
