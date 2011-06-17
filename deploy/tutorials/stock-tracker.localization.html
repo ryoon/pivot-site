@@ -45,7 +45,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:jscript">
-            
+
             {   stockTracker: "Pivot Stock Tracker",
                 symbol: "Symbol",
                 companyName: "Company",
@@ -61,12 +61,12 @@ limitations under the License.
                 dataProvidedBy: "Data provided by",
                 yahooFinance: "Yahoo! Finance"
             }
-            
+
         </pre>
         <p class="caption">StockTracker.json</p>
 
         <pre class="brush:jscript">
-            
+
             {   stockTracker: "La Bourse Pivot",
                 symbol: "Code",
                 companyName: "Soci&eacute;t&eacute;",
@@ -82,7 +82,7 @@ limitations under the License.
                 dataProvidedBy: "Donn&eacute;es fournies par",
                 yahooFinance: "Yahoo! Finance"
             }
-            
+
         </pre>
         <p class="caption">StockTracker_fr.json</p>
 
@@ -92,7 +92,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-            
+
             &lt;Form styles="{padding:0, fill:true, showFlagIcons:false, showFlagHighlight:false,
                 leftAlignLabels:true}"&gt;
                 &lt;Form.Section&gt;
@@ -122,7 +122,7 @@ limitations under the License.
                         styles="{horizontalAlignment:'right'}"/&gt;
                 &lt;/Form.Section&gt;
             &lt;/Form&gt;
-            
+
         </pre>
 
         <p>
@@ -134,51 +134,51 @@ limitations under the License.
         </p>
 
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"480",
                 height:"360"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.signed.jar");
                 libraries.push("/lib/pivot-web-2.0.signed.jar");
                 libraries.push("/lib/pivot-wtk-2.0.signed.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.signed.jar");
                 libraries.push("/lib/pivot-tutorials-2.0.signed.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.signed.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.tutorials.stocktracker.StockTracker'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
                 var systemProperties = [];
-                
+
                     systemProperties.push("user.language=fr");
-                
+
                 parameters.system_properties = systemProperties.join("&");
-            
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>
@@ -189,11 +189,11 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG,
                 DateFormat.MEDIUM, Locale.getDefault());
             lastUpdateLabel.setText(dateFormat.format(new Date()));
-            
+
         </pre>
 
         <p>

@@ -53,50 +53,50 @@ limitations under the License.
         </p>
 
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"640",
                 height:"480"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.signed.jar");
                 libraries.push("/lib/pivot-wtk-2.0.signed.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.signed.jar");
                 libraries.push("/lib/pivot-tutorials-2.0.signed.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.signed.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.wtk.ScriptApplication'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
                 var startupProperties = [];
-                
+
                     startupProperties.push("src=/org/apache/pivot/tutorials/menus/menu_bars.bxml");
-                
+
                 parameters.startup_properties = startupProperties.join("&");
-            
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>
@@ -128,7 +128,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-            
+
             &lt;menus:MenuBars title="Menu Bars" maximized="true"
                 styles="{padding:{top:0, left:4, bottom:4, right:4}, showWindowControls:false}"
                 xmlns:bxml="http://pivot.apache.org/bxml"
@@ -192,7 +192,7 @@ limitations under the License.
                     &lt;TabPane bxml:id="tabPane"/&gt;
                 &lt;/Border&gt;
             &lt;/menus:MenuBars&gt;
-            
+
         </pre>
 
         <p>
@@ -203,7 +203,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             package org.apache.pivot.tutorials.menus;
 
             import java.io.IOException;
@@ -337,7 +337,7 @@ limitations under the License.
                 public void initialize(Map&lt;String, Object&gt; namespace, URL location, Resources resources) {
                 }
             }
-            
+
         </pre>
 
         <p>

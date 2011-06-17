@@ -36,50 +36,50 @@ limitations under the License.
         </p>
 
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"480",
                 height:"240"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.jar");
                 libraries.push("/lib/pivot-wtk-2.0.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.jar");
                 libraries.push("/lib/pivot-tutorials-2.0.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.wtk.ScriptApplication'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
                 var startupProperties = [];
-                
+
                     startupProperties.push("src=/org/apache/pivot/tutorials/tableviews/json_table_view.bxml");
-                
+
                 parameters.startup_properties = startupProperties.join("&");
-            
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>
@@ -87,7 +87,7 @@ limitations under the License.
         <p>The BXML source is as follows:</p>
 
         <pre class="brush:xml">
-            
+
             &lt;Window title="Table Views" maximized="true"
                 xmlns:bxml="http://pivot.apache.org/bxml"
                 xmlns="org.apache.pivot.wtk"&gt;
@@ -121,7 +121,7 @@ limitations under the License.
                     &lt;/ScrollPane&gt;
                 &lt;/Border&gt;
             &lt;/Window&gt;
-            
+
         </pre>
 
         <p>It is very similar to the previous example, with the following exceptions:</p>
@@ -159,14 +159,14 @@ limitations under the License.
                 </p>
 
                 <pre class="brush:xml">
-                    
+
                     &lt;tableViewSortListeners&gt;
                         function sortChanged(tableView) {
                             var tableData = tableView.getTableData();
                             tableData.setComparator(new org.apache.pivot.wtk.content.TableViewRowComparator(tableView));
                         }
                     &lt;/tableViewSortListeners&gt;
-                    
+
                 </pre>
                 <p>
                     In this case, the listener assigns an instance of
@@ -184,7 +184,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:javascript">
-            
+
             // Source: http://en.wikipedia.org/wiki/2008_Summer_Olympics_medal_table
             [   {nation:"China", gold:51, silver:21, bronze:28, total:100},
                 {nation:"United States", gold:36, silver:38, bronze:36, total:110},
@@ -197,7 +197,7 @@ limitations under the License.
                 {nation:"Italy", gold:8, silver:10, bronze:10, total:28},
                 {nation:"France", gold:7, silver:16, bronze:17, total:40}
             ]
-            
+
         </pre>
 
         <p>

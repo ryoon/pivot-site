@@ -97,9 +97,9 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             getQuery = new GetQuery(SERVICE_HOSTNAME, SERVICE_PATH);
-            
+
         </pre>
 
         <p>
@@ -108,7 +108,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             StringBuilder symbolsParameterBuilder = new StringBuilder();
             for (int i = 0, n = symbols.getLength(); i &lt; n; i++) {
                 if (i &gt; 0) {
@@ -130,7 +130,7 @@ limitations under the License.
             String symbolsParameter = symbolsParameterBuilder.toString();
             getQuery.getParameters().put("s", symbolsParameter);
             getQuery.getParameters().put("f", "snl1ohgc1v");
-            
+
         </pre>
 
         <p>
@@ -146,7 +146,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             CSVSerializer quoteSerializer = new CSVSerializer(StockQuote.class);
             quoteSerializer.setKeys("symbol",
                 "companyName",
@@ -156,7 +156,7 @@ limitations under the License.
                 "lowValue",
                 "change",
                 "volume");
-            
+
         </pre>
 
         <p>
@@ -190,7 +190,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             public class StockQuote {
                 private String symbol = null;
                 private String companyName = null;
@@ -313,7 +313,7 @@ limitations under the License.
                     }
                 }
             }
-            
+
         </pre>
 
         <p>
@@ -326,13 +326,13 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             getQuery.setSerializer(quoteSerializer);
 
             getQuery.execute(new TaskAdapter&lt;Object&gt;(new TaskListener&lt;Object&gt;() {
             ...
             }
-            
+
         </pre>
 
         <p>
@@ -366,7 +366,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
                 @Override
                 public void taskExecuted(Task&lt;Object&gt; task) {
                     if (task == getQuery) {
@@ -415,7 +415,7 @@ limitations under the License.
                     }
                 }
             }
-            
+
         </pre>
 
         <p>
@@ -459,7 +459,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             @Override
             public void executeFailed(Task&lt;Object&gt; task) {
                 if (task == getQuery) {
@@ -467,7 +467,7 @@ limitations under the License.
                     getQuery = null;
                 }
             }
-            
+
         </pre>
 
         <p>

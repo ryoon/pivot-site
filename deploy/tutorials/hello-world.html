@@ -33,44 +33,44 @@ limitations under the License.
         </p>
 
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"240",
                 height:"80"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.jar");
                 libraries.push("/lib/pivot-wtk-2.0.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.jar");
                 libraries.push("/lib/pivot-tutorials-2.0.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.tutorials.HelloJava'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>
@@ -81,7 +81,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             package org.apache.pivot.tutorials;
 
             import java.awt.Color;
@@ -135,7 +135,7 @@ limitations under the License.
                 public void resume() {
                 }
             }
-            
+
         </pre>
 
         <p>
@@ -181,13 +181,13 @@ limitations under the License.
         </p>
 
         <pre class="brush:html">
-            
+
             &lt;applet code="org.apache.pivot.wtk.BrowserApplicationContext$HostApplet"
                 archive="lib/pivot-core-[version].jar,lib/pivot-wtk-[version].jar,lib/pivot-wtk-terra-[version].jar,lib/pivot-tutorials-[version].jar"
                 width="160" height="80"&gt;
                 &lt;param name="application_class_name" value="org.apache.pivot.tutorials.HelloJava"&gt;
             &lt;/applet&gt;
-            
+
         </pre>
 
         <p>

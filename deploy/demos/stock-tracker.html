@@ -28,51 +28,51 @@ limitations under the License.
             signed to allow it to communicate with the Yahoo web service):
         </p>
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"480",
                 height:"360"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.signed.jar");
                 libraries.push("/lib/pivot-wtk-2.0.signed.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.signed.jar");
                 libraries.push("/lib/pivot-web-2.0.signed.jar");
                 libraries.push("/lib/pivot-tutorials-2.0.signed.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.signed.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.tutorials.stocktracker.StockTracker'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
                 var startupProperties = [];
-                
+
                     startupProperties.push("language=en");
-                
+
                 parameters.startup_properties = startupProperties.join("&");
-            
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>

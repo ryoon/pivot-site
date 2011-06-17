@@ -26,44 +26,44 @@ limitations under the License.
             Allows users to create and preview custom color schemes for Pivot applications.
         </p>
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"680",
                 height:"480"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.signed.jar");
                 libraries.push("/lib/pivot-wtk-2.0.signed.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.signed.jar");
                 libraries.push("/lib/pivot-demos-2.0.signed.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.signed.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.demos.styles.ColorSchemeBuilder'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>

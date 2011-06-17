@@ -53,50 +53,50 @@ limitations under the License.
         </p>
 
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"420",
                 height:"240"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.jar");
                 libraries.push("/lib/pivot-wtk-2.0.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.jar");
                 libraries.push("/lib/pivot-tutorials-2.0.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.wtk.ScriptApplication'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
                 var startupProperties = [];
-                
+
                     startupProperties.push("src=/org/apache/pivot/tutorials/menus/context_menus.bxml");
-                
+
                 parameters.startup_properties = startupProperties.join("&");
-            
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>
@@ -108,7 +108,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-            
+
             &lt;menus:ContextMenus title="Context Menus" maximized="true"
                 xmlns:bxml="http://pivot.apache.org/bxml"
                 xmlns:menus="org.apache.pivot.tutorials.menus"
@@ -142,7 +142,7 @@ limitations under the License.
                     &lt;/TablePane&gt;
                 &lt;/Border&gt;
             &lt;/menus:ContextMenus&gt;
-            
+
         </pre>
 
         <p>
@@ -165,7 +165,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             package org.apache.pivot.tutorials.menus;
 
             import java.net.URL;
@@ -211,7 +211,7 @@ limitations under the License.
                     setMenuHandler(menuHandler);
                 }
             }
-            
+
         </pre>
 
         <p>

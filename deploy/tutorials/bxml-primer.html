@@ -50,7 +50,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-        
+
         public interface Serializer&lt;T&gt; {
             public T readObject(InputStream inputStream)
                 throws IOException, SerializationException;
@@ -58,7 +58,7 @@ limitations under the License.
                 throws IOException, SerializationException;
             public String getMIMEType(T object);
         }
-        
+
         </pre>
 
         <p>
@@ -67,10 +67,10 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-        
+
         BXMLSerializer bxmlSerializer = new BXMLSerializer();
         Window window = (Window)bxmlSerializer.readObject(getClass().getResource("my_window.bxml"));
-        
+
         </pre>
 
         <p>
@@ -92,9 +92,9 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;foo:Bar xmlns:foo="com.foo"/&gt;
-        
+
         </pre>
 
         <p>
@@ -105,9 +105,9 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;Bar xmlns="com.foo"/&gt;;
-        
+
         </pre>
 
         <p>
@@ -124,12 +124,12 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;Bar xmlns:bxml="http://pivot.apache.org/bxml"
             xmlns="com.foo"&gt;
             ...
         &lt;/Bar&gt;
-        
+
         </pre>
 
         <p>
@@ -148,9 +148,9 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;Foo bxml:id="myFoo"/&gt;
-        
+
         </pre>
         </li>
 
@@ -161,9 +161,9 @@ limitations under the License.
         "my_include.bxml" file in the current document:</p>
 
         <pre class="brush:xml">
-        
+
         &lt;bxml:include src="my_include.bxml"/&gt;;
-        
+
         </pre>
 
         <p>
@@ -184,13 +184,13 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;bxml:script&gt;
         function foo() {
             ....
         }
         &lt;/bxml:script&gt;
-        
+
         </pre>
 
         <p>
@@ -200,9 +200,9 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;?language groovy?&gt;
-        
+
         </pre>
 
         <p>
@@ -225,11 +225,11 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;bxml:define&gt;
             &lt;Foo bxml:id="myFoo"/&gt;
         &lt;/bxml:define&gt;
-        
+
         </pre>
         </li>
 
@@ -241,9 +241,9 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;bxml:reference id="myFoo"/&gt;
-        
+
         </pre>
 
         <p>
@@ -287,9 +287,9 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;Label text="Hello, World!" xmlns="org.apache.pivot.wtk" /&gt;
-        
+
         </pre>
 
         <p>
@@ -309,9 +309,9 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;HashMap foo="123" bar="456"/&gt;
-        
+
         </pre>
 
         <p>
@@ -340,11 +340,11 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;Label xmlns="org.apache.pivot.wtk"&gt;
             &lt;text&gt;Hello, World!&lt;/text&gt;
         &lt;/Label&gt;
-        
+
         </pre>
 
         <p>
@@ -353,9 +353,9 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;Label text="Hello, World!" xmlns="org.apache.pivot.wtk"/&gt;
-        
+
         </pre>
 
         <p>
@@ -366,7 +366,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;ListView xmlns="org.apache.pivot.wtk"
             xmlns:collections="org.apache.pivot.collections"
             xmlns:content="org.apache.pivot.wtk.content"&gt;
@@ -378,7 +378,7 @@ limitations under the License.
                 &lt;/collections:ArrayList&gt;
             &lt;/listData&gt;
         &lt;/ListView&gt;
-        
+
         </pre>
 
         <h4>Read-Only Sequences</h4>
@@ -392,14 +392,14 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;TabPane xmlns="org.apache.pivot.wtk"&gt;
             &lt;tabs&gt;
                 &lt;Label text="Foo"/&gt;
                 &lt;Label text="Bar"/&gt;
             &lt;/tabs&gt;
         &lt;/TabPane&gt;
-        
+
         </pre>
 
         <h4>Read-Only Dictionaries</h4>
@@ -411,12 +411,12 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;Label text="Hello, World!"
             xmlns="org.apache.pivot.wtk"&gt;
             &lt;userData foo="123" bar="456"/&gt;
         &lt;/Label&gt;
-        
+
         </pre>
 
         <p>
@@ -441,12 +441,12 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;TabPane xmlns="org.apache.pivot.wtk"&gt;
             &lt;Label text="Foo"/&gt;
             &lt;Label text="Bar"/&gt;
         &lt;/TabPane&gt;
-        
+
         </pre>
 
         <p>
@@ -470,7 +470,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;TabPane xmlns:content="org.apache.pivot.wtk.content"
             xmlns="org.apache.pivot.wtk"&gt;
             &lt;Label text="Tab 1"&gt;
@@ -479,7 +479,7 @@ limitations under the License.
                 &lt;/TabPane.tabData&gt;
             &lt;/Label&gt;
         &lt;/TabPane&gt;
-        
+
         </pre>
 
         <p>
@@ -487,7 +487,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-        
+
         TabPane tabPane = new TabPane();
 
         Label label = new Label();
@@ -498,7 +498,7 @@ limitations under the License.
         TabPane.setTabData(label, buttonData);
 
         tabPane.getTabs().add(label);
-        
+
         </pre>
 
         <p>
@@ -530,7 +530,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-        
+
         package com.foo;
 
         public class MyBean {
@@ -539,7 +539,7 @@ limitations under the License.
             public int getBar() { ... }
             public void setBar(int bar) { ... }
         }
-        
+
         </pre>
 
         <p>
@@ -548,9 +548,9 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;MyBean foo="hello" bar="123"/&gt;
-        
+
         </pre>
 
         <p>
@@ -567,12 +567,12 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;TabPane xmlns:content="org.apache.pivot.wtk.content"
             xmlns="org.apache.pivot.wtk"&gt;
             &lt;Label text="Tab 1" TabPane.tabData="First Tab"/&gt;
         &lt;/TabPane&gt;
-        
+
         </pre>
 
         <p>
@@ -580,7 +580,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-        
+
         TabPane tabPane = new TabPane();
 
         Label label = new Label();
@@ -589,7 +589,7 @@ limitations under the License.
         TabPane.setTabData(label, "First Tab");
 
         tabPane.getTabs().add(label);
-        
+
         </pre>
 
         <h4>Event Listeners</h4>
@@ -629,7 +629,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;ScrollPane xmlns="org.apache.pivot.wtk"
             xmlns:bxml="http://pivot.apache.org/bxml"&gt;
             &lt;view&gt;
@@ -642,7 +642,7 @@ limitations under the License.
                 &lt;TableViewHeader tableView="$tableView"/&gt;
             &lt;/columnHeader&gt;
         &lt;/ScrollPane&gt;
-        
+
         </pre>
 
         <h4>Resource Resolution</h4>
@@ -654,9 +654,9 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;Label text="%myText"/&gt;
-        
+
         </pre>
 
         <p>
@@ -664,10 +664,10 @@ limitations under the License.
         </p>
 
         <pre class="brush:jscript">
-        
+
         {   myText:"This is my text!"
         }
-        
+
         </pre>
 
         <p>
@@ -684,9 +684,9 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;ImageView image="@foo.png"/&gt;
-        
+
         </pre>
 
         <p>
@@ -708,7 +708,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;Window xmlns:bxml="http://pivot.apache.org/bxml"
             xmlns="org.apache.pivot.wtk"&gt;
             &lt;bxml:script&gt;
@@ -716,7 +716,7 @@ limitations under the License.
             &lt;/bxml:script&gt;
             &lt;Label text="$foo"/&gt;
         &lt;/Window&gt;
-        
+
         </pre>
 
         <p>
@@ -724,13 +724,13 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;Window xmlns:bxml="http://pivot.apache.org/bxml"
             xmlns="org.apache.pivot.wtk"&gt;
             &lt;bxml:script src="foo.js"/&gt;
             &lt;Label text="$foo"/&gt;
         &lt;/Window&gt;
-        
+
         </pre>
 
         <p>
@@ -747,11 +747,11 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;PushButton xmlns="org.apache.pivot.wtk"
             xmlns:bxml="http://pivot.apache.org/bxml"
             bxml:id="pushButton" buttonData="Click Me!"/&gt;
-        
+
         </pre>
 
         <p>
@@ -760,7 +760,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-        
+
         PushButton pushButton = (PushButton)bxmlSerializer.getNamespace().get("pushButton");
 
         pushButton.getButtonPressListeners().add(new ButtonPressListener() {
@@ -768,7 +768,7 @@ limitations under the License.
                 // Handle event
             }
         });
-        
+
         </pre>
 
         <p>
@@ -778,7 +778,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;PushButton xmlns="org.apache.pivot.wtk"
             xmlns:bxml="http://pivot.apache.org/bxml"
             buttonData="Click Me!"&gt;
@@ -788,7 +788,7 @@ limitations under the License.
             }
             &lt;/buttonPressListeners&gt;
         &lt;/PushButton&gt;
-        
+
         </pre>
 
         <p>
@@ -826,12 +826,12 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;PushButton xmlns="org.apache.pivot.wtk"
             xmlns:bxml="http://pivot.apache.org/bxml"
             buttonData="Click Me!"
             ButtonPressListener.buttonPressed="handleEvent(arguments[0])"/&gt;
-        
+
         </pre>
 
         <p>
@@ -859,7 +859,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-        
+
         public void startup(Display display, Map&lt;String, String&gt; properties)
             throws Exception {
             BXMLSerializer bxmlSerializer = new BXMLSerializer();
@@ -871,7 +871,7 @@ limitations under the License.
 
             window.open(display);
         }
-        
+
         </pre>
 
         <p>
@@ -911,12 +911,12 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-        
+
         &lt;Window xmlns="org.apache.pivot.wtk"
             xmlns:bxml="http://pivot.apache.org/bxml"&gt;
             &lt;Label bxml:id="label" text="Hello, World!"/&gt;
         &lt;Window&gt;
-        
+
         </pre>
 
         <p>
@@ -925,9 +925,9 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-        
+
         @BXML private Label label;
-        
+
         </pre>
 
         <p>

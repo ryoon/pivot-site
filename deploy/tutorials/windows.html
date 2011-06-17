@@ -141,44 +141,44 @@ limitations under the License.
         </p>
 
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"720",
                 height:"600"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.jar");
                 libraries.push("/lib/pivot-wtk-2.0.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.jar");
                 libraries.push("/lib/pivot-tutorials-2.0.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.tutorials.windows.Windows'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>
@@ -186,7 +186,7 @@ limitations under the License.
         <p>The content of each frame is defined in "frame.bxml":</p>
 
         <pre class="brush:xml">
-            
+
             &lt;Frame bxml:id="frame" icon="@application_form.png"
                 preferredWidth="480" preferredHeight="360"
                 xmlns:bxml="http://pivot.apache.org/bxml"
@@ -253,7 +253,7 @@ limitations under the License.
                     &lt;/PushButton&gt;
                 &lt;/BoxPane&gt;
             &lt;/Frame&gt;
-            
+
         </pre>
         <p class="caption">frame.bxml</p>
 
@@ -263,7 +263,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-            
+
             &lt;Dialog bxml:id="dialog" title="Dialog" modal="true"
                 xmlns:bxml="http://pivot.apache.org/bxml"
                 xmlns="org.apache.pivot.wtk"&gt;
@@ -286,12 +286,12 @@ limitations under the License.
                     &lt;/TablePane.Row&gt;
                 &lt;/TablePane&gt;
             &lt;/Dialog&gt;
-            
+
         </pre>
         <p class="caption">dialog.bxml</p>
 
         <pre class="brush:xml">
-            
+
             &lt;Sheet bxml:id="sheet" title="Sheet"
                 xmlns:bxml="http://pivot.apache.org/bxml"
                 xmlns="org.apache.pivot.wtk"&gt;
@@ -316,12 +316,12 @@ limitations under the License.
                     &lt;/TablePane&gt;
                 &lt;/BoxPane&gt;
             &lt;/Sheet&gt;
-            
+
         </pre>
         <p class="caption">sheet.bxml</p>
 
         <pre class="brush:xml">
-            
+
             &lt;Palette title="Palette" preferredWidth="60" preferredHeight="120"
                 xmlns:bxml="http://pivot.apache.org/bxml"
                 xmlns="org.apache.pivot.wtk"&gt;
@@ -334,7 +334,7 @@ limitations under the License.
                     &lt;PushButton buttonData="6" styles="{toolbar:true, minimumAspectRatio:1, maximumAspectRatio:1}"/&gt;
                 &lt;/FlowPane&gt;
             &lt;/Palette&gt;
-            
+
         </pre>
         <p class="caption">palette.bxml</p>
 
@@ -344,7 +344,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             package org.apache.pivot.tutorials.windows;
 
             import java.io.IOException;
@@ -418,6 +418,6 @@ limitations under the License.
                     DesktopApplicationContext.main(Windows.class, args);
                 }
             }
-            
+
         </pre>
     </div><p>Next: <a href="clipboard.html">Clipboard</a></p></div></div></div><div class="group" id="footer"><div class="footerLogo">Copyright (c) 1999-2011<br>The Apache Software Foundation.</div><div class="footerLinks"><ul class="footerMenuGr"><li><strong>Demos</strong><ul><li><a href="/demos/kitchen-sink.html" target="_new">"Kitchen Sink"</a></li><li><a href="/demos/component-explorer.html" target="_new">Component Explorer</a></li><li><a href="http://ixnay.biz/pivot-jfree-demos/charts_demo.html" target="_new">Charting</a></li><li><a href="/demos/">More Demos</a></li></ul></li><li><strong>Documentation</strong><ul><li><a href="/getting-started.html">Getting Started</a></li><li><a href="/tutorials/">Tutorial</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/2.0/docs/api/">Javadoc (2.0)</a></li></ul></li><li><strong>Get Involved</strong><ul><li><a href="/svn.html">SVN Repositories</a></li><li><a href="/lists.html">Mailing Lists</a></li><li><a href="http://issues.apache.org/jira/browse/PIVOT">Bug Database</a></li><li><a href="http://cwiki.apache.org/PIVOT/">Wiki</a></li></ul></li><li><strong>Related</strong><ul><li><a href="http://code.google.com/p/pivot-jfree/">JFreeChart Provider</a></li></ul></li><li><strong>About</strong><ul><li><a href="/who-we-are.html">Who We Are</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/news.html">News</a></li><li><a href="/legal.html">Legal/License</a></li></ul></li></ul></div></div></div></body></html>

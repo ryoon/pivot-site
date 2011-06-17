@@ -76,50 +76,50 @@ limitations under the License.
         </p>
 
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"240",
                 height:"240"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.jar");
                 libraries.push("/lib/pivot-wtk-2.0.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.jar");
                 libraries.push("/lib/pivot-tutorials-2.0.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.wtk.ScriptApplication'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
                 var startupProperties = [];
-                
+
                     startupProperties.push("src=/org/apache/pivot/tutorials/backgroundtasks/background_tasks.bxml");
-                
+
                 parameters.startup_properties = startupProperties.join("&");
-            
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>
@@ -138,7 +138,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-            
+
             &lt;backgroundtasks:BackgroundTasks title="Background Tasks" maximized="true"
                 xmlns:bxml="http://pivot.apache.org/bxml"
                 xmlns:backgroundtasks="org.apache.pivot.tutorials.backgroundtasks"
@@ -153,7 +153,7 @@ limitations under the License.
                     &lt;PushButton bxml:id="executeAsynchronousButton" buttonData="Execute Asynchronously"/&gt;
                 &lt;/BoxPane&gt;
             &lt;/backgroundtasks:BackgroundTasks&gt;
-            
+
         </pre>
 
         <p>
@@ -162,7 +162,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             package org.apache.pivot.tutorials.backgroundtasks;
 
             import org.apache.pivot.util.concurrent.Task;
@@ -182,7 +182,7 @@ limitations under the License.
                     return "Done sleeping!";
                 }
             }
-            
+
         </pre>
 
         <p>
@@ -190,7 +190,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             package org.apache.pivot.tutorials.backgroundtasks;
 
             import java.net.URL;
@@ -274,7 +274,7 @@ limitations under the License.
                     });
                 }
             }
-            
+
         </pre>
 
         <p>

@@ -42,50 +42,50 @@ limitations under the License.
         </p>
 
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"180",
                 height:"40"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.jar");
                 libraries.push("/lib/pivot-wtk-2.0.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.jar");
                 libraries.push("/lib/pivot-tutorials-2.0.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.wtk.ScriptApplication'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
                 var startupProperties = [];
-                
+
                     startupProperties.push("src=/org/apache/pivot/tutorials/effects/transitions.bxml");
-                
+
                 parameters.startup_properties = startupProperties.join("&");
-            
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>
@@ -93,7 +93,7 @@ limitations under the License.
         <p>The BXML source for the example is shown below. It simply creates a box pane containing several push buttons:</p>
 
         <pre class="brush:xml">
-            
+
             &lt;effects:Transitions title="Transitions" maximized="true"
                 xmlns:bxml="http://pivot.apache.org/bxml"
                 xmlns:effects="org.apache.pivot.tutorials.effects"
@@ -105,7 +105,7 @@ limitations under the License.
                     &lt;PushButton bxml:id="button4" buttonData="Four"/&gt;
                 &lt;/BoxPane&gt;
             &lt;/effects:Transitions&gt;
-            
+
         </pre>
 
         <p>
@@ -115,7 +115,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             package org.apache.pivot.tutorials.effects;
 
             import java.net.URL;
@@ -186,7 +186,7 @@ limitations under the License.
                     button4.getButtonPressListeners().add(buttonPressListener);
                 }
             }
-            
+
         </pre>
 
         <p>
@@ -194,7 +194,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             package org.apache.pivot.tutorials.effects;
 
             import org.apache.pivot.wtk.Component;
@@ -252,7 +252,7 @@ limitations under the License.
                     }
                 }
             }
-            
+
         </pre>
 
         <p>

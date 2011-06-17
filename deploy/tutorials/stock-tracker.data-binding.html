@@ -86,7 +86,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-            
+
             &lt;Form styles="{padding:0, fill:true, showFlagIcons:false, showFlagHighlight:false,
                 leftAlignLabels:true}"&gt;
                 &lt;Form.Section&gt;
@@ -116,7 +116,7 @@ limitations under the License.
                         styles="{horizontalAlignment:'right'}"/&gt;
                 &lt;/Form.Section&gt;
             &lt;/Form&gt;
-            
+
         </pre>
 
         <p>
@@ -126,7 +126,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             @SuppressWarnings("unchecked")
             private void refreshDetail() {
                 StockQuote stockQuote = null;
@@ -147,7 +147,7 @@ limitations under the License.
 
                 detailPane.load(new BeanAdapter(stockQuote));
             }
-            
+
         </pre>
 
         <p>
@@ -158,9 +158,9 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-            
+
             &lt;Label textKey="companyName" styles="{font:{size:12, bold:true}}"/&gt;
-            
+
         </pre>
 
         <h2>Bind Mappings</h2>
@@ -174,7 +174,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             public class ValueMapping implements Label.TextBindMapping {
                 private static final DecimalFormat FORMAT = new DecimalFormat("$0.00");
 
@@ -188,7 +188,7 @@ limitations under the License.
                     throw new UnsupportedOperationException();
                 }
             }
-            
+
         </pre>
 
         <p>

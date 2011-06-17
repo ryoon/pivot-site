@@ -56,50 +56,50 @@ limitations under the License.
         </p>
 
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"430",
                 height:"280"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.jar");
                 libraries.push("/lib/pivot-wtk-2.0.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.jar");
                 libraries.push("/lib/pivot-tutorials-2.0.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.wtk.ScriptApplication'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
                 var startupProperties = [];
-                
+
                     startupProperties.push("src=/org/apache/pivot/tutorials/databinding/data_binding.bxml");
-                
+
                 parameters.startup_properties = startupProperties.join("&");
-            
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>
@@ -109,7 +109,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-            
+
             &lt;databinding:DataBinding title="Data Binding" maximized="true"
                 xmlns:bxml="http://pivot.apache.org/bxml"
                 xmlns:databinding="org.apache.pivot.tutorials.databinding"
@@ -153,7 +153,7 @@ limitations under the License.
                     &lt;/BoxPane&gt;
                 &lt;/Border&gt;
             &lt;/databinding:DataBinding&gt;
-            
+
         </pre>
 
         <p>
@@ -162,7 +162,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             package org.apache.pivot.tutorials.databinding;
 
             import java.io.InputStream;
@@ -234,7 +234,7 @@ limitations under the License.
                     });
                 }
             }
-            
+
         </pre>
 
         <p>
@@ -244,7 +244,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:jscript">
-            
+
             {   id: 101,
                 name: "Joe User",
 
@@ -263,7 +263,7 @@ limitations under the License.
                     type: "AIM"
                 }
             }
-            
+
         </pre>
 
         <p>
@@ -272,7 +272,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             package org.apache.pivot.tutorials.databinding;
 
             public class Contact {
@@ -325,11 +325,11 @@ limitations under the License.
                     return getIMAccount();
                 }
             }
-            
+
         </pre>
 
         <pre class="brush:java">
-            
+
             package org.apache.pivot.tutorials.databinding;
 
             public class Address {
@@ -365,11 +365,11 @@ limitations under the License.
                     return zip;
                 }
             }
-            
+
         </pre>
 
         <pre class="brush:java">
-            
+
             public class IMAccount {
                 private String id;
                 private String type;
@@ -395,7 +395,7 @@ limitations under the License.
                     return type;
                 }
             }
-            
+
         </pre>
 
         <p>

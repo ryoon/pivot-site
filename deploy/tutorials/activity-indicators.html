@@ -43,50 +43,50 @@ limitations under the License.
         </p>
 
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"320",
                 height:"240"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.jar");
                 libraries.push("/lib/pivot-wtk-2.0.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.jar");
                 libraries.push("/lib/pivot-tutorials-2.0.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.wtk.ScriptApplication'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
                 var startupProperties = [];
-                
+
                     startupProperties.push("src=/org/apache/pivot/tutorials/progress/activity_indicators.bxml");
-                
+
                 parameters.startup_properties = startupProperties.join("&");
-            
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>
@@ -96,7 +96,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-            
+
             &lt;progress:ActivityIndicators title="Activity Indicators" maximized="true"
                 xmlns:bxml="http://pivot.apache.org/bxml"
                 xmlns:progress="org.apache.pivot.tutorials.progress"
@@ -126,7 +126,7 @@ limitations under the License.
                     &lt;/TablePane.Row&gt;
                 &lt;/TablePane&gt;
             &lt;/progress:ActivityIndicators&gt;
-            
+
         </pre>
 
         <p>
@@ -136,7 +136,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             package org.apache.pivot.tutorials.progress;
 
             import java.net.URL;
@@ -180,7 +180,7 @@ limitations under the License.
                     activityButton.setButtonData(activityIndicator1.isActive() ? "Stop" : "Start");
                 }
             }
-            
+
         </pre>
 
         <p>

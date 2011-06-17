@@ -44,50 +44,50 @@ limitations under the License.
         </p>
 
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"300",
                 height:"300"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.jar");
                 libraries.push("/lib/pivot-wtk-2.0.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.jar");
                 libraries.push("/lib/pivot-tutorials-2.0.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.wtk.ScriptApplication'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
                 var startupProperties = [];
-                
+
                     startupProperties.push("src=/org/apache/pivot/tutorials/treeviews/tree_views.bxml");
-                
+
                 parameters.startup_properties = startupProperties.join("&");
-            
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>
@@ -95,7 +95,7 @@ limitations under the License.
         <p>The BXML for this example is shown below:</p>
 
         <pre class="brush:xml">
-            
+
             &lt;Window title="Tree Views" maximized="true"
                 xmlns:bxml="http://pivot.apache.org/bxml"
                 xmlns="org.apache.pivot.wtk"&gt;
@@ -109,7 +109,7 @@ limitations under the License.
                     &lt;/ScrollPane&gt;
                 &lt;/Border&gt;
             &lt;/Window&gt;
-            
+
         </pre>
 
         <p>
@@ -117,7 +117,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-            
+
             &lt;TreeBranch xmlns="org.apache.pivot.wtk.content"&gt;
                 &lt;TreeBranch text="Activity" icon="/org/apache/pivot/tutorials/folder.png"&gt;
                     &lt;TreeBranch text="Games" icon="/org/apache/pivot/tutorials/folder.png"&gt;
@@ -163,7 +163,7 @@ limitations under the License.
                     &lt;/TreeBranch&gt;
                 &lt;/TreeBranch&gt;
             &lt;/TreeBranch&gt;
-            
+
         </pre>
 
         <p>

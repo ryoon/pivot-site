@@ -42,50 +42,50 @@ limitations under the License.
         </p>
 
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"720",
                 height:"480"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.signed.jar");
                 libraries.push("/lib/pivot-wtk-2.0.signed.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.signed.jar");
                 libraries.push("/lib/pivot-tutorials-2.0.signed.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.signed.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.wtk.ScriptApplication'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
                 var startupProperties = [];
-                
+
                     startupProperties.push("src=/org/apache/pivot/tutorials/clipboard/clipboard.bxml");
-                
+
                 parameters.startup_properties = startupProperties.join("&");
-            
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>
@@ -99,7 +99,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-            
+
             &lt;Window title="Clipboard" maximized="true"
                 xmlns:bxml="http://pivot.apache.org/bxml"
                 xmlns="org.apache.pivot.wtk"&gt;
@@ -176,7 +176,7 @@ limitations under the License.
                     &lt;/TablePane.Row&gt;
                 &lt;/TablePane&gt;
             &lt;/Window&gt;
-            
+
         </pre>
 
         <p>
@@ -195,20 +195,20 @@ limitations under the License.
                 <p>A window state listener that initializes the selection of the card pane when the window is opened:</p>
 
                 <pre class="brush:xml">
-                    
+
                     &lt;windowStateListeners&gt;
                         function windowOpened(window) {
                             sourceImageButtonGroup.setSelection(sourceImageButton1);
                             sourceImageButton1.requestFocus();
                         }
                     &lt;/windowStateListeners&gt;
-                    
+
                 </pre>
             </li>
             <li>
                 <p>A button group listener that changes the card pane's selection in response to a button group selection change:</p>
                 <pre class="brush:xml">
-                    
+
                     &lt;buttonGroupListeners&gt;
                         function selectionChanged(buttonGroup, previousSelection) {
                             var selection = buttonGroup.getSelection();
@@ -219,25 +219,25 @@ limitations under the License.
                             }
                         }
                     &lt;/buttonGroupListeners&gt;
-                    
+
                 </pre>
             </li>
             <li>
                 <p>A button press listener that calls the <tt>copy()</tt> function when the "Copy" button is pressed:</p>
                 <pre class="brush:xml">
-                    
+
                     &lt;PushButton bxml:id="copyButton" buttonData="Copy"
                         ButtonPressListener.buttonPressed="copy()"/&gt;
-                    
+
                 </pre>
             </li>
             <li>
                 <p>A button press listener that calls the <tt>paste()</tt> function when the "Paste" button is pressed:</p>
                 <pre class="brush:xml">
-                    
+
                     &lt;PushButton bxml:id="pasteButton" buttonData="Paste"
                         ButtonPressListener.buttonPressed="paste()"/&gt;
-                    
+
                 </pre>
             </li>
         </ul>
@@ -248,7 +248,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:javascript">
-            
+
             importPackage(org.apache.pivot.wtk);
 
             function copy() {
@@ -274,7 +274,7 @@ limitations under the License.
                         destinationImageView.setImage(image);
                     }
                 }
-            
+
         </pre>
 
         <p>

@@ -35,50 +35,50 @@ limitations under the License.
         </p>
 
         <script src="http://java.com/js/deployJava.js" type="text/javascript"></script><script type="text/javascript">
-            
+
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
                 width:"480",
                 height:"360"
             };
 
-            
-            
 
-            
+
+
+
             var libraries = [];
             libraries.push("/lib/pivot-core-2.0.jar");
                 libraries.push("/lib/pivot-wtk-2.0.jar");
                 libraries.push("/lib/pivot-wtk-terra-2.0.jar");
                 libraries.push("/lib/pivot-tutorials-2.0.jar");
-                
+
                     libraries.push("/lib/svgSalamander-tiny.jar");
-                
+
 
             attributes.archive = libraries.join(",");
 
-            
+
             var parameters = {
                 codebase_lookup:false,
                 application_class_name:'org.apache.pivot.wtk.ScriptApplication'
             };
 
-            
+
             var javaArguments = ["-Dsun.awt.noerasebackground=true",
                 "-Dsun.awt.erasebackgroundonresize=true"];
 
-            
+
 
             parameters.java_arguments = javaArguments.join(" ");
 
-            
-            
+
+
                 var startupProperties = [];
-                
+
                     startupProperties.push("src=/org/apache/pivot/tutorials/databinding/property_binding.bxml");
-                
+
                 parameters.startup_properties = startupProperties.join("&");
-            
+
 
             deployJava.runApplet(attributes, parameters, "1.6");
         </script>
@@ -105,7 +105,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:xml">
-            
+
             &lt;databinding:PropertyBinding title="Property Binding" maximized="true"
                 xmlns:bxml="http://pivot.apache.org/bxml"
                 xmlns:databinding="org.apache.pivot.tutorials.databinding"
@@ -155,7 +155,7 @@ limitations under the License.
                     &lt;/Form&gt;
                 &lt;/Border&gt;
             &lt;/databinding:PropertyBinding&gt;
-            
+
         </pre>
 
         <p>
@@ -172,7 +172,7 @@ limitations under the License.
         </p>
 
         <pre class="brush:java">
-            
+
             package org.apache.pivot.tutorials.databinding;
 
             import java.awt.Color;
@@ -209,7 +209,7 @@ limitations under the License.
                     return String.format("#%02X%02X%02X", color.getRed(), color.getBlue(), color.getGreen());
                 }
             }
-            
+
         </pre>
 
         <p>
