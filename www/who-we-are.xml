@@ -92,6 +92,17 @@ limitations under the License.
                 <!--Your bio goes here-->
             </ul>
         </section>
+
+        <section name="Other Committers">
+            <ul class="committers">
+                <li>
+                    <strong>Roger Whitcomb</strong>
+                    <em>(rwhitcomb at apache.org)</em>
+                    <!--Your bio goes here-->
+                </li>
+            </ul>
+        </section>
+
     </body>
 </document>
 
