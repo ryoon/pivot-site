@@ -8,10 +8,11 @@ that represents http://svn.apache.org/repos/asf/pivot/trunk/. This location is p
 build using the 'folder.trunk' parameter. The build will not run without this parameter being
 specified.
 
-An example command to build the site, which will build the site into the ant-bin/ folder, is as
+An example command to build the site, which will build the site into the deploy/ folder, is as
 follows:
 
-  $ ant -Dfolder.trunk=/path/to/pivot/trunk clean build
+  $ ant -Dfolder.trunk=/path/to/pivot/trunk build
 
-Note that the generated pages do not get checked into SVN. To deploy updated pages to the Pivot web
-site, you should scp the pages to people.apache.org:/www/pivot.apache.org/.
+Make sure you don't run clean, as this will wipe the deploy/.svn/ folder. To deploy updated pages
+to the Pivot web site, you check in the built files, then ssh over to people.apache.org, go to
+/www/pivot.apache.org/, and svn update.
