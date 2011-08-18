@@ -83,5 +83,16 @@ limitations under the License.
                 </tr>
             </table>
         </section>
+        <section name="Git Mirrors">
+            <p>
+                <strong>Read only</strong>
+                <a href="http://git.apache.org/">Git mirrors</a> of the Apache Pivot
+                Subversion repository are also available.
+            <p>
+            </p>
+                Further information, including a proposed workflow, can be found
+                <a href="http://www.apache.org/dev/git.html">here</a>.
+            </p>
+        </section>
     </body>
 </document>

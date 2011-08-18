@@ -96,10 +96,10 @@ limitations under the License.
                 <h2>Latest Updates</h2>
                 <ul class="newsItems">
                     <li>
-                        <a href="download.cgi#{$version}">
-                            <strong>Pivot 2.0 Released</strong>
-                            <em>January 10, 2011</em>
-                            <p>The latest version of Pivot is now available for download.</p>
+                        <a href="svn.html#Git%20Mirrors">
+                            <strong>Git Mirrors Now Available</strong>
+                            <em>August 18, 2011</em>
+                            <p>Git mirrors of the Pivot Subversion repository are now available.</p>
                         </a>
 
                         <a href="http://cwiki.apache.org/confluence/download/attachments/108483/org.apache.pivot.eclipse_2.0.0.jar">
@@ -108,6 +108,13 @@ limitations under the License.
                             <p>An Eclipse Plugin that simplifies development of Pivot applications is now
                             available for download.</p>
                         </a>
+
+                        <a href="download.cgi#{$version}">
+                            <strong>Pivot 2.0 Released</strong>
+                            <em>January 10, 2011</em>
+                            <p>The latest version of Pivot is now available for download.</p>
+                        </a>
+
                     </li>
                 </ul>
                 <!-- <div class="btnNewsArchive"><a href="news.html"><span>News archive</span></a></div> -->
