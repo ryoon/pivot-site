@@ -96,16 +96,17 @@ limitations under the License.
                     <em>(cbartlett at apache.org)</em>
                     <!--Your bio goes here-->
                 </li>
-            </ul>
-        </section>
 
-        <section name="Other Committers">
-            <ul class="committers">
                 <li>
                     <strong>Roger Whitcomb</strong>
                     <em>(rwhitcomb at apache.org)</em>
                     <!--Your bio goes here-->
                 </li>
+            </ul>
+        </section>
+
+        <section name="Other Committers">
+            <ul class="committers">
                 <li>
                     <strong>Edvin Syse</strong>
                     <em>(edvin at apache.org)</em>
