@@ -110,7 +110,5 @@ limitations under the License.
         <demo id="kitchen-sink" screenshot="images/demos_feat_kitchen.jpg"/>
         <demo id="stock-tracker" screenshot="images/demos_feat_stock.jpg"/>
         <demo id="itunes-search" screenshot="images/demos_feat_itunes.jpg"/>
-<!--         <demo id="charting" screenshot="images/demos_feat_chart.jpg"/> -->
-        <demo id="decorators" screenshot="images/demos_feat_deco.jpg"/>
     </featured-demos>
 </project>

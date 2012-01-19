@@ -407,6 +407,7 @@ cite.homeCol2 {
 }
 
 .otherDemos {
+	clear:both;
 	list-style: none;
 }
 
