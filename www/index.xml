@@ -96,6 +96,18 @@ limitations under the License.
                 <h2>Latest Updates</h2>
                 <ul class="newsItems">
                     <li>
+                        <a href="download.cgi#{$version}">
+                            <strong>Pivot 2.0.1 Released</strong>
+                            <em>January 16, 2012</em>
+                            <p>The latest version of Pivot is now available for download.</p>
+                        </a>
+
+                        <a href="http://cwiki.apache.org/confluence/display/PIVOT/News">
+                            <strong>Pivot Subprojects under Apache-Extras</strong>
+                            <em>December, 2011</em>
+                            <p>Moved all official Pivot Subprojects under Apache-Extras</p>
+                        </a>
+
                         <a href="svn.html#Git%20Mirrors">
                             <strong>Git Mirrors Now Available</strong>
                             <em>August 18, 2011</em>
@@ -117,7 +129,6 @@ limitations under the License.
 
                     </li>
                 </ul>
-                <!-- <div class="btnNewsArchive"><a href="news.html"><span>News archive</span></a></div> -->
             </div>
         </div>
     </body>

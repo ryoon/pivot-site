@@ -182,6 +182,11 @@ limitations under the License.
                         </xsl:for-each>
                     </ul>
                 </div>
+
+                <!-- Trademark on name -->
+                <div class="footerLinks">
+                	Apache Pivot is a trademark of the Apache Software Foundation
+                </div>
             </div>
         </div>
     </xsl:template>

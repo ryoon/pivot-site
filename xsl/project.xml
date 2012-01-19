@@ -20,7 +20,7 @@ limitations under the License.
     <title>Apache Pivot</title>
     <tagline>Rich Internet Applications in Java</tagline>
     <copyright>
-        <message>Copyright (c) 1999-2011</message>
+        <message>Copyright (c) 1999-2012</message>
         <message>The Apache Software Foundation.</message>
     </copyright>
 
@@ -68,7 +68,10 @@ limitations under the License.
         <document-group id="related">
             <title>Related</title>
             <documents>
-                <document href="http://code.google.com/p/pivot-jfree/">JFreeChart Provider</document>
+                <document href="http://code.google.com/a/apache-extras.org/p/pivot-jfree/">JFreeChart Provider</document>
+                <document href="http://code.google.com/a/apache-extras.org/p/pivot-common/">Pivot-Common</document>
+                <document href="http://code.google.com/a/apache-extras.org/p/pivot-contrib/">Pivot-Contrib</document>
+                <document href="http://code.google.com/a/apache-extras.org/p/pivot-multilang/">Pivot-Multilang</document>
             </documents>
         </document-group>
 
@@ -77,7 +80,8 @@ limitations under the License.
             <documents>
                 <document href="who-we-are.html">Who We Are</document>
                 <document href="contact.html">Contact</document>
-                <document href="news.html">News</document>
+                <!--  <document href="news.html">News</document>  //-->
+                <document href="http://cwiki.apache.org/confluence/display/PIVOT/News">News</document>
                 <document href="legal.html">Legal/License</document>
                 <document href="http://www.apache.org/foundation/sponsorship.html" footer="false">Sponsorship</document>
                 <document href="http://www.apache.org/foundation/thanks.html" footer="false">Thanks</document>
@@ -86,21 +90,11 @@ limitations under the License.
     </document-groups>
 
     <external-demos>
-        <demo id="charting" href="http://ixnay.biz/pivot-jfree-demos/charts_demo.html">
+        <demo id="charting" href="http://cwiki.apache.org/confluence/display/PIVOT/Other+Demos">
             <properties>
                 <title>Charting</title>
                 <description>
-                    Demonstrates charting in Pivot using the JFreeChart chart provider (hosted at
-                    http://ixnay.biz/).
-                </description>
-            </properties>
-        </demo>
-        <demo id="ticker-slideshow" href="http://www.satelliteconsulting.com/">
-            <properties>
-                <title>News Ticker/Slide Show</title>
-                <description>
-                    Demonstrates Pivot used in a real-world context, used to show a news feed and
-                    a slide show of client logos (hosted at http://www.satelliteconsulting.com/).
+                    Demonstrates charting in Pivot using the JFreeChart chart provider.
                 </description>
             </properties>
         </demo>
@@ -116,7 +110,7 @@ limitations under the License.
         <demo id="kitchen-sink" screenshot="images/demos_feat_kitchen.jpg"/>
         <demo id="stock-tracker" screenshot="images/demos_feat_stock.jpg"/>
         <demo id="itunes-search" screenshot="images/demos_feat_itunes.jpg"/>
-        <demo id="charting" screenshot="images/demos_feat_chart.jpg"/>
+<!--         <demo id="charting" screenshot="images/demos_feat_chart.jpg"/> -->
         <demo id="decorators" screenshot="images/demos_feat_deco.jpg"/>
     </featured-demos>
 </project>
