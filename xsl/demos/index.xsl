@@ -92,10 +92,19 @@ limitations under the License.
                                         <xsl:attribute name="href">
                                             <xsl:value-of select="concat('/demos/', $id, '.html')"/>
                                         </xsl:attribute>
+                                        <xsl:attribute name="style">text-align:left;</xsl:attribute>
                                         <xsl:if test="boolean($document/properties/full-screen)">
                                             <xsl:attribute name="target">_new</xsl:attribute>
                                         </xsl:if>
-                                        <xsl:text>View</xsl:text>
+                                        <xsl:text>Applet</xsl:text>
+                                    </xsl:element>
+                                    -
+                                    <xsl:element name="a">
+                                        <xsl:attribute name="href">
+                                            <xsl:value-of select="concat('/demos/', $id, '.jnlp')"/>
+                                        </xsl:attribute>
+                                        <xsl:attribute name="style">text-align:right;</xsl:attribute>
+                                        <xsl:text>Web Start</xsl:text>
                                     </xsl:element>
                                 </p>
                             </div>

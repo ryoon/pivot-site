@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to you under the Apache License,
+Version 2.0 (the "License"); you may not use this file except in
+compliance with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<jnlp spec="1.6+" codebase="http://pivot.apache.org/demos/" href="itunes-search.jnlp">
+	<information>
+		<title>Pivot iTunes Search Demo</title>
+		<description>Simple application that allows a user to run search queries against the iTunes Music Store and presents the results in a table view.</description>
+		<vendor>Apache Pivot</vendor>
+		<homepage href="http://pivot.apache.org/"/>
+	</information>
+
+	<security>
+		<all-permissions/>
+	</security>
+
+	<resources>
+		<property name="jnlp.packEnabled" value="true"/>
+		<property name="sun.awt.noerasebackground" value="true"/>
+		<property name="sun.awt.erasebackgroundonresize=true" value="true"/>
+		<java version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+		<jar href="lib/pivot-core-2.0.1.signed.jar"/>
+		<jar href="lib/pivot-wtk-2.0.1.signed.jar" main="true"/>
+		<jar href="lib/pivot-wtk-terra-2.0.1.signed.jar"/>
+		<jar href="lib/pivot-web-2.0.1.signed.jar"/>
+		<jar href="lib/pivot-demos-2.0.1.signed.jar"/>
+		<jar href="lib/svgSalamander-tiny.signed.jar"/>
+	</resources>
+
+	<application-desc main-class="org.apache.pivot.wtk.DesktopApplicationContext">
+		<argument>org.apache.pivot.demos.itunes.SearchDemo</argument>
+		<argument>--center=true</argument>
+	</application-desc>
+
+	<update check="background"/>
+
+</jnlp>
