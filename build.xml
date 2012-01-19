@@ -28,11 +28,13 @@ limitations under the License.
     Usage: ant [-Dfolder.trunk=pathtotrunk] [target]
 
     Parameters:
-      folder.trunk    This specifies the absolute file system location of the pivot trunk. The site
-                      pulls the current Pivot version, the demos, and the tutorials from this
-                      location. If unspecified, it will default to 'trunk', meaning that you can
-                      either check the trunk out into this folder, or you can create a symbolic
-                      link named 'trunk' that links to the trunk.
+      folder.trunk    This specifies the absolute file system location of the 
+                      pivot trunk. The site pulls the current Pivot version, 
+                      the demos, and the tutorials from this location. 
+                      If unspecified, it will default to 'trunk', meaning that 
+                      you can either check the trunk out into this folder, 
+                      or you can create a symbolic link named 'trunk' that 
+                      links to the trunk.
 
     ]]>
     </fail>
