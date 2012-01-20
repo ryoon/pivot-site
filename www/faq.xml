@@ -26,7 +26,11 @@ limitations under the License.
         <p>This section answers questions related to the Pivot platform.</p>
 
         <h2>What is Apache Pivot?</h2>
-        <p>Apache Pivot is an open-source platform for building installable Internet applications (IIAs). It combines the enhanced productivity and usability features of a modern user interface toolkit with the robustness of the Java platform.</p>
+        <p>
+                Apache Pivot&#0153; is an open-source platform for building installable Internet
+                applications (IIAs). It combines the enhanced productivity and usability features
+                of a modern user interface toolkit with the robustness of the Java platform.
+        </p>
 
         <p>Pivot allows developers to easily construct visually-engaging, cross-platform, connected applications in Java or any other JVM language, such as JavaScript, Groovy, or Scala. Pivot is also the only truly open IIA framework: it is completely open source, and is driven entirely by the software development community.</p>
 

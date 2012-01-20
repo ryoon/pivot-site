@@ -185,7 +185,7 @@ limitations under the License.
 
                 <!-- Trademark on name -->
                 <div class="footerLinks">
-                	Apache Pivot is a trademark of the Apache Software Foundation
+                	Apache Pivot, Pivot, Apache, and the Apache Pivot project logo are trademarks of The Apache Software Foundation.
                 </div>
             </div>
         </div>
