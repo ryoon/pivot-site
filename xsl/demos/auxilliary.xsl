@@ -38,6 +38,7 @@ limitations under the License.
             </xsl:when>
             <xsl:otherwise>
                 <link href="/styles/pivot.css" rel="stylesheet" type="text/css"/>
+                <link href="/styles/pivot_print.css" rel="stylesheet" type="text/css" media="print"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>

@@ -193,6 +193,7 @@ limitations under the License.
 
     <xsl:template name="css">
         <link href="/styles/pivot.css" rel="stylesheet" type="text/css"/>
+        <link href="/styles/pivot_print.css" rel="stylesheet" type="text/css" media="print"/>
     </xsl:template>
 
     <xsl:template name="envelope">

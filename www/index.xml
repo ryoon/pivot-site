@@ -67,6 +67,21 @@ limitations under the License.
                 <h2>User Comments</h2>
                 <ul>
                     <li>
+                        <p>"
+                        After initially considering a number of different technologies to use
+                        for a new cross-platform application, we decided to use Pivot both
+                        because of its wide variety of controls and ability to be seamlessly deployed
+                        as either a desktop application and a web applet.
+                        But since then, we have been impressed with the overall design of the framework,
+                        the ability (being an Apache open-source project) to add features,
+                        fix bugs and get improvements made, and with the responsiveness of the developers
+                        to answer questions and work through problems.
+                        So now we are just about to do our first commercial release of this product.
+                        "</p>
+                        <cite class="homeCol2">- Roger Whitcomb, Actian Corporation</cite>
+                    </li>
+
+                    <li>
                         <p>"We chose Pivot due to how rapidly we were able to create a user interface
                         and tie it into our existing API for our storage system. Pivot's straight-forward
                         collection model saved us the hassle of writing mountains of boilerplate code to

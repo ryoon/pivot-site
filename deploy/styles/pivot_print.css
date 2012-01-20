@@ -1,0 +1,45 @@
+@charset "UTF-8";
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: white;
+	font-family: Georgia, ‘Times New Roman’, serif;
+	font-size: small;
+//	line-height: 1.0em;
+	color: #000000;
+}
+
+#header, #footer {
+	display: none;
+}
+
+#content, .content {
+	background: transparent;
+	width: 100%;
+	margin: 0;
+	float: none;
+}
+
+#nav, #sidebar {
+	display: none;
+}
+
+a:link {
+//	color: #06c;
+	color: #252525;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+div.logo, ul.naviLeft {
+	display: none;
+}
+
+
+.noprint {
+	display: none;
+}
+
