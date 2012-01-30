@@ -1,0 +1,9 @@
+# Add the right MIME Type for Java Web Start applications
+AddType application/x-java-jnlp-file .jnlp
+
+# Add the right MIME Type for Java archives and delta archives
+# AddType application/x-java-archive .jar
+AddType application/x-java-archive-diff .jardiff
+
+# Add right MIME Type and handler for pack200 files
+#  -- verify if needed ...
