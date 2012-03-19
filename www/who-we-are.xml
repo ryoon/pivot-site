@@ -103,5 +103,19 @@ limitations under the License.
             </ul>
         </section>
 
+
+        <section name="Emeritus Committers">
+            <ul class="committers">
+                <li>
+                    <strong>Christopher Brind</strong>
+                    <em>(brindy at apache.org)</em>
+                </li>
+                <li>
+                    <strong>Niclas Hedhman</strong>
+                    <em>(niclas at apache.org)</em>
+                </li>
+            </ul>
+        </section>
+
     </body>
 </document>
