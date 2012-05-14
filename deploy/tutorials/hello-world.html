@@ -216,6 +216,17 @@ limitations under the License.
             <tt>DesktopApplicationContext</tt> loader application.
         </p>
 
+        <p>
+            Note that you can even add the main() method to be able to run the class as 
+            Standard Java Application in the usual way.
+        </p>
+        <pre class="brush:java">
+                public static void main(String[] args) {
+                    DesktopApplicationContext.main(HelloJava.class, args);
+                }
+            
+        </pre>
+
         <h3>The Window Class</h3>
         <p>
             A window is the top-level entry point into an application's user interface. Almost all
