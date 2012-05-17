@@ -17,10 +17,16 @@ limitations under the License.
 -->
 
 <project name="pivot-site" default="build" basedir=".">
+
+    <!-- Properties that affect the directories that are created as part of the build -->
     <property name="folder.trunk" location="trunk"/>
     <property name="folder.deploy" location="deploy"/>
+
+    <!-- Dynamic properties -->
     <property file="${folder.trunk}/build.properties"/>
 
+
+    <!-- Ant argument check -->
     <fail unless="version">
     <![CDATA[
     Error:
@@ -28,8 +34,8 @@ limitations under the License.
     Usage: ant [-Dfolder.trunk=pathtotrunk] [target]
 
     Parameters:
-      folder.trunk    This specifies the absolute file system location of the 
-                      pivot trunk. The site pulls the current Pivot version, 
+      folder.trunk    This specifies the file system location of the pivot trunk. 
+	                  The site pulls the current Pivot version, 
                       the demos, and the tutorials from this location. 
                       If unspecified, it will default to 'trunk', meaning that 
                       you can either check the trunk out into this folder, 
@@ -38,6 +44,7 @@ limitations under the License.
 
     ]]>
     </fail>
+
 
     <!-- Transform macro -->
     <macrodef name="transform">
@@ -58,6 +65,13 @@ limitations under the License.
         </sequential>
     </macrodef>
 
+
+    <!-- Removes build artifacts -->
+    <target name="clean" description="Removes build artifacts">
+        <delete dir="${folder.deploy}"/>
+    </target>
+
+    <!-- Builds the site -->
     <target name="build" description="Builds the site">
         <!-- perform XSLT transformations -->
         <transform stylesheet="xsl/index.xsl">
@@ -131,7 +145,4 @@ limitations under the License.
         </javadoc>
     </target>
 
-    <target name="clean" description="Removes build artifacts">
-        <delete dir="${folder.deploy}"/>
-    </target>
 </project>

@@ -13,6 +13,17 @@ follows:
 
   $ ant -Dfolder.trunk=/path/to/pivot/trunk build
 
-Make sure you don't run clean, as this will wipe the deploy/.svn/ folder. To deploy updated pages
-to the Pivot web site, you check in the built files, then ssh over to people.apache.org, go to
-/www/pivot.apache.org/, and svn update.
+
+Make sure you don't run clean, as this will wipe the deploy/.svn/ folder.
+To deploy updated pages to the Pivot web site, now it'e enough to check in the built files.
+
+
+Note that when regenerating the site, the version is taken from the build.properties file
+in pivot trunk, so for example during a web site maintenance/update:
+change it back temporary to the current version published in the web site, 
+and finally revert local changes to that file.
+
+For example:
+
+  $ ant -Dfolder.trunk=../../trunk build
+
