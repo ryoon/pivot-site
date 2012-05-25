@@ -108,40 +108,25 @@ limitations under the License.
             </div>
 
             <div class="homeCol3">
-                <h2>Latest Updates</h2>
+                <h2><a href="http://cwiki.apache.org/confluence/display/PIVOT/News">Latest Updates</a></h2>
                 <ul class="newsItems">
                     <li>
                         <a href="download.cgi#{$version}">
-                            <strong>Pivot 2.0.1 Released</strong>
-                            <em>January 16, 2012</em>
+                            <strong>Pivot 2.0.2 Released</strong>
+                            <em>May 21, 2012</em>
                             <p>The latest version of Pivot is now available for download.</p>
                         </a>
-
-                        <a href="http://cwiki.apache.org/confluence/display/PIVOT/News">
-                            <strong>Pivot Subprojects under Apache-Extras</strong>
-                            <em>December, 2011</em>
-                            <p>Moved all official Pivot Subprojects under Apache-Extras</p>
+						<br/>
+                    </li>
+                </ul>
+				<br/>
+                <h2>Archived News</h2>
+                <ul class="newsItems">
+                    <li>
+                        <a href="http://cwiki.apache.org/confluence/display/PIVOT/Archived+News">
+                            <strong>Archive of Past News</strong>
                         </a>
-
-                        <a href="svn.html#Git%20Mirrors">
-                            <strong>Git Mirrors Now Available</strong>
-                            <em>August 18, 2011</em>
-                            <p>Git mirrors of the Pivot Subversion repository are now available.</p>
-                        </a>
-
-                        <a href="http://cwiki.apache.org/confluence/download/attachments/108483/org.apache.pivot.eclipse_2.0.0.jar">
-                            <strong>Eclipse Plugin Now Available</strong>
-                            <em>January 19, 2011</em>
-                            <p>An Eclipse Plugin that simplifies development of Pivot applications is now
-                            available for download.</p>
-                        </a>
-
-                        <a href="download.cgi#{$version}">
-                            <strong>Pivot 2.0 Released</strong>
-                            <em>January 10, 2011</em>
-                            <p>The latest version of Pivot is now available for download.</p>
-                        </a>
-
+						<br/>
                     </li>
                 </ul>
             </div>

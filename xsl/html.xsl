@@ -55,7 +55,9 @@ limitations under the License.
                 try {
                 var pageTracker = _gat._getTracker("UA-7977275-3");
                 pageTracker._trackPageview();
-                } catch(err) {}</script>
+                } catch(err) {
+				}
+				</script>
             </head>
 
             <body>
