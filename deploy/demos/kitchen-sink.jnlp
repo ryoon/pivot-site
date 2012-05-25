@@ -27,10 +27,10 @@ limitations under the License.
 	<resources>
 		<property name="jnlp.packEnabled" value="true"/>
 		<java version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-		<jar href="/lib/pivot-core-2.0.1.jar"/>
-		<jar href="/lib/pivot-wtk-2.0.1.jar" main="true"/>
-		<jar href="/lib/pivot-wtk-terra-2.0.1.jar"/>
-		<jar href="/lib/pivot-tutorials-2.0.1.jar"/>
+		<jar href="/lib/pivot-core-2.0.2.jar"/>
+		<jar href="/lib/pivot-wtk-2.0.2.jar" main="true"/>
+		<jar href="/lib/pivot-wtk-terra-2.0.2.jar"/>
+		<jar href="/lib/pivot-tutorials-2.0.2.jar"/>
 		<jar href="/lib/svgSalamander-tiny.jar"/>
 	</resources>
 

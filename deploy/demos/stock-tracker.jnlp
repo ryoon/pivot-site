@@ -33,11 +33,11 @@ limitations under the License.
 		<property name="sun.awt.noerasebackground" value="true"/>
 		<property name="sun.awt.erasebackgroundonresize=true" value="true"/>
 		<java version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-		<jar href="/lib/pivot-core-2.0.1.signed.jar"/>
-		<jar href="/lib/pivot-wtk-2.0.1.signed.jar" main="true"/>
-		<jar href="/lib/pivot-wtk-terra-2.0.1.signed.jar"/>
-		<jar href="/lib/pivot-web-2.0.1.signed.jar"/>
-		<jar href="/lib/pivot-tutorials-2.0.1.signed.jar"/>
+		<jar href="/lib/pivot-core-2.0.2.signed.jar"/>
+		<jar href="/lib/pivot-wtk-2.0.2.signed.jar" main="true"/>
+		<jar href="/lib/pivot-wtk-terra-2.0.2.signed.jar"/>
+		<jar href="/lib/pivot-web-2.0.2.signed.jar"/>
+		<jar href="/lib/pivot-tutorials-2.0.2.signed.jar"/>
 		<jar href="/lib/svgSalamander-tiny.signed.jar"/>
 	</resources>
 
