@@ -25,5 +25,5 @@ and finally revert local changes to that file.
 
 For example:
 
-  $ ant -Dfolder.trunk=../../trunk build
+  $ ant -Dfolder.trunk=/absolute_path_to/trunk build
 
