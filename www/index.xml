@@ -60,7 +60,6 @@ limitations under the License.
                     Pivot enables developers to build solutions using the tools they already know,
                     decreasing delivery time and reducing technology sprawl.
                 </p>
-                <!-- <div class="btnMore"><a href="about.html"><span>More about Pivot</span></a></div> -->
             </div>
 
             <div class="homeCol2">
@@ -83,7 +82,7 @@ limitations under the License.
                 </ul>
 				<br/>
                 <h2>More User Comments</h2>
-                <ul>
+                <ul class="newsItems">
                     <li>
                         <a href="http://cwiki.apache.org/confluence/display/PIVOT/User+Comments">
                             <strong>Archive of User Comments</strong>
