@@ -1,0 +1,1 @@
+This folder contains some files copied by hand, to be able to make some loading test from Client applications.Note that bxml (and related) resources are here to simulate bxml files (dynamically) generated at server side.
