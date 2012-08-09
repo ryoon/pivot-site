@@ -90,7 +90,8 @@ limitations under the License.
                         // Alert.alert("resourcesBaseURL = " + resourcesBaseURL, frame);  // debug
 						// new, for remote loading of this file (included by another):
 						// note thate this version requires the variable resourcesBaseURL defined, at least an empty string ...
-                        palette = application.load(resourcesBaseURL + "palette.bxml");
+                        // palette = application.load(resourcesBaseURL + "palette.bxml");  // original version, but ok only for (local) filenames ...
+						palette = application.loadWindowFromURL(resourcesBaseURL + "palette.bxml", null);  // new version, using URL for the file to load ...
                         palette.setLocation(frame.getX() + frame.getWidth() + 20, frame.getY() + 20);
                     }
 
