@@ -28,6 +28,10 @@ limitations under the License.
 
     <bxml:script>
     var palette = null;
+
+    if (resourcesBaseURL == null) {
+	    resourcesBaseURL = "";  // safer default
+    }
     </bxml:script>
 
     <BoxPane orientation="vertical">
@@ -82,11 +86,11 @@ limitations under the License.
                 function buttonPressed(button) {
                     if (palette == null) {
                         // palette = application.load("palette.bxml"); // original version
-                        // Alert.alert("baseURL is defined " + (baseURL != undefined), frame);  // debug
-                        // Alert.alert("baseURL = " + baseURL, frame);  // debug
+                        // Alert.alert("resourcesBaseURL is defined " + (resourcesBaseURL != undefined), frame);  // debug
+                        // Alert.alert("resourcesBaseURL = " + resourcesBaseURL, frame);  // debug
 						// new, for remote loading of this file (included by another):
-						// note thate this version requires the variable baseURL defined, at least an empty string ...
-                        palette = application.load(baseURL + "palette.bxml");
+						// note thate this version requires the variable resourcesBaseURL defined, at least an empty string ...
+                        palette = application.load(resourcesBaseURL + "palette.bxml");
                         palette.setLocation(frame.getX() + frame.getWidth() + 20, frame.getY() + 20);
                     }
 
