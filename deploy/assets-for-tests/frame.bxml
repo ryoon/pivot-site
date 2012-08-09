@@ -81,7 +81,12 @@ limitations under the License.
                 importPackage(org.apache.pivot.wtk);
                 function buttonPressed(button) {
                     if (palette == null) {
-                        palette = application.load("palette.bxml");
+                        // palette = application.load("palette.bxml"); // original version
+                        // Alert.alert("baseURL is defined " + (baseURL != undefined), frame);  // debug
+                        // Alert.alert("baseURL = " + baseURL, frame);  // debug
+						// new, for remote loading of this file (included by another):
+						// note thate this version requires the variable baseURL defined, at least an empty string ...
+                        palette = application.load(baseURL + "palette.bxml");
                         palette.setLocation(frame.getX() + frame.getWidth() + 20, frame.getY() + 20);
                     }
 
