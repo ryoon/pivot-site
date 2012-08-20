@@ -14,7 +14,13 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
---><html xmlns="http://www.w3.org/1999/xhtml"><head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Frequently Asked Questions (FAQ) | Apache Pivot</title><link href="/styles/pivot.css" rel="stylesheet" type="text/css"><link href="/styles/pivot_print.css" rel="stylesheet" type="text/css" media="print"><script type="text/javascript">
+--><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Frequently Asked Questions (FAQ) | Apache Pivot</title>
+<link href="./styles/pivot.css" rel="stylesheet" type="text/css">
+<link href="/styles/pivot_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript">
                 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
                 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
                 </script><script type="text/javascript">
@@ -23,7 +29,12 @@ limitations under the License.
                 pageTracker._trackPageview();
                 } catch(err) {
 				}
-				</script></head><body><div id="wrapper"><div id="main"><div id="header"><div xmlns="" class="logo"><a href="/index.html"><img src="/images/logo.png" alt="Apache Pivot" title="Apache Pivot Homepage"></a></div><div class="tagline"><img src="/images/tagline.png" alt="Rich Internet Applications in Java" style="visibility:hidden"></div><ul class="navi"><li><a href="/demos/">Demos</a></li><li><a href="/download.cgi#2.0.2">Download</a></li><li><a href="/tutorials/">Tutorial</a></li><li><a href="/get-involved.html">Get Involved</a></li><li><a href="/about.html">About</a></li></ul></div><div id="contentBase" class="group"><h1>Frequently Asked Questions (FAQ)</h1><ul class="naviLeft"></ul><div class="content">
+				</script>
+</head>
+<body>
+<div id="wrapper"><div id="main"><div id="header"><div xmlns="" class="logo"><a href="/index.html"><img src="/images/logo.png" alt="Apache Pivot" title="Apache Pivot Homepage"></a></div><div class="tagline"><img src="/images/tagline.png" alt="Rich Internet Applications in Java" style="visibility:hidden"></div><ul class="navi"><li><a href="/demos/">Demos</a></li><li><a href="/download.cgi#2.0.2">Download</a></li><li><a href="/tutorials/">Tutorial</a></li><li><a href="/get-involved.html">Get Involved</a></li><li><a href="/about.html">About</a></li></ul></div><div id="contentBase" class="group"><h1>Frequently Asked Questions (FAQ)</h1><ul class="naviLeft"></ul>
+<div class="content">
+        <br/>
         <h1>Platform</h1>
         <p>This section answers questions related to the Pivot platform.</p>
 
@@ -100,20 +111,28 @@ limitations under the License.
 
         <p>Pivot allows developers to efficiently construct applications that can truly take advantage of the Java platform.</p>
 
-        <div class="section"><a name=""><h2></h2></a>Features</div>
+        <br/>
+		<h1>Features</h1>
         <p>This section answers questions related to Pivot features.</p>
 
         <h2>Where can I find information on how to use Pivot?</h2>
-        <p>Javadoc for Pivot is available <a href="http://incubator.apache.org/pivot/2.0/docs/api">online</a>, and a complete tutorial is available <a href="http://incubator.apache.org/pivot/tutorials">here</a>.</p>
+        <p>Javadoc for Pivot is available <a href="http://pivot.apache.org/2.0.2/docs/api/">online</a>, and a complete tutorial list is available <a href="http://pivot.apache.org/tutorials/">here</a>.</p>
 
-        <p>Readers who want a quicker introduction to the platform may prefer to jump directly to the <a href="http://incubator.apache.org/pivot/tutorials/stock-tracker.html">final section</a> of the tutorial, which walks through the implementation of a simple but practical sample application called "Stock Tracker". Stock Tracker demonstrates a number of key features used by many "real world" applications, including UI markup, event handling, web queries, data binding, and localization, among others.</p>
+        <p>Readers who want a quicker introduction to the platform may prefer to jump directly to the <a href="http://pivot.apache.org/tutorials/stock-tracker.html">final section</a> of the tutorial, which walks through the implementation of a simple but practical sample application called "Stock Tracker". Stock Tracker demonstrates a number of key features used by many "real world" applications, including UI markup, event handling, web queries, data binding, and localization, among others.</p>
 
-        <p>Readers may also find it helpful to review the <a href="http://incubator.apache.org/pivot/tutorials/bxml-primer.html">BXML Primer</a>, which provides an introduction to Pivot's markup language, before browsing the tutorials themsevles.</p>
+        <p>Readers may also find it helpful to review the <a href="http://pivot.apache.org/tutorials/bxml-primer.html">BXML Primer</a>, which provides an introduction to Pivot's markup language, before browsing the tutorials themsevles.</p>
 
         <h2>Where can I find documentation on what BXML attributes and styles a component supports?</h2>
-        <p>Component attributes are simply the Java bean properties of the component class itself. Styles are the bean properties of the currently installed skin. So, you can simply refer to the Javadoc for the component to identify the supported attributes, and for the skin (generally either in <tt>org.apache.pivot.skin</tt> or <tt>org.apache.pivot.skin.terra</tt>) to identify the supported styles.</p>
-
-        <p>How Java classes map to BXML is discussed in more detail in the <a href="http://incubator.apache.org/pivot/tutorials/bxml-primer.html">BXML Primer</a>.</p>
+        <p>
+		Component attributes are simply the Java bean properties of the component class itself. 
+		Styles are the bean properties of the currently installed skin. 
+		So, you can simply refer to the Javadoc for the component (in <tt>org.apache.pivot.wtk</tt>) to identify the supported attributes, 
+		and for the skin (generally either in <tt>org.apache.pivot.skin</tt> or <tt>org.apache.pivot.skin.terra</tt>) 
+		to identify the supported styles.
+		<br/>
+		For a live preview, use the <a href="http://pivot.apache.org/demos/component-explorer.html">Component Explorer Demo</a>
+		</p>
+        <p>How Java classes map to BXML is discussed in more detail in the <a href="http://pivot.apache.org/tutorials/bxml-primer.html">BXML Primer</a>.</p>
 
         <h2>How can I create a Pivot project in Eclipse?</h2>
         <p>It is very easy to set up a Pivot project using Eclipse (the Pivot platform itself is actually built using Eclipse):</p>
@@ -157,9 +176,9 @@ limitations under the License.
         <li><p>Open Eclipse Preferences.</p></li>
         <li><p>Select General &gt; Content Types from the tree navigation on the left.</p></li>
         <li><p>Select Text &gt; XML from the "Content types" list on the right.</p></li>
-        <li><p>Click "Add" and enter "*.wtkx" in the popup to create a new file association.</p></li>
+        <li><p>Click "Add" and enter "*.bxml" in the popup to create a new file association.</p></li>
         <li><p>Select General &gt; Editors &gt; File Assocations from the tree navigation on the left.</p></li>
-        <li><p>Click "Add" and enter "*.wtkx" in the popup to add the "*.wtkx" assocation to the list.</p></li>
+        <li><p>Click "Add" and enter "*.bxml" in the popup to add the "*.bxml" assocation to the list.</p></li>
         </ul>
 
         <h2>Why does Pivot include its own collection classes?</h2>
@@ -179,6 +198,13 @@ limitations under the License.
         <p>Copy/paste does work in Pivot. However, untrusted Java applets aren't allowed to interact with the system clipboard for security reasons. Trusted (signed) applets and applications running locally have full access to the system clipboard and can share data with native applications as well as other Pivot applications.</p>
 
         <p><a href="http://webhostingrating.com/libs/pivot-apache-be">Belorussian translation of this document (Беларускі пераклад)</a></p>
-    </div></div></div><div id="footer" class="group"><div class="footerLogo">Copyright (c) 1999-2012<br>The Apache Software Foundation.</div><div class="footerLinks"><ul class="footerMenuGr"><li><strong>Demos</strong><ul><li><a href="/demos/kitchen-sink.html" target="_new">"Kitchen Sink"</a></li><li><a href="/demos/component-explorer.html" target="_new">Component Explorer</a></li><li><a href="http://cwiki.apache.org/confluence/display/PIVOT/Other+Demos" target="_new">Charting</a></li><li><a href="/demos/">More Demos</a></li></ul></li><li><strong>Documentation</strong><ul><li><a href="/getting-started.html">Getting Started</a></li><li><a href="/tutorials/">Tutorial</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/2.0.2/docs/api/">Javadoc (2.0.2)</a></li></ul></li><li><strong>Get Involved</strong><ul><li><a href="/svn.html">SVN Repositories</a></li><li><a href="/lists.html">Mailing Lists</a></li><li><a href="http://issues.apache.org/jira/browse/PIVOT">Bug Database</a></li><li><a href="http://cwiki.apache.org/PIVOT/">Wiki</a></li></ul></li><li><strong>Related</strong><ul><li><a href="http://code.google.com/a/apache-extras.org/p/pivot-jfree/">JFreeChart Provider</a></li><li><a href="http://code.google.com/a/apache-extras.org/p/pivot-common/">Pivot-Common</a></li><li><a href="http://code.google.com/a/apache-extras.org/p/pivot-contrib/">Pivot-Contrib</a></li><li><a href="http://code.google.com/a/apache-extras.org/p/pivot-multilang/">Pivot-Multilang</a></li></ul></li><li><strong>About</strong><ul><li><a href="/who-we-are.html">Who We Are</a></li><li><a href="/contact.html">Contact</a></li><li><a href="http://cwiki.apache.org/confluence/display/PIVOT/News">News</a></li><li><a href="/legal.html">Legal/License</a></li></ul></li></ul></div><div class="footerLinks">
-                	Apache Pivot, Pivot, Apache, and the Apache Pivot project logo are trademarks of The Apache Software Foundation.
-                </div></div></div></body></html>
+    </div></div></div>
+	<div id="footer" class="group">
+	    <div class="footerLogo">Copyright (c) 1999-2012<br>The Apache Software Foundation.</div>
+	    <div class="footerLinks"><ul class="footerMenuGr"><li><strong>Demos</strong><ul><li><a href="/demos/kitchen-sink.html" target="_new">"Kitchen Sink"</a></li><li><a href="/demos/component-explorer.html" target="_new">Component Explorer</a></li><li><a href="http://cwiki.apache.org/confluence/display/PIVOT/Other+Demos" target="_new">Charting</a></li><li><a href="/demos/">More Demos</a></li></ul></li><li><strong>Documentation</strong><ul><li><a href="/getting-started.html">Getting Started</a></li><li><a href="/tutorials/">Tutorial</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/2.0.2/docs/api/">Javadoc (2.0.2)</a></li></ul></li><li><strong>Get Involved</strong><ul><li><a href="/svn.html">SVN Repositories</a></li><li><a href="/lists.html">Mailing Lists</a></li><li><a href="http://issues.apache.org/jira/browse/PIVOT">Bug Database</a></li><li><a href="http://cwiki.apache.org/PIVOT/">Wiki</a></li></ul></li><li><strong>Related</strong><ul><li><a href="http://code.google.com/a/apache-extras.org/p/pivot-jfree/">JFreeChart Provider</a></li><li><a href="http://code.google.com/a/apache-extras.org/p/pivot-common/">Pivot-Common</a></li><li><a href="http://code.google.com/a/apache-extras.org/p/pivot-contrib/">Pivot-Contrib</a></li><li><a href="http://code.google.com/a/apache-extras.org/p/pivot-multilang/">Pivot-Multilang</a></li></ul></li><li><strong>About</strong><ul><li><a href="/who-we-are.html">Who We Are</a></li><li><a href="/contact.html">Contact</a></li><li><a href="http://cwiki.apache.org/confluence/display/PIVOT/News">News</a></li><li><a href="/legal.html">Legal/License</a></li></ul></li></ul></div><div class="footerLinks">
+           	Apache Pivot, Pivot, Apache, and the Apache Pivot project logo are trademarks of The Apache Software Foundation.
+        </div>
+	</div>
+	</div>
+</body>
+</html>

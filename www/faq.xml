@@ -22,6 +22,7 @@ limitations under the License.
     </properties>
 
     <body>
+        <br/>
         <h1>Platform</h1>
         <p>This section answers questions related to the Pivot platform.</p>
 
@@ -98,20 +99,33 @@ limitations under the License.
 
         <p>Pivot allows developers to efficiently construct applications that can truly take advantage of the Java platform.</p>
 
-        <section>Features</section>
+
+        <br/>
+		<h1>Features</h1>
         <p>This section answers questions related to Pivot features.</p>
 
         <h2>Where can I find information on how to use Pivot?</h2>
-        <p>Javadoc for Pivot is available <a href="http://incubator.apache.org/pivot/2.0/docs/api">online</a>, and a complete tutorial is available <a href="http://incubator.apache.org/pivot/tutorials">here</a>.</p>
+        <p>Javadoc for Pivot is available <a href="http://pivot.apache.org/2.0.2/docs/api/">online</a>, and a complete tutorial list is available <a href="http://pivot.apache.org/tutorials/">here</a>.</p>
 
-        <p>Readers who want a quicker introduction to the platform may prefer to jump directly to the <a href="http://incubator.apache.org/pivot/tutorials/stock-tracker.html">final section</a> of the tutorial, which walks through the implementation of a simple but practical sample application called "Stock Tracker". Stock Tracker demonstrates a number of key features used by many "real world" applications, including UI markup, event handling, web queries, data binding, and localization, among others.</p>
+        <p>Readers who want a quicker introduction to the platform may prefer to jump directly to the <a href="http://pivot.apache.org/tutorials/stock-tracker.html">final section</a> of the tutorial, which walks through the implementation of a simple but practical sample application called "Stock Tracker". Stock Tracker demonstrates a number of key features used by many "real world" applications, including UI markup, event handling, web queries, data binding, and localization, among others.</p>
 
-        <p>Readers may also find it helpful to review the <a href="http://incubator.apache.org/pivot/tutorials/bxml-primer.html">BXML Primer</a>, which provides an introduction to Pivot's markup language, before browsing the tutorials themsevles.</p>
+        <p>Readers may also find it helpful to review the <a href="http://pivot.apache.org/tutorials/bxml-primer.html">BXML Primer</a>, 
+		which provides an introduction to Pivot's markup language, before browsing the tutorials themsevles.
+		</p>
 
         <h2>Where can I find documentation on what BXML attributes and styles a component supports?</h2>
-        <p>Component attributes are simply the Java bean properties of the component class itself. Styles are the bean properties of the currently installed skin. So, you can simply refer to the Javadoc for the component to identify the supported attributes, and for the skin (generally either in <tt>org.apache.pivot.skin</tt> or <tt>org.apache.pivot.skin.terra</tt>) to identify the supported styles.</p>
-
-        <p>How Java classes map to BXML is discussed in more detail in the <a href="http://incubator.apache.org/pivot/tutorials/bxml-primer.html">BXML Primer</a>.</p>
+        <p>
+		Component attributes are simply the Java bean properties of the component class itself. 
+		Styles are the bean properties of the currently installed skin. 
+		So, you can simply refer to the Javadoc for the component (in <tt>org.apache.pivot.wtk</tt>) to identify the supported attributes, 
+		and for the skin (generally either in <tt>org.apache.pivot.skin</tt> or <tt>org.apache.pivot.skin.terra</tt>) 
+		to identify the supported styles.
+		<br/>
+		For a live preview, use the <a href="http://pivot.apache.org/demos/component-explorer.html">Component Explorer Demo</a>
+		</p>
+        <p>
+		How Java classes map to BXML is discussed in more detail in the <a href="http://pivot.apache.org/tutorials/bxml-primer.html">BXML Primer</a>.
+		</p>
 
         <h2>How can I create a Pivot project in Eclipse?</h2>
         <p>It is very easy to set up a Pivot project using Eclipse (the Pivot platform itself is actually built using Eclipse):</p>
@@ -155,9 +169,9 @@ limitations under the License.
         <li><p>Open Eclipse Preferences.</p></li>
         <li><p>Select General > Content Types from the tree navigation on the left.</p></li>
         <li><p>Select Text > XML from the "Content types" list on the right.</p></li>
-        <li><p>Click "Add" and enter "*.wtkx" in the popup to create a new file association.</p></li>
+        <li><p>Click "Add" and enter "*.bxml" in the popup to create a new file association.</p></li>
         <li><p>Select General > Editors > File Assocations from the tree navigation on the left.</p></li>
-        <li><p>Click "Add" and enter "*.wtkx" in the popup to add the "*.wtkx" assocation to the list.</p></li>
+        <li><p>Click "Add" and enter "*.bxml" in the popup to add the "*.bxml" assocation to the list.</p></li>
         </ul>
 
         <h2>Why does Pivot include its own collection classes?</h2>
