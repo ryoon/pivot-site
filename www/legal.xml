@@ -18,7 +18,7 @@ limitations under the License.
 
 <document group="about">
     <properties>
-        <title>Legal Stuff They Make Us Say</title>
+        <title>Legal Stuff</title>
     </properties>
 
     <body>
@@ -29,6 +29,16 @@ limitations under the License.
                 its projects or subjects is licensed according to the terms of
                 <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License,
                 Version 2.0 (current)</a>.
+            </p>
+        </section>
+
+        <section name="Trademarks">
+            <p>
+				"Apache Pivot" and "Pivot" are trademarks of the Apache Software Foundation. 
+				Use of these trademarks is subject to the terms of section 6 of 
+                <a href="http://www.apache.org/licenses/LICENSE-2.0">
+				Apache License, Version 2.0 (current)
+				</a>.
             </p>
         </section>
 

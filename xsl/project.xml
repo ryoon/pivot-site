@@ -72,6 +72,7 @@ limitations under the License.
                 <document href="http://code.google.com/a/apache-extras.org/p/pivot-common/">Pivot-Common</document>
                 <document href="http://code.google.com/a/apache-extras.org/p/pivot-contrib/">Pivot-Contrib</document>
                 <document href="http://code.google.com/a/apache-extras.org/p/pivot-multilang/">Pivot-Multilang</document>
+                <document href="http://code.google.com/a/apache-extras.org/p/pivot-stuff/">Pivot-Stuff</document>
             </documents>
         </document-group>
 
@@ -80,11 +81,10 @@ limitations under the License.
             <documents>
                 <document href="who-we-are.html">Who We Are</document>
                 <document href="contact.html">Contact</document>
-                <!--  <document href="news.html">News</document>  //-->
-                <document href="http://cwiki.apache.org/confluence/display/PIVOT/News">News</document>
+                <document href="http://www.apache.org/">Apache Home</document>
                 <document href="legal.html">Legal/License</document>
-                <document href="http://www.apache.org/foundation/sponsorship.html" footer="false">Sponsorship</document>
-                <document href="http://www.apache.org/foundation/thanks.html" footer="false">Thanks</document>
+                <document href="http://www.apache.org/foundation/sponsorship.html">Sponsorship</document>
+                <document href="http://www.apache.org/foundation/thanks.html">Thanks</document>
             </documents>
         </document-group>
     </document-groups>
@@ -107,7 +107,7 @@ limitations under the License.
     </footer-demos>
 
     <featured-demos>
-        <demo id="kitchen-sink" screenshot="images/demos_feat_kitchen.jpg"/>
+        <demo id="kitchen-sink"  screenshot="images/demos_feat_kitchen.jpg"/>
         <demo id="stock-tracker" screenshot="images/demos_feat_stock.jpg"/>
         <demo id="itunes-search" screenshot="images/demos_feat_itunes.jpg"/>
     </featured-demos>
