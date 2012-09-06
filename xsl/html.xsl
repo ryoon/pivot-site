@@ -71,7 +71,7 @@ limitations under the License.
         <div id="wrapper">
             <div id="main">
                 <div id="header">
-                    <!-- Logo -->
+                    <!-- Pivot Logo -->
                     <xsl:element name="div">
                         <xsl:attribute name="class">
                             <xsl:choose>
@@ -84,6 +84,12 @@ limitations under the License.
                                 title="{$project/title} Homepage"/>
                         </a>
                     </xsl:element>
+                    <!-- ASF Logo -->
+					<div xmlns="" class="logoASF">
+						<a href="http://www.apache.org/">
+							<img src="/images/asf_logo_wide_transp.png" alt="Apache" title="Apache Homepage"/>
+						</a>
+					</div>
 
                     <!-- Tagline -->
                     <div class="tagline">

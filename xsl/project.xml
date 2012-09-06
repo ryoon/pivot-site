@@ -83,6 +83,7 @@ limitations under the License.
                 <document href="contact.html">Contact</document>
                 <document href="http://www.apache.org/">Apache Home</document>
                 <document href="legal.html">Legal/License</document>
+                <document href="security.html" footer="false">Security</document>
                 <document href="http://www.apache.org/foundation/sponsorship.html">Sponsorship</document>
                 <document href="http://www.apache.org/foundation/thanks.html">Thanks</document>
             </documents>
