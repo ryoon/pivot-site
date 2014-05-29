@@ -105,7 +105,7 @@ limitations under the License.
         <p>This section answers questions related to Pivot features.</p>
 
         <h2>Where can I find information on how to use Pivot?</h2>
-        <p>Javadoc for Pivot is available <a href="http://pivot.apache.org/2.0.3/docs/api/">online</a>, and a complete tutorial list is available <a href="http://pivot.apache.org/tutorials/">here</a>.</p>
+        <p>Javadoc for Pivot is available <a href="http://pivot.apache.org/2.0.4/docs/api/">online</a>, and a complete tutorial list is available <a href="http://pivot.apache.org/tutorials/">here</a>.</p>
 
         <p>Readers who want a quicker introduction to the platform may prefer to jump directly to the <a href="http://pivot.apache.org/tutorials/stock-tracker.html">final section</a> of the tutorial, which walks through the implementation of a simple but practical sample application called "Stock Tracker". Stock Tracker demonstrates a number of key features used by many "real world" applications, including UI markup, event handling, web queries, data binding, and localization, among others.</p>
 
