@@ -4,14 +4,20 @@ The Apache Pivot Website Instructions
 The Pivot web site is based on XML files which are transformed into HTML files using XSLT and Ant.
 
 In order to build the site, Ant needs to know the location of the folder on your local file system
-that represents http://svn.apache.org/repos/asf/pivot/trunk/. This location is passed to the Ant
-build using the 'folder.trunk' parameter. The build will not run without this parameter being
-specified.
+that represents the development folder that contains the right version of Pivot to be published
+in the web site (usually it's trunk, at http://svn.apache.org/repos/asf/pivot/trunk/ ,
+but could be another folder for example for a maintenance branch). This location is passed to the Ant
+build using the 'folder.trunk' parameter.
+The build will not run without this parameter being specified.
+
+Of course before running the following command all source pages must be updated
+(even in copyright year dates and other details), so it would be good to make some check with grep.
+Remember to check even JavaDoc files in the right (linked) place.
 
 An example command to build the site, which will build the site into the deploy/ folder, is as
 follows:
 
-  $ ant -Dfolder.trunk=/path/to/pivot/trunk build
+  $ ant -Dfolder.trunk=/absolute_path_to/trunk build
 
 
 Make sure you don't run clean, as this will wipe the deploy/.svn/ folder.
@@ -25,5 +31,7 @@ and finally revert local changes to that file.
 
 For example:
 
+  $ ant -Dfolder.trunk=/absolute_path_to/2.0.x build
+or
   $ ant -Dfolder.trunk=/absolute_path_to/trunk build
 
