@@ -56,8 +56,8 @@ limitations under the License.
                 var pageTracker = _gat._getTracker("UA-7977275-3");
                 pageTracker._trackPageview();
                 } catch(err) {
-				}
-				</script>
+                }
+                </script>
             </head>
 
             <body>
@@ -85,11 +85,11 @@ limitations under the License.
                         </a>
                     </xsl:element>
                     <!-- ASF Logo -->
-					<div xmlns="" class="logoASF">
-						<a href="http://www.apache.org/">
-							<img src="/images/asf_logo_wide_transp.png" alt="Apache" title="Apache Homepage"/>
-						</a>
-					</div>
+                    <div xmlns="" class="logoASF">
+                        <a href="http://www.apache.org/">
+                            <img src="/images/asf_logo_wide_transp.png" alt="Apache" title="Apache Homepage"/>
+                        </a>
+                    </div>
 
                     <!-- Tagline -->
                     <div class="tagline">
@@ -193,7 +193,7 @@ limitations under the License.
 
                 <!-- Trademark on name -->
                 <div class="footerLinks">
-                	Apache Pivot, Pivot, Apache, and the Apache Pivot project logo are trademarks of The Apache Software Foundation.
+                    Apache Pivot, Pivot, Apache, and the Apache Pivot project logo are trademarks of The Apache Software Foundation.
                 </div>
             </div>
         </div>
@@ -289,7 +289,7 @@ limitations under the License.
                 parameters.system_properties = systemProperties.join("&amp;");
             </xsl:if>
 
-            deployJava.runApplet(attributes, parameters, "1.6");
+            deployJava.runApplet(attributes, parameters, "1.7");
         </script>
     </xsl:template>
 </xsl:stylesheet>
