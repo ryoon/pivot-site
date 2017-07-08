@@ -97,17 +97,18 @@ limitations under the License.
                 <ul class="newsItems">
                     <li>
                         <a href="download.cgi#{$version}">
-                            <strong>Pivot 2.0.4 Released</strong>
-                            <em>May 19, 2014</em>
+                            <strong>Pivot 2.0.5 Released</strong>
+                            <em>July 04, 2017</em>
                             <p>The latest version of Pivot is now available for download.</p>
+							<p>This releases fixes a blocker issue with Java 8 Update 131 and higher.</p>
                         </a>
 						<br/>
                     </li>
                     <li>
                         <a href="download.cgi#{$version}">
-                            <strong>Pivot 2.0.3 Released</strong>
-                            <em>Aug 01, 2013</em>
-                            <p>The latest version of Pivot is now available for download.</p>
+                            <strong>Pivot 2.0.4 Released</strong>
+                            <em>May 19, 2014</em>
+                            <p>Fourth maintenance version of Pivot is now available for download.</p>
                         </a>
 						<br/>
                     </li>

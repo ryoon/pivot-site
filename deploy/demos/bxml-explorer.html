@@ -25,15 +25,16 @@ limitations under the License.
                         overflow: hidden;
                     }
                 </style><script type="text/javascript">
-                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-                </script><script type="text/javascript">
-                try {
-                var pageTracker = _gat._getTracker("UA-7977275-3");
-                pageTracker._trackPageview();
-                } catch(err) {
-				}
-				</script></head><body><script type="text/javascript" src="https://java.com/js/deployJava.js"></script><script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-7977275-3']);
+                _gaq.push (['_gat._anonymizeIp']);
+                _gaq.push(['_trackPageview']);
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+                </script></head><body><script type="text/javascript" src="https://java.com/js/deployJava.js"></script><script type="text/javascript">
             
             var attributes = {
                 code:"org.apache.pivot.wtk.BrowserApplicationContext$HostApplet",
@@ -46,10 +47,10 @@ limitations under the License.
 
             
             var libraries = [];
-            libraries.push("/lib/pivot-core-2.0.4.signed.jar");
-                libraries.push("/lib/pivot-wtk-2.0.4.signed.jar");
-                libraries.push("/lib/pivot-wtk-terra-2.0.4.signed.jar");
-                libraries.push("/lib/pivot-tutorials-2.0.4.signed.jar");
+            libraries.push("/lib/pivot-core-2.0.5.signed.jar");
+                libraries.push("/lib/pivot-wtk-2.0.5.signed.jar");
+                libraries.push("/lib/pivot-wtk-terra-2.0.5.signed.jar");
+                libraries.push("/lib/pivot-tutorials-2.0.5.signed.jar");
                 
                     libraries.push("/lib/svgSalamander-tiny.signed.jar");
                 
@@ -73,5 +74,5 @@ limitations under the License.
             
             
 
-            deployJava.runApplet(attributes, parameters, "1.6");
+            deployJava.runApplet(attributes, parameters, "1.7");
         </script></body></html>
