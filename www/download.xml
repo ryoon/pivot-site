@@ -32,10 +32,10 @@ limitations under the License.
 
         <section name="Quick Navigation">
             <p>
-                <a href="http://www.apache.org/dist/pivot/KEYS">KEYS</a> |
+                <a href="https://www.apache.org/dist/pivot/KEYS">KEYS</a> |
                 <a href="#{$version}"><version/></a> |
                 <a href="[preferred]/pivot/">Browse</a> |
-                <a href="http://archive.apache.org/dist/pivot/">Archives</a>
+                <a href="https://archive.apache.org/dist/pivot/">Archives</a>
             </p>
         </section>
 
@@ -43,7 +43,7 @@ limitations under the License.
             <p>
                 You must verify the integrity of the downloaded files. We provide <code>PGP</code>
                 signatures for every release file. This signature should be matched against the
-                <a href="http://www.apache.org/dist/pivot/KEYS">KEYS</a> file containing the PGP keys of Pivot's
+                <a href="https://www.apache.org/dist/pivot/KEYS">KEYS</a> file containing the PGP keys of Pivot's
                 Release Managers. We also provide an <code>MD5</code> checksum and a
                 <code>SHA</code> checksum for every release file. After you download the file, you
                 should calculate a checksum for your download and make sure it is the same as ours.
@@ -89,15 +89,15 @@ limitations under the License.
                 <ul>
                     <li>
                         <a href="[preferred]/pivot/binaries/apache-pivot-{$version}.zip">zip</a>
-                        (<a href="http://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.zip.asc">pgp</a>,
-                        <a href="http://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.zip.md5">md5</a>,
-                        <a href="http://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.zip.sha">sha</a>)
+                        (<a href="https://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.zip.asc">pgp</a>,
+                        <a href="https://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.zip.md5">md5</a>,
+                        <a href="https://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.zip.sha">sha</a>)
                     </li>
                     <li>
                         <a href="[preferred]/pivot/binaries/apache-pivot-{$version}.tar.gz">tar.gz</a>
-                        (<a href="http://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.tar.gz.asc">pgp</a>,
-                        <a href="http://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.tar.gz.md5">md5</a>,
-                        <a href="http://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.tar.gz.sha">sha</a>)
+                        (<a href="https://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.tar.gz.asc">pgp</a>,
+                        <a href="https://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.tar.gz.md5">md5</a>,
+                        <a href="https://www.apache.org/dist/pivot/binaries/apache-pivot-{$version}.tar.gz.sha">sha</a>)
                     </li>
                 </ul>
             </subsection>
@@ -106,15 +106,15 @@ limitations under the License.
                 <ul>
                     <li>
                         <a href="[preferred]/pivot/source/apache-pivot-{$version}-src.tar.gz">tar.gz</a>
-                        (<a href="http://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.tar.gz.asc">pgp</a>,
-                        <a href="http://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.tar.gz.md5">md5</a>,
-                        <a href="http://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.tar.gz.sha">sha</a>)
+                        (<a href="https://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.tar.gz.asc">pgp</a>,
+                        <a href="https://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.tar.gz.md5">md5</a>,
+                        <a href="https://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.tar.gz.sha">sha</a>)
                     </li>
                     <li>
                         <a href="[preferred]/pivot/source/apache-pivot-{$version}-src.zip">zip</a>
-                        (<a href="http://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.zip.asc">pgp</a>,
-                        <a href="http://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.zip.md5">md5</a>,
-                        <a href="http://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.zip.sha">sha</a>)
+                        (<a href="https://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.zip.asc">pgp</a>,
+                        <a href="https://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.zip.md5">md5</a>,
+                        <a href="https://www.apache.org/dist/pivot/source/apache-pivot-{$version}-src.zip.sha">sha</a>)
                     </li>
                 </ul>
             </subsection>
