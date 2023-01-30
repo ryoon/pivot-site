@@ -151,6 +151,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public abstract class <span class="typeNameLabel">QueryServlet</span>
 extends javax.servlet.http.HttpServlet</pre>
 <div class="block">Abstract base class for query servlets.</div>
+<div class="block">Note that for better security, you should only use BinarySerializer in QueryServlet if you're sure the incoming requests will only come from trusted sources.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../serialized-form.html#org.apache.pivot.web.server.QueryServlet">Serialized Form</a></dd>

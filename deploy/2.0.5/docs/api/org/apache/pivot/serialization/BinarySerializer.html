@@ -144,6 +144,7 @@ implements <a href="Serializer.html" title="interface in org.apache.pivot.serial
 <div class="block">Implementation of the <a href="Serializer.html" title="interface in org.apache.pivot.serialization"><code>Serializer</code></a> interface that uses Java's internal
  serialization mechanism to read and write values. All values in the object
  hierarchy are required to implement <code>Serializable</code>.</div>
+<div class="block">Note that for better security, you should only use BinarySerializer in QueryServlet if you're sure the incoming requests will only come from trusted sources.</div>
 </li>
 </ul>
 </div>
